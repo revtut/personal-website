@@ -18,6 +18,8 @@ html, body {
     font-family: Roboto, sans-serif;
 }
 
+/** header **/
+
 header.intro {
     background-image: url(../img/background.png);
     background-attachment: fixed;
@@ -27,8 +29,21 @@ header.intro {
 }
 
 header.intro img {
-    width: 20rem;
-    height: 20rem;
+    width: 25rem;
+    height: 25rem;
+    margin-bottom: 3rem;
+}
+
+header.intro h1 {
+    margin: 0;
+    color: white;
+    font-size: 10rem;
+}
+
+header.intro h2 {
+    margin: 0;
+    color: white;
+    font-size: 5rem;
 }
 
 /*
