@@ -1,0 +1,42 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100);
+
+/* Firefox Dotted Line */
+
+a, a:active, a:hover, a:focus, a:link, a:visited, input::-moz-focus-inner, button::-moz-focus-inner, object, embed {
+    outline: none;
+}
+
+/*
+    ELEMENTS
+*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Roboto, sans-serif;
+}
+
+header.intro {
+    background-image: url(../img/background.png);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+}
+
+header.intro img {
+    width: 20rem;
+    height: 20rem;
+}
+
+/*
+    UTILS
+*/
+
+.v-align {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
