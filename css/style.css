@@ -46,6 +46,11 @@ header.intro h2 {
     font-size: 5rem;
 }
 
+header.intro hr {
+    width: 45rem;
+    border: 0.1rem solid #009bdb;
+}
+
 /*
     UTILS
 */
