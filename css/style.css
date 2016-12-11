@@ -56,13 +56,13 @@ header.intro hr {
 
 /* Navigation Bar */
 
-nav ul {
-    width: 100%;
-}
-
-nav li {
-    float: none !important;
-    display: inline-block !important;
+@media (min-width: 768px){
+    .navbar-nav-center{
+        float:none;
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+    }
 }
 
 /*
