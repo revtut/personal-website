@@ -3,47 +3,51 @@
  */
 function scrollEvent() {
     var windowElement = $(window),
-        headerElement = $('header'),
-        backTopElement = $('div.back-top'),
         navigationElement = $('nav'),
-        navbarAnchorElements = $('nav a');
+        navbarAnchorElements = $('nav li'),
+        navActiveElement;
 
-    var lastAnchor = "#top";
-    var currentAnchor = lastAnchor;
+    var lastAnchor = "#top",
+        currentAnchor = lastAnchor,
+        navDistance = navigationElement.offset().top;
 
-    windowElement.scroll(function() {
-        var y = windowElement.scrollTop(),
-            height = screen.height;
-        console.log("Height: " + height + " | Y: " + y);
+    windowElement.scroll(function () {
+        var y = windowElement.scrollTop();
 
         ////////////////////
         // Navigation bar //
         ////////////////////
-        if (y > height && !navigationElement.hasClass("navbar-fixed-top")) {
+        if (y > navDistance && !navigationElement.hasClass("navbar-fixed-top")) {
             navigationElement.addClass("navbar-fixed-top");
-        } else if (y <= height && navigationElement.hasClass("navbar-fixed-top")) {
+        } else if (y <= navDistance && navigationElement.hasClass("navbar-fixed-top")) {
             navigationElement.removeClass("navbar-fixed-top");
         }
 
         ///////////////////////
         // Current menu item //
         ///////////////////////
-        navbarAnchorElements.each(function() {
-            var anchorId = $(this).attr('href');
-            var target = $(anchorId).offset().top - 80;
+        navActiveElement = null;
+        navbarAnchorElements.each(function () {
+            var anchorId = $(this).children().attr('href'),
+                target = $(anchorId).offset().top - 80;
 
             // Update current active menu
-            if (y >= target)
+            if (y >= target) {
+                navActiveElement = $(this);
                 currentAnchor = anchorId;
+            }
         });
 
         // Apply classes to the current anchor
+        if(navActiveElement == null)
+            currentAnchor = "#top";
         if (lastAnchor != currentAnchor) {
             lastAnchor = currentAnchor;
 
             // Update classes
-            navbarAnchorElements.removeClass("active");
-            $("#navigation-bar li a[href='" + currentAnchor + "']").addClass('active');
+            navbarAnchorElements.removeClass("active", 200);
+            if(navActiveElement != null)
+                navActiveElement.addClass("active", 200);
 
             // Added hash to browser
             if (history.replaceState)
@@ -61,7 +65,7 @@ function smoothAnchor() {
     var root = $('html, body'),
         smoothAnchorElements = $('a.smooth-scroll');
 
-    smoothAnchorElements.click(function() {
+    smoothAnchorElements.click(function () {
         this.blur();
         var href = $.attr(this, 'href');
         root.animate({

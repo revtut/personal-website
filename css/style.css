@@ -82,6 +82,7 @@ header.intro hr {
 .navbar-center .navbar-collapse .navbar-nav>li>a {
   font-size: 2rem;
   color: #009bdb;
+  transition: background-color 0.2s linear;
 }
 
 .navbar-center .navbar-collapse .navbar-nav>li.active>a,
@@ -89,6 +90,14 @@ header.intro hr {
 .navbar-center .navbar-collapse .navbar-nav>li>a:active {
   color: white;
   background-color: #009bdb;
+}
+
+section:nth-of-type(odd) {
+  background-color: #e9f0f5;
+}
+
+section:nth-of-type(even) {
+  background-color: #eff6fa;
 }
 
 /*
