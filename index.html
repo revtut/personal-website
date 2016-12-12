@@ -9,7 +9,7 @@
   <meta name="description" content="João Silva, personal portfólio">
   <meta name="author" content="João Silva">
 
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
   <!-- External CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -17,16 +17,16 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
 
   <!-- External JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
-    crossorigin="anonymous" async defer></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous" async defer></script>
+    crossorigin="anonymous"></script>
 
   <!-- Local CSS -->
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Local JavaScript -->
-  <script src="js/script.js"></script>
+  <script rel="text/javascript" src="js/script.js"></script>
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -34,7 +34,7 @@
 </head>
 
 <body>
-  <header class="intro">
+  <header id="top" class="intro">
     <div class="text-center v-align">
       <img src="img/profile-picture.png" alt="Profile picture" class="img-circle">
       <h1>João Silva</h1>
@@ -43,13 +43,22 @@
     </div>
   </header>
 
-  <nav class="navbar navbar-default navbar-fixed-top" hidden="hidden">
-    <div class="container-fluid center">
+  <nav class="navbar navbar-default navbar-center">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-content">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-content">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#timeline">Timeline</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a class="smooth-scroll" href="#about">About</a></li>
+        <li><a class="smooth-scroll" href="#timeline">Timeline</a></li>
+        <li><a class="smooth-scroll" href="#skills">Skills</a></li>
+        <li><a class="smooth-scroll" href="#portfolio">Portfolio</a></li>
+        <li><a class="smooth-scroll" href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
