@@ -74,13 +74,16 @@ header.intro hr {
 .navbar-center {
   background-color: #e9f0f5;
   border: 0;
+  margin: 0;
   -webkit-box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 0.4);
 }
 
 .navbar-center .navbar-collapse .navbar-nav>li>a {
-  font-size: 2rem;
+  font-size: 3rem;
+  padding: 3rem 4rem;
+  box-sizing: border-box;
   color: #009bdb;
   transition: background-color 0.2s linear;
 }
@@ -92,12 +95,27 @@ header.intro hr {
   background-color: #009bdb;
 }
 
-section:nth-of-type(odd) {
+/* Sections */
+
+main section:nth-of-type(odd) {
   background-color: #e9f0f5;
 }
 
-section:nth-of-type(even) {
+main section:nth-of-type(even) {
   background-color: #eff6fa;
+}
+
+main section header {
+  font-size: 5rem;
+  text-align: center;
+  color: #009bdb;
+  padding: 3rem 0rem 0.5rem 0rem;
+}
+
+main section hr {
+  width: 45rem;
+  border: 0.1rem solid #009bdb;
+  margin: 0 auto;
 }
 
 /*
