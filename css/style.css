@@ -1,11 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100);
 
-/* Firefox Dotted Line */
-
-a, a:active, a:hover, a:focus, a:link, a:visited, input::-moz-focus-inner, button::-moz-focus-inner, object, embed {
-  outline: none;
-}
-
 /*
     ELEMENTS
 */
@@ -52,52 +46,6 @@ header.intro h2 {
 header.intro hr {
   width: 45rem;
   border: 0.1rem solid #009bdb;
-}
-
-/* Navigation Bar */
-
-@media (min-width: 768px){
-    .navbar-center .navbar-collapse>ul{
-        float:none;
-        margin: 0 auto;
-        display: table;
-        table-layout: fixed;
-    }
-}
-
-@media (min-width: 768px) {
-  .navbar-center .navbar-collapse .navbar-nav>li>a {
-      padding: 20px 30px;
-  }
-}
-
-.navbar-center {
-  background-color: #e9f0f5;
-  border: 0;
-  -webkit-box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 0.4);
-  box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 0.4);
-}
-
-.navbar-center .navbar-collapse .navbar-nav>li>a {
-  font-size: 2rem;
-  color: #009bdb;
-  transition: background-color 0.2s linear;
-}
-
-.navbar-center .navbar-collapse .navbar-nav>li.active>a,
-.navbar-center .navbar-collapse .navbar-nav>li>a:hover,
-.navbar-center .navbar-collapse .navbar-nav>li>a:active {
-  color: white;
-  background-color: #009bdb;
-}
-
-section:nth-of-type(odd) {
-  background-color: #e9f0f5;
-}
-
-section:nth-of-type(even) {
-  background-color: #eff6fa;
 }
 
 /*
