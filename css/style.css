@@ -56,16 +56,14 @@ header.intro hr {
 
 /* Navigation Bar */
 
-@media (min-width: 768px){
-    .navbar-center .navbar-collapse>ul{
-        float:none;
-        margin: 0 auto;
-        display: table;
-        table-layout: fixed;
-    }
-}
+@media (min-width: 992px){
+  .navbar-center .navbar-collapse>ul{
+      float:none;
+      margin: 0 auto;
+      display: table;
+      table-layout: fixed;
+  }
 
-@media (min-width: 768px) {
   .navbar-center .navbar-collapse .navbar-nav>li>a {
       padding: 20px 30px;
   }
@@ -81,7 +79,7 @@ header.intro hr {
 }
 
 .navbar-center .navbar-collapse .navbar-nav>li>a {
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding: 3rem 4rem;
   box-sizing: border-box;
   color: #009bdb;
@@ -116,6 +114,75 @@ main section hr {
   width: 45rem;
   border: 0.1rem solid #009bdb;
   margin: 0 auto;
+}
+
+/* Timeline */
+@media (min-width: 992px){
+  .timeline-moment>.moment-description {
+    width: 25%;
+  }
+}
+
+@media (max-width: 992px){
+  .timeline-moment>.moment-description {
+    width: 50%;
+  }
+}
+
+.timeline-content {
+  margin-top: 5rem;
+}
+
+.timeline-moment>.moment-description {
+  background-color: white;
+  display: inline-block;
+  color: #000;
+  position: relative;
+  padding: 1rem;
+  -webkit-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.10);
+  -moz-box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.10);
+  box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.10);
+}
+
+.timeline-moment:nth-of-type(odd)>.moment-description::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 20%;
+  right: -2rem;
+	width: 0;
+	height: 0;
+	border-top: 1.4rem solid transparent;
+	border-left: 2rem solid white;
+	border-bottom: 1.4rem solid transparent;
+}
+
+.timeline-moment:nth-of-type(even)>.moment-description::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 20%;
+  left: -2rem;
+	width: 0;
+	height: 0;
+	border-top: 1.4rem solid transparent;
+	border-right: 2rem solid white;
+	border-bottom: 1.4rem solid transparent;
+}
+
+.timeline-moment>.moment-description>h3 {
+  margin: 0rem 0rem 2rem 0rem;
+  color: #303e49;
+  font-size: 2.5rem;
+  text-align: left;
+}
+
+.timeline-moment>.moment-description>p {
+  margin: 0;
+  color: #7f8c97;
+  font-size: 1.8rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /*
