@@ -28,10 +28,23 @@ header.intro {
   height: 100%;
 }
 
+@media (min-width: 768px){
+  header.intro img {
+    width: 25rem;
+    height: 25rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 768px){
+  header.intro img {
+    width: 15rem;
+    height: 15rem;
+    margin-bottom: 3rem;
+  }
+}
+
 header.intro img {
-  width: 25rem;
-  height: 25rem;
-  margin-bottom: 3rem;
   -webkit-box-shadow: 0px 0px 25px 3px rgba(0, 0, 0, 0.35);
   -moz-box-shadow: 0px 0px 25px 3px rgba(0, 0, 0, 0.35);
   box-shadow: 0px 0px 25px 3px rgba(0, 0, 0, 0.35);
@@ -56,7 +69,7 @@ header.intro hr {
 
 /* Navigation Bar */
 
-@media (min-width: 992px){
+@media (min-width: 768px){
   .navbar-center .navbar-collapse>ul{
       float:none;
       margin: 0 auto;
@@ -117,28 +130,33 @@ main section hr {
 }
 
 /* Timeline */
-@media (min-width: 992px){
-  .timeline-moment>.moment-description {
-    width: 35rem;
-  }
-}
-
-@media (max-width: 992px){
-  .timeline-moment>.moment-description {
-    width: 50%;
-  }
-}
 
 .timeline-content {
-  margin-top: 5rem;
+  padding: 3rem 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  height: 90%;
+  width: 0.3rem;
+  background: #d7e4ed;
+}
+
+.timeline-moment {
+  margin-top: 3rem;
 }
 
 .timeline-moment>.moment-description {
   background-color: white;
-  display: inline-block;
   color: #000;
   position: relative;
   padding: 1rem;
+  box-sizing: border-box;
   filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.05));
 }
 
@@ -152,21 +170,23 @@ main section hr {
 .timeline-moment>.moment-description>p {
   margin: 0;
   color: #7f8c97;
-  font-size: 1.8rem;
+  font-size: 2rem;
   text-align: justify;
   text-justify: inter-word;
 }
 
-.timeline-moment>.moment-date {
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 3rem;
+.timeline-moment>.moment-date>p {
+  font-size: 2rem;
+  margin: 3rem 0rem;
+  color: #7f8c97;
 }
 
-.timeline-moment>.moment-date>p {
-  font-size: 1.8rem;
-  margin: 0;
-  color: #7f8c97;
+.timeline-moment:nth-of-type(odd)>.moment-date>p {
+  text-align: left;
+}
+
+.timeline-moment:nth-of-type(even)>.moment-date>p {
+  text-align: right;
 }
 
 .timeline-moment>.moment-description::after {
@@ -190,18 +210,12 @@ main section hr {
 	border-right: 2rem solid white;
 }
 
-.timeline-moment>.moment-image {
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 3rem;
+.timeline-moment>.moment-image>img {
   width: 10rem;
   height: 10rem;
-}
-
-.timeline-moment>.moment-image>img {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
+  border-radius: 10rem;
+  box-shadow: 0 0 0 0.7rem white;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.05));
 }
 
 /*

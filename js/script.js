@@ -17,11 +17,11 @@ function scrollEvent() {
         ////////////////////
         // Navigation bar //
         ////////////////////
-        if (y > navDistance && !navigationElement.hasClass("navbar-fixed-top")) {
+        /*if (y > navDistance && !navigationElement.hasClass("navbar-fixed-top")) {
             navigationElement.addClass("navbar-fixed-top");
         } else if (y <= navDistance && navigationElement.hasClass("navbar-fixed-top")) {
             navigationElement.removeClass("navbar-fixed-top");
-        }
+    }*/
 
         ///////////////////////
         // Current menu item //
