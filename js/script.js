@@ -3,6 +3,7 @@
  */
 function scrollEvent() {
     var windowElement = $(window),
+        bodyElement = $('body'),
         navigationElement = $('nav'),
         navbarAnchorElements = $('nav li'),
         navActiveElement;
@@ -19,8 +20,10 @@ function scrollEvent() {
         ////////////////////
         if (y > navDistance && !navigationElement.hasClass("navbar-fixed-top")) {
             navigationElement.addClass("navbar-fixed-top");
+            bodyElement.css("margin-top", navigationElement.height());
         } else if (y <= navDistance && navigationElement.hasClass("navbar-fixed-top")) {
             navigationElement.removeClass("navbar-fixed-top");
+            bodyElement.css("margin-top", 0);
         }
 
         ///////////////////////
