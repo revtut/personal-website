@@ -246,17 +246,19 @@ main section hr {
 
 .timeline-moment:nth-of-type(odd)>.moment-date>p {
   text-align: left;
+  margin-left: 7rem;
 }
 
 .timeline-moment:nth-of-type(even)>.moment-date>p {
   text-align: right;
+  margin-right: 7rem;
 }
 
 .timeline-moment>.moment-description::after {
   content: "";
   display: inline-block;
   position: absolute;
-  top: 20%;
+  top: 3rem;
   width: 0;
   height: 0;
   border-top: 1.4rem solid transparent;
