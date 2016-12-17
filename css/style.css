@@ -146,6 +146,13 @@ header.intro hr {
   main section hr {
     width: 45rem;
   }
+
+  main section div>h3 {
+    font-size: 3.5rem;
+  }
+  main section div>hr {
+    width: 25rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -155,6 +162,17 @@ header.intro hr {
   main section hr {
     width: 25rem;
   }
+
+  main section div>h3 {
+    font-size: 2rem;
+  }
+  main section div>hr {
+    width: 15rem;
+  }
+}
+
+main section>div {
+  padding: 3rem 0;
 }
 
 main section:nth-of-type(odd) {
@@ -165,13 +183,22 @@ main section:nth-of-type(even) {
   background-color: #eff6fa;
 }
 
-main section header {
+main section>header {
   text-align: center;
   color: #009bdb;
   padding: 3rem 0rem 0.5rem 0rem;
 }
 
-main section hr {
+main section>hr {
+  border: 0.1rem solid #009bdb;
+  margin: 0 auto;
+}
+
+main section div>h3 {
+  color: #009bdb;  
+}
+
+main section div>hr {
   border: 0.1rem solid #009bdb;
   margin: 0 auto;
 }
@@ -198,7 +225,6 @@ main section hr {
 }
 
 .timeline-content {
-  padding: 3rem 0;
   position: relative;
   box-sizing: border-box;
 }
