@@ -403,6 +403,16 @@ main section>hr {
   box-shadow: none;
 }
 
+/* Portfolio */
+
+.portfolio-row {
+  margin-top: 3rem;
+}
+
+.portfolio-row .portfolio-item>img {
+  width: 100%;
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.15));
+}
 
 /*
     UTILS
