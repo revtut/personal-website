@@ -32,7 +32,7 @@ function scrollEvent() {
         navActiveElement = null;
         navbarAnchorElements.each(function () {
             var anchorId = $(this).children().attr('href'),
-                target = $(anchorId).offset().top - 80;
+                target = $(anchorId).offset().top - navigationElement.height();
 
             // Update current active menu
             if (y >= target) {
