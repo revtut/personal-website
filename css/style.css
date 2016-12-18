@@ -181,6 +181,49 @@ main section>hr {
 }
 
 
+/* About */
+
+@media (min-width: 768px) {
+  .about-me .about-me-element p {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  
+  .about-me .about-me-element i {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-me .about-me-element p {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+  
+  .about-me .about-me-element i {
+    font-size: 1.8rem;
+  }
+}
+
+.about-me .about-me-element {
+    margin-top: 1rem;
+}
+
+.about-me .about-me-element p,
+.about-me .about-me-element i {
+  margin: 0;
+}
+
+.about-me .about-me-element p {
+  display: inline-block;
+  color: #7f8c97;
+}
+
+.about-me .about-me-element i {
+  color: #f0ad4e;
+}
+
+
 /* Timeline */
 
 @media (min-width: 768px) {
@@ -300,7 +343,6 @@ main section>hr {
     height: 3rem;
     line-height: 3rem;
   }
-
   .skill-element p {
     font-size: 2.5rem;
   }
@@ -317,7 +359,6 @@ main section>hr {
     height: 2rem;
     line-height: 2rem;
   }
-
   .skill-element p {
     font-size: 1.5rem;
   }
@@ -334,7 +375,7 @@ main section>hr {
 }
 
 .skill-element {
- margin-top: 1rem; 
+  margin-top: 1rem;
 }
 
 .skill-element p {
@@ -343,8 +384,7 @@ main section>hr {
   color: #7f8c97;
 }
 
-.skill-element div,
-.skill-element .progress {
+.skill-element div, .skill-element .progress {
   overflow: unset;
   height: 100%;
   box-shadow: none;
