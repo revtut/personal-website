@@ -403,7 +403,36 @@ main section>hr {
   box-shadow: none;
 }
 
+
 /* Portfolio */
+
+.portfolio-page {
+  position: relative;
+}
+
+.portfolio-page>.next,
+.portfolio-page>.prev {
+  font-size: 5rem;
+  color: #009bdb;
+  padding: 0.5rem 2rem;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+}
+
+.portfolio-page>.next:hover,
+.portfolio-page>.prev:hover {
+  color: #f0ad4e;
+  cursor: pointer;
+}
+
+.portfolio-page>.next {
+  right: 10%;
+}
+
+.portfolio-page>.prev {
+  left: 10%;
+}
 
 .portfolio-row {
   margin-top: 3rem;
@@ -413,6 +442,7 @@ main section>hr {
   width: 100%;
   filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.15));
 }
+
 
 /*
     UTILS
