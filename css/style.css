@@ -2,7 +2,16 @@
 
 /* Firefox Dotted Line */
 
-a, a:active, a:hover, a:focus, a:link, a:visited, input::-moz-focus-inner, button::-moz-focus-inner, object, embed {
+a,
+a:active,
+a:hover,
+a:focus,
+a:link,
+a:visited,
+input::-moz-focus-inner,
+button::-moz-focus-inner,
+object,
+embed {
   outline: none;
 }
 
@@ -18,7 +27,8 @@ a, a:active, a:hover, a:focus, a:link, a:visited, input::-moz-focus-inner, butto
     ELEMENTS
 */
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -131,7 +141,9 @@ header.intro hr {
   transition: background-color 0.2s linear;
 }
 
-.navbar-center .navbar-collapse .navbar-nav>li.active>a, .navbar-center .navbar-collapse .navbar-nav>li>a:hover, .navbar-center .navbar-collapse .navbar-nav>li>a:active {
+.navbar-center .navbar-collapse .navbar-nav>li.active>a,
+.navbar-center .navbar-collapse .navbar-nav>li>a:hover,
+.navbar-center .navbar-collapse .navbar-nav>li>a:active {
   color: white;
   background-color: #009bdb;
 }
@@ -188,7 +200,6 @@ main section>hr {
     font-size: 2.5rem;
     line-height: 3rem;
   }
-  
   .about-me .about-me-element i {
     font-size: 3rem;
   }
@@ -199,14 +210,13 @@ main section>hr {
     font-size: 1.5rem;
     line-height: 1.8rem;
   }
-  
   .about-me .about-me-element i {
     font-size: 1.8rem;
   }
 }
 
 .about-me .about-me-element {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .about-me .about-me-element p,
@@ -230,7 +240,8 @@ main section>hr {
   .timeline-moment>.moment-description>h3 {
     font-size: 2.5rem;
   }
-  .timeline-moment>.moment-description>p, .timeline-moment>.moment-date>p {
+  .timeline-moment>.moment-description>p,
+  .timeline-moment>.moment-date>p {
     font-size: 2rem;
   }
 }
@@ -239,7 +250,8 @@ main section>hr {
   .timeline-moment>.moment-description>h3 {
     font-size: 1.8rem;
   }
-  .timeline-moment>.moment-description>p, .timeline-moment>.moment-date>p {
+  .timeline-moment>.moment-description>p,
+  .timeline-moment>.moment-date>p {
     font-size: 1.5rem;
   }
 }
@@ -384,7 +396,8 @@ main section>hr {
   color: #7f8c97;
 }
 
-.skill-element div, .skill-element .progress {
+.skill-element div,
+.skill-element .progress {
   overflow: unset;
   height: 100%;
   box-shadow: none;

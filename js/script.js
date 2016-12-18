@@ -42,14 +42,14 @@ function scrollEvent() {
         });
 
         // Apply classes to the current anchor
-        if(navActiveElement == null)
+        if (navActiveElement == null)
             currentAnchor = "#top";
         if (lastAnchor != currentAnchor) {
             lastAnchor = currentAnchor;
 
             // Update classes
             navbarAnchorElements.removeClass("active", 200);
-            if(navActiveElement != null)
+            if (navActiveElement != null)
                 navActiveElement.addClass("active", 200);
 
             // Added hash to browser
