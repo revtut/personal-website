@@ -13,15 +13,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
-  <!-- External JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
   <!-- Local CSS -->
   <link rel="stylesheet" href="css/style.css">
-  <!-- Local JavaScript -->
-  <script rel="text/javascript" src="js/script.js"></script>
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
@@ -79,7 +72,7 @@
           </div>
           <div class="row about-me-element">
             <div class="col-xs-2 text-center">
-              <i class="fa fa-2x fa-location-arrow" aria-hidden="true"></i>
+              <i class="fa fa-2x fa-map-marker" aria-hidden="true"></i>
             </div>
             <div class="col-xs-10">
               <p>Porto, Portugal</p>
@@ -87,7 +80,7 @@
           </div>
           <div class="row about-me-element">
             <div class="col-xs-2 text-center">
-              <i class="fa fa-2x fa-genderless" aria-hidden="true"></i>
+              <i class="fa fa-2x fa-intersex" aria-hidden="true"></i>
             </div>
             <div class="col-xs-10">
               <p>Male</p>
@@ -249,7 +242,10 @@
         <div class="row text-center portfolio-page">
           <div class="row portfolio-row">
             <div class="col-md-pull-1 col-md-offset-3 col-md-2 portfolio-item">
-              <img src="img/background.png" alt="Logo">
+              <figure>
+                <img src='img/background.png' alt='Logo' />
+                <figcaption>Lorem ipsum</figcaption>
+              </figure>
             </div>
             <div class="col-md-2 portfolio-item">
               <img src="img/background.png" alt="Logo">
@@ -269,13 +265,13 @@
               <img src="img/background.png" alt="Logo">
             </div>
           </div>
-          <a class="prev" onclick="plusSlides(-1)">
-            <i class="fa fa-chevron-left" aria-hidden="true"></i>
-          </a>
-          <a class="next" onclick="plusSlides(-1)">
-            <i class="fa fa-chevron-right" aria-hidden="true"></i>
-          </a>
         </div>
+        <a class="portfolio-previous" onclick="plusSlides(-1)">
+          <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </a>
+        <a class="portfolio-next" onclick="plusSlides(-1)">
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </a>
       </div>
     </section>
     <section id="contact">
@@ -300,6 +296,13 @@
       </div>
     </div>
   </footer>
+  <!-- External JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <!-- Local JavaScript -->
+  <script rel="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>

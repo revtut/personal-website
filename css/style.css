@@ -406,39 +406,47 @@ main section>hr {
 
 /* Portfolio */
 
-.portfolio-page {
+.portfolio-content {
   position: relative;
 }
 
-.portfolio-page>.next,
-.portfolio-page>.prev {
+.portfolio-content>.portfolio-next,
+.portfolio-content>.portfolio-previous {
   font-size: 5rem;
   color: #009bdb;
   padding: 0.5rem 2rem;
   box-sizing: border-box;
   position: absolute;
-  bottom: 0;
+  bottom: 5%;
 }
 
-.portfolio-page>.next:hover,
-.portfolio-page>.prev:hover {
+.portfolio-content>.portfolio-next:hover,
+.portfolio-content>.portfolio-previous:hover {
   color: #f0ad4e;
   cursor: pointer;
 }
 
-.portfolio-page>.next {
+.portfolio-content>.portfolio-next {
   right: 10%;
 }
 
-.portfolio-page>.prev {
+.portfolio-content>.portfolio-previous {
   left: 10%;
+}
+
+.portfolio-page {
+  margin-top: 3rem;
 }
 
 .portfolio-row {
   margin-top: 3rem;
 }
 
-.portfolio-row .portfolio-item>img {
+.portfolio-row .portfolio-item figure {
+  position: relative;
+}
+
+.portfolio-row .portfolio-item img {
   width: 100%;
   filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.15));
 }
