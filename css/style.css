@@ -157,6 +157,10 @@ header.intro hr {
   }
 }
 
+main section>div {
+  padding: 3rem 0;
+}
+
 main section:nth-of-type(odd) {
   background-color: #e9f0f5;
 }
@@ -165,13 +169,13 @@ main section:nth-of-type(even) {
   background-color: #eff6fa;
 }
 
-main section header {
+main section>header {
   text-align: center;
   color: #009bdb;
   padding: 3rem 0rem 0.5rem 0rem;
 }
 
-main section hr {
+main section>hr {
   border: 0.1rem solid #009bdb;
   margin: 0 auto;
 }
@@ -198,7 +202,6 @@ main section hr {
 }
 
 .timeline-content {
-  padding: 3rem 0;
   position: relative;
   box-sizing: border-box;
 }
@@ -281,6 +284,70 @@ main section hr {
   border-radius: 10rem;
   box-shadow: 0 0 0 0.7rem white;
   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.05));
+}
+
+
+/* Skills */
+
+@media (min-width: 768px) {
+  .skill-set h3 {
+    font-size: 3.5rem;
+  }
+  .skill-set hr {
+    width: 25rem;
+  }
+  .skill-set .skill-element {
+    height: 3rem;
+    line-height: 3rem;
+  }
+
+  .skill-element p {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-set h3 {
+    font-size: 2rem;
+  }
+  .skill-set hr {
+    width: 15rem;
+  }
+  .skill-set .skill-element {
+    height: 2rem;
+    line-height: 2rem;
+  }
+
+  .skill-element p {
+    font-size: 1.5rem;
+  }
+}
+
+.skill-set h3 {
+  color: #009bdb;
+}
+
+.skill-set hr {
+  border: 0.1rem solid #009bdb;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.skill-element {
+ margin-top: 1rem; 
+}
+
+.skill-element p {
+  text-align: right;
+  margin: 0;
+  color: #7f8c97;
+}
+
+.skill-element div,
+.skill-element .progress {
+  overflow: unset;
+  height: 100%;
+  box-shadow: none;
 }
 
 
