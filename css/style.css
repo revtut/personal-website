@@ -273,6 +273,9 @@ main section>hr {
   .timeline-moment>.moment-date>p {
     font-size: 1.5rem;
   }
+  .timeline-moment>.moment-description {
+    margin: 0 2rem;
+  }
 }
 
 .timeline-content {
@@ -283,10 +286,11 @@ main section>hr {
 .timeline-content::before {
   content: '';
   position: absolute;
-  top: 5%;
+  top: 1%;
+  bottom: 0;
   left: 0;
   right: 0;
-  margin: 0 auto;
+  margin: auto;
   height: 90%;
   width: 0.3rem;
   background: #d7e4ed;
@@ -412,12 +416,16 @@ main section>hr {
 
 .portfolio-content>.portfolio-next,
 .portfolio-content>.portfolio-previous {
-  font-size: 5rem;
   color: #009bdb;
   padding: 0.5rem 2rem;
   box-sizing: border-box;
   position: absolute;
-  bottom: 5%;
+  bottom: 0;
+  top: 0;
+  margin: auto 0;
+  height: 5rem;
+  font-size: 4rem;
+  line-height: 4rem;
 }
 
 .portfolio-content>.portfolio-next:hover,
@@ -427,15 +435,21 @@ main section>hr {
 }
 
 .portfolio-content>.portfolio-next {
-  right: 10%;
+  right: 5%;
 }
 
 .portfolio-content>.portfolio-previous {
-  left: 10%;
+  left: 5%;
 }
 
 .portfolio-page {
-  margin-top: 3rem;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.portfolio-page .portfolio-item {
+  display: inline-block;
 }
 
 .portfolio-item figure {
