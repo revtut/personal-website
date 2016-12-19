@@ -76,7 +76,8 @@ body {
 }
 
 header.intro {
-  background-image: url(../img/background.png);
+  background: #002e58;
+  background: radial-gradient(at top center, #002e58 0%,#00192f 100%);
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
