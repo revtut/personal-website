@@ -77,7 +77,7 @@ body {
 
 header.intro {
   background: #002e58;
-  background: radial-gradient(at top center, #002e58 0%,#00192f 100%);
+  background: radial-gradient(at top center, #002e58 0%, #00192f 100%);
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
@@ -245,6 +245,24 @@ main section>hr {
   .timeline-moment>.moment-date>p {
     font-size: 2rem;
   }
+  .timeline-moment>.moment-description::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 3rem;
+    width: 0;
+    height: 0;
+    border-top: 1.4rem solid transparent;
+    border-bottom: 1.4rem solid transparent;
+  }
+  .timeline-moment:nth-of-type(odd)>.moment-description::after {
+    right: -2rem;
+    border-left: 2rem solid white;
+  }
+  .timeline-moment:nth-of-type(even)>.moment-description::after {
+    left: -2rem;
+    border-right: 2rem solid white;
+  }
 }
 
 @media (max-width: 768px) {
@@ -311,27 +329,6 @@ main section>hr {
 .timeline-moment:nth-of-type(even)>.moment-date>p {
   text-align: right;
   margin-right: 7rem;
-}
-
-.timeline-moment>.moment-description::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 3rem;
-  width: 0;
-  height: 0;
-  border-top: 1.4rem solid transparent;
-  border-bottom: 1.4rem solid transparent;
-}
-
-.timeline-moment:nth-of-type(odd)>.moment-description::after {
-  right: -2rem;
-  border-left: 2rem solid white;
-}
-
-.timeline-moment:nth-of-type(even)>.moment-description::after {
-  left: -2rem;
-  border-right: 2rem solid white;
 }
 
 .timeline-moment>.moment-image>img {
