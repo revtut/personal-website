@@ -53,7 +53,7 @@ body {
   }
   header.intro hr {
     width: 45rem;
-    border: 0.1rem solid #009bdb;
+    border: 0.1rem solid #004080;
   }
 }
 
@@ -71,7 +71,7 @@ body {
   }
   header.intro hr {
     width: 25rem;
-    border: 0.1rem solid #009bdb;
+    border: 0.1rem solid #004080;
   }
 }
 
@@ -101,7 +101,7 @@ header.intro h2 {
 }
 
 header.intro hr {
-  border: 0.1rem solid #009bdb;
+  border: 0.1rem solid #004080;
 }
 
 
@@ -138,7 +138,7 @@ header.intro hr {
 
 .navbar-center .navbar-collapse .navbar-nav>li>a {
   box-sizing: border-box;
-  color: #009bdb;
+  color: #004080;
   transition: background-color 0.2s linear;
 }
 
@@ -146,7 +146,7 @@ header.intro hr {
 .navbar-center .navbar-collapse .navbar-nav>li>a:hover,
 .navbar-center .navbar-collapse .navbar-nav>li>a:active {
   color: white;
-  background-color: #009bdb;
+  background-color: #004080;
 }
 
 
@@ -184,12 +184,12 @@ main section:nth-of-type(even) {
 
 main section>header {
   text-align: center;
-  color: #009bdb;
+  color: #004080;
   padding: 3rem 0rem 0.5rem 0rem;
 }
 
 main section>hr {
-  border: 0.1rem solid #009bdb;
+  border: 0.1rem solid #004080;
   margin: 0 auto;
 }
 
@@ -381,11 +381,11 @@ main section>hr {
 }
 
 .skill-set h3 {
-  color: #009bdb;
+  color: #004080;
 }
 
 .skill-set hr {
-  border: 0.1rem solid #009bdb;
+  border: 0.1rem solid #004080;
   margin: 0 auto;
   margin-bottom: 2rem;
 }
@@ -416,7 +416,7 @@ main section>hr {
 
 .portfolio-content>.portfolio-next,
 .portfolio-content>.portfolio-previous {
-  color: #009bdb;
+  color: #004080;
   padding: 0.5rem 2rem;
   box-sizing: border-box;
   position: absolute;
