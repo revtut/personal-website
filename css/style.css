@@ -123,7 +123,7 @@ header.intro hr {
 @media (max-width: 768px) {
   .navbar-center .navbar-collapse .navbar-nav>li>a {
     padding: 20px 30px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -208,7 +208,7 @@ main section>hr {
 
 @media (max-width: 768px) {
   .about-me .about-me-element p {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     line-height: 1.8rem;
   }
   .about-me .about-me-element i {
@@ -271,7 +271,7 @@ main section>hr {
   }
   .timeline-moment>.moment-description>p,
   .timeline-moment>.moment-date>p {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   .timeline-moment>.moment-description {
     margin: 0 2rem;
@@ -366,7 +366,7 @@ main section>hr {
 
 @media (max-width: 768px) {
   .skill-set h3 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   .skill-set hr {
     width: 15rem;
@@ -376,7 +376,7 @@ main section>hr {
     line-height: 2rem;
   }
   .skill-element p {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -410,42 +410,18 @@ main section>hr {
 
 /* Portfolio */
 
-.portfolio-content {
-  position: relative;
+@media (min-width: 768px) {
+  .portfolio-item figcaption {
+    font-size: 2.5rem;
+    padding: 1rem 2rem;
+  }
 }
 
-.portfolio-content>.portfolio-next,
-.portfolio-content>.portfolio-previous {
-  color: #004080;
-  padding: 0.5rem 2rem;
-  box-sizing: border-box;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  margin: auto 0;
-  height: 5rem;
-  font-size: 4rem;
-  line-height: 4rem;
-}
-
-.portfolio-content>.portfolio-next:hover,
-.portfolio-content>.portfolio-previous:hover {
-  color: #f0ad4e;
-  cursor: pointer;
-}
-
-.portfolio-content>.portfolio-next {
-  right: 5%;
-}
-
-.portfolio-content>.portfolio-previous {
-  left: 5%;
-}
-
-.portfolio-page {
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+@media (max-width: 768px) {
+  .portfolio-item figcaption {
+    font-size: 1.8rem;
+    padding: 0.5rem 1rem;
+  }
 }
 
 .portfolio-page .portfolio-item {
@@ -454,21 +430,21 @@ main section>hr {
 
 .portfolio-item figure {
   position: relative;
-  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.15));
+  border: solid white 0.7rem;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.05));
 }
 
 .portfolio-item figcaption {
   position: absolute;
   bottom: 5%;
-  padding: 1rem 2rem;
-  font-size: 2.5rem;
-  color: white;
-  background-color: rgba(48, 62, 73, 0.95);
+  left: -1.5rem;
+  color: #303e49;
+  background-color: rgba(255, 255, 255, 0.97);
 }
 
 .portfolio-item img {
   width: 100%;
-  padding: 0rem 1rem;
 }
 
 
