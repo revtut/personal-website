@@ -79,11 +79,27 @@ function smoothAnchor() {
 }
 
 /**
+ * Change the text of selected phone extension to its value
+ */
+function changeExtensionDisplay() {
+    $('#ext').on('blur focus', function (e) {
+        $(this.options).text(function () {
+            return e.type === 'focus' ? this.getAttribute('data-default-text') : "+" + this.value;
+        });
+    }).children().attr('data-default-text', function () {
+        return this.textContent;
+    }).end().on('change', function () {
+        $(this).blur();
+    }).blur();
+}
+
+/**
  * Setup the javascript
  */
 function setup() {
     scrollEvent();
     smoothAnchor();
+    changeExtensionDisplay();
 }
 
 $(document).ready(setup);
