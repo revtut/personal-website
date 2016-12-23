@@ -452,6 +452,34 @@ main section>hr {
 
 /* Contact */
 
+@media (min-width: 768px) {
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    padding: 2rem;
+  }
+  .contact-form label,
+  .contact-form legend {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding: 1.2rem;
+  }
+  .contact-form label,
+  .contact-form legend {
+    font-size: 1.8rem;
+  }
+}
+
 .contact-form label,
 .contact-form legend,
 .contact-form input,
@@ -465,9 +493,6 @@ main section>hr {
 .contact-form textarea,
 .contact-form select {
   color: #303e49;
-  font-size: 1.8rem;
-  line-height: 1.8rem;
-  padding: 2rem;
   border: none;
   border-radius: 0;
   -webkit-box-sizing: border-box;
@@ -489,7 +514,6 @@ main section>hr {
 .contact-form label,
 .contact-form legend {
   text-align: left;
-  font-size: 2.5rem;
   color: #004080;
   font-weight: 100;
   border: none;

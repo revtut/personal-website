@@ -284,19 +284,19 @@
       </header>
       <hr>
       <div class="row text-center">
-        <form action="sendMessage.php" class="contact-form">
+        <form action="sendMessage.php" method="POST" class="contact-form">
           <div class="col-md-offset-3 col-md-3">
             <div class="form-group">
               <label for="name">Name:</label>
-              <input id="name" type="text" name="name" placeholder="Your name..." class="form-control">
+              <input id="name" type="text" name="name" required="required" placeholder="Your name..." class="form-control">
             </div>
             <div class="form-group">
               <label for="email">Email:</label>
-              <input id="email" type="email" name="email" placeholder="Your email..." class="form-control">
+              <input id="email" type="email" name="email" required="required" placeholder="Your email..." class="form-control">
             </div>
             <fieldset>
               <legend>Phone:</legend>
-              <select id="ext" type="number" name="ext" placeholder="Ext." class="form-control">
+              <select id="ext" type="number" name="ext" required="required" placeholder="Ext." class="form-control">
               	<option data-countryCode="DZ" value="213">Algeria (+213)</option>
                 <option data-countryCode="AD" value="376">Andorra (+376)</option>
                 <option data-countryCode="AO" value="244">Angola (+244)</option>
@@ -512,12 +512,12 @@
                 <option data-countryCode="ZM" value="260">Zambia (+260)</option>
                 <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
               </select>
-              <input id="phone" type="tel" name="phone" placeholder="Your phone number..." class="form-control">
+              <input id="phone" type="tel" name="phone" required="required" placeholder="Your phone number..." class="form-control">
             </fieldset>
           </div>
           <div class="col-md-3">
             <label for="message">Message:</label>
-            <textarea id="message" name="message" placeholder="Your message..." rows="8" class="form-control"></textarea>
+            <textarea id="message" name="message" required="required" placeholder="Your message..." rows="8" class="form-control"></textarea>
             <button type="submit" class="btn btn-default">Send</button>
           </div>
         </form>
