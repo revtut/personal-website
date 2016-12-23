@@ -331,12 +331,12 @@ main section>hr {
 
 .timeline-moment:nth-of-type(odd)>.moment-date>p {
   text-align: left;
-  margin-left: 7rem;
+  margin-left: 5rem;
 }
 
 .timeline-moment:nth-of-type(even)>.moment-date>p {
   text-align: right;
-  margin-right: 7rem;
+  margin-right: 5rem;
 }
 
 .timeline-moment>.moment-image>img {
@@ -461,7 +461,8 @@ main section>hr {
     padding: 2rem;
   }
   .contact-form label,
-  .contact-form legend {
+  .contact-form legend,
+  .contact-form button {
     font-size: 2.5rem;
   }
 }
@@ -475,7 +476,8 @@ main section>hr {
     padding: 1.2rem;
   }
   .contact-form label,
-  .contact-form legend {
+  .contact-form legend,
+  .contact-form button {
     font-size: 1.8rem;
   }
 }
@@ -519,6 +521,26 @@ main section>hr {
   border: none;
   padding: 0;
   margin: 0.5rem;
+}
+
+.contact-form button {
+  background-color: #004080;
+  color: white;
+  font-weight: 100;
+  border-radius: 0;
+  border: none;
+  margin-top: 5rem;
+  width: 15rem;
+  height: 5rem;
+}
+
+.contact-form .btn:hover,
+.contact-form .btn:focus,
+.contact-form .btn:active {
+  background-color: #f0ad4e;
+  color: #303e49;
+  border: none;
+  box-shadow: none;
 }
 
 #ext {
