@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100);
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
 
 /* Firefox Dotted Line */
 
@@ -171,7 +172,7 @@ header.intro hr {
 }
 
 main section>div {
-  padding: 3rem 0;
+  padding: 5rem 0;
 }
 
 main section:nth-of-type(odd) {
@@ -556,6 +557,78 @@ main section>hr {
 #phone {
   float: right;
   width: 70%;
+}
+
+
+/* Footer */
+
+@media (min-width: 768px) {
+  footer>.upper-footer {
+    font-size: 2.2rem;
+  }
+  footer>.lower-footer>.footer-quote p {
+    font-size: 1.5rem;
+  }
+  footer>.lower-footer .fa {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  footer>.upper-footer {
+    font-size: 1.8rem;
+  }
+  footer>.lower-footer>.footer-quote p {
+    font-size: 1.2rem;
+  }
+  footer>.lower-footer .fa {
+    font-size: 3rem;
+  }
+}
+
+footer>.upper-footer {
+  padding: 1rem 0rem;
+  background-color: #585a5d;
+  color: #eff6fa;
+  font-family: 'Dancing Script', cursive, sans-serif;
+  box-sizing: border-box;
+}
+
+footer>.upper-footer>span {
+  margin-left: 1rem;
+}
+
+footer>.lower-footer {
+  background-color: #303134;
+  color: #eff6fa;
+}
+
+footer>.lower-footer>.footer-quote {
+  padding: 1rem;
+}
+
+footer>.lower-footer>.footer-quote img {
+  width: 3.5rem;
+}
+
+footer>.lower-footer>.footer-quote p {
+  margin: 0;
+}
+
+footer>.lower-footer .social-icon {
+  color: #eff6fa;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: -4px;
+  padding: 1em;
+}
+
+footer>.lower-footer .social-icon:hover,
+footer>.lower-footer .social-icon:focus,
+footer>.lower-footer .social-icon:active {
+  background-color: #585a5d;
+  text-decoration: none;
+  outline: 0;
 }
 
 
