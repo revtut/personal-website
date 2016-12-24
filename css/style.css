@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100);
-@import url('https://fonts.googleapis.com/css?family=Yellowtail');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
 
 /* Firefox Dotted Line */
 
@@ -564,13 +564,13 @@ main section>hr {
 
 @media (min-width: 768px) {
   footer>.upper-footer {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 }
 
 @media (max-width: 768px) {
   footer>.upper-footer {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -578,8 +578,17 @@ footer>.upper-footer {
   padding: 1rem 0rem;
   background-color: #585a5d;
   color: #eff6fa;
-  font-family: 'Yellowtail', cursive, sans-serif;
+  font-family: 'Dancing Script', cursive, sans-serif;
   box-sizing: border-box;
+}
+
+footer>.upper-footer>span {
+  margin-left: 1rem;
+}
+
+footer>.lower-footer img,
+footer>.lower-footer p {
+  display: inline-block;
 }
 
 
