@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100);
+@import url('https://fonts.googleapis.com/css?family=Yellowtail');
 
 /* Firefox Dotted Line */
 
@@ -171,7 +172,7 @@ header.intro hr {
 }
 
 main section>div {
-  padding: 3rem 0;
+  padding: 5rem 0;
 }
 
 main section:nth-of-type(odd) {
@@ -556,6 +557,29 @@ main section>hr {
 #phone {
   float: right;
   width: 70%;
+}
+
+
+/* Footer */
+
+@media (min-width: 768px) {
+  footer>.upper-footer {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  footer>.upper-footer {
+    font-size: 1.5rem;
+  }
+}
+
+footer>.upper-footer {
+  padding: 1rem 0rem;
+  background-color: #585a5d;
+  color: #eff6fa;
+  font-family: 'Yellowtail', cursive, sans-serif;
+  box-sizing: border-box;
 }
 
 
