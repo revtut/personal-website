@@ -616,6 +616,7 @@ footer>.lower-footer>.footer-quote p {
 }
 
 footer>.lower-footer .social-icon {
+  color: #eff6fa;
   box-sizing: border-box;
   display: inline-block;
   padding: 1em;
@@ -624,16 +625,6 @@ footer>.lower-footer .social-icon {
 footer>.lower-footer .social-icon:hover,
 footer>.lower-footer .social-icon:focus,
 footer>.lower-footer .social-icon:active {
-  background-color: #585a5d;
-}
-
-footer>.lower-footer .social-icon>a {
-  color: #eff6fa;
-}
-
-footer>.lower-footer a:hover,
-footer>.lower-footer a:focus,
-footer>.lower-footer a:active {
   background-color: #585a5d;
   text-decoration: none;
   outline: 0;
@@ -648,10 +639,4 @@ footer>.lower-footer a:active {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-}
-
-.col-center {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
 }
