@@ -350,6 +350,13 @@ main section>hr {
   position: relative;
 }
 
+.timeline-moment>.moment-image .overlay {
+  width: 10rem;
+  height: 10rem;
+  line-height: 10rem;
+  border-radius: 10rem;
+}
+
 .timeline-moment>.moment-image img {
   width: 10rem;
   height: 10rem;
@@ -664,10 +671,6 @@ footer>.lower-footer .social-icon:active {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   opacity: 0;
-  width: 10rem;
-  height: 10rem;
-  line-height: 10rem;
-  border-radius: 10rem;
   background-color: rgba(0, 64, 128, 0.7);
   transition: all 0.2s;
 }
