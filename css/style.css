@@ -241,6 +241,7 @@ main section>hr {
 /* Timeline */
 
 @media (min-width: 768px) {
+  .timeline-moment i,
   .timeline-moment>.moment-description>h3 {
     font-size: 2.5rem;
   }
@@ -269,6 +270,7 @@ main section>hr {
 }
 
 @media (max-width: 768px) {
+  .timeline-moment i,
   .timeline-moment>.moment-description>h3 {
     font-size: 1.8rem;
   }
@@ -325,6 +327,10 @@ main section>hr {
   text-justify: inter-word;
 }
 
+.timeline-moment>.moment-date {
+  pointer-events: none;
+}
+
 .timeline-moment>.moment-date>p {
   margin: 3rem 0rem;
   color: #7f8c97;
@@ -340,7 +346,11 @@ main section>hr {
   margin-right: 5rem;
 }
 
-.timeline-moment>.moment-image>img {
+.timeline-moment>.moment-image {
+  position: relative;
+}
+
+.timeline-moment>.moment-image img {
   width: 10rem;
   height: 10rem;
   border-radius: 10rem;
@@ -640,4 +650,27 @@ footer>.lower-footer .social-icon:active {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.overlay {
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  width: 10rem;
+  height: 10rem;
+  line-height: 10rem;
+  border-radius: 10rem;
+  background-color: rgba(0, 64, 128, 0.5);
+}
+
+a:hover .overlay {
+  opacity: 1;
 }
