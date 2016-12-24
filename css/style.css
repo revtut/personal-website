@@ -668,7 +668,7 @@ footer>.lower-footer .social-icon:active {
   height: 10rem;
   line-height: 10rem;
   border-radius: 10rem;
-  background-color: rgba(0, 64, 128, 0.5);
+  background-color: rgba(0, 64, 128, 0.7);
 }
 
 a:hover .overlay {
