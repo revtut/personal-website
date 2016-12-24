@@ -566,11 +566,23 @@ main section>hr {
   footer>.upper-footer {
     font-size: 2.2rem;
   }
+  footer>.lower-footer>.footer-quote p {
+    font-size: 1.5rem;
+  }
+  footer>.lower-footer .fa {
+    font-size: 4rem;
+  }
 }
 
 @media (max-width: 768px) {
   footer>.upper-footer {
     font-size: 1.8rem;
+  }
+  footer>.lower-footer>.footer-quote p {
+    font-size: 1.2rem;
+  }
+  footer>.lower-footer .fa {
+    font-size: 3rem;
   }
 }
 
@@ -586,9 +598,45 @@ footer>.upper-footer>span {
   margin-left: 1rem;
 }
 
-footer>.lower-footer img,
-footer>.lower-footer p {
+footer>.lower-footer {
+  background-color: #303134;
+  color: #eff6fa;
+}
+
+footer>.lower-footer>.footer-quote {
+  padding: 1rem;
+}
+
+footer>.lower-footer>.footer-quote img {
+  width: 3.5rem;
+}
+
+footer>.lower-footer>.footer-quote p {
+  margin: 0;
+}
+
+footer>.lower-footer .social-icon {
+  box-sizing: border-box;
   display: inline-block;
+  padding: 1em;
+}
+
+footer>.lower-footer .social-icon:hover,
+footer>.lower-footer .social-icon:focus,
+footer>.lower-footer .social-icon:active {
+  background-color: #585a5d;
+}
+
+footer>.lower-footer .social-icon>a {
+  color: #eff6fa;
+}
+
+footer>.lower-footer a:hover,
+footer>.lower-footer a:focus,
+footer>.lower-footer a:active {
+  background-color: #585a5d;
+  text-decoration: none;
+  outline: 0;
 }
 
 
@@ -600,4 +648,10 @@ footer>.lower-footer p {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.col-center {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
 }
