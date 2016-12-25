@@ -462,7 +462,6 @@ main section>hr {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 64, 128, 0.7);
-  box-sizing: border-box;
 }
 
 .portfolio-item figcaption {
@@ -693,7 +692,6 @@ footer>.lower-footer .social-icon:active {
   pointer-events: none;
 }
 
-.portfolio-item:hover .overlay,
-a:hover .overlay {
+*:hover>.overlay {
   opacity: 1;
 }
