@@ -353,8 +353,8 @@ main section>hr {
 .timeline-moment>.moment-image .overlay {
   width: 10rem;
   height: 10rem;
-  line-height: 10rem;
   border-radius: 10rem;
+  background-color: rgba(0, 64, 128, 0.7);
 }
 
 .timeline-moment>.moment-image img {
@@ -435,6 +435,9 @@ main section>hr {
     font-size: 2.5rem;
     padding: 1rem 2rem;
   }
+  .portfolio-item .overlay i {
+    font-size: 2.5rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -442,17 +445,24 @@ main section>hr {
     font-size: 1.8rem;
     padding: 0.5rem 1rem;
   }
-}
-
-.portfolio-page .portfolio-item {
-  display: inline-block;
+  .portfolio-item .overlay i {
+    font-size: 1.8rem;
+  }
 }
 
 .portfolio-item figure {
+  cursor: pointer;
   position: relative;
   border: solid white 0.7rem;
   box-sizing: border-box;
   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.05));
+}
+
+.portfolio-item .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 64, 128, 0.7);
+  box-sizing: border-box;
 }
 
 .portfolio-item figcaption {
@@ -461,6 +471,7 @@ main section>hr {
   left: -1.5rem;
   color: #303e49;
   background-color: rgba(255, 255, 255, 0.97);
+  z-index: 1;
 }
 
 .portfolio-item img {
@@ -659,6 +670,13 @@ footer>.lower-footer .social-icon:active {
   transform: translateY(-50%);
 }
 
+.overlay:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
 .overlay {
   color: #fff;
   text-align: center;
@@ -671,10 +689,11 @@ footer>.lower-footer .social-icon:active {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   opacity: 0;
-  background-color: rgba(0, 64, 128, 0.7);
   transition: all 0.2s;
+  pointer-events: none;
 }
 
+.portfolio-item:hover .overlay,
 a:hover .overlay {
   opacity: 1;
 }
