@@ -442,7 +442,7 @@ main section>hr {
   .portfolio-item .overlay i {
     font-size: 2.5rem;
   }
-  .portfolio-item .modal .modal-banner {
+  .portfolio-item .modal .modal-header {
     height: 25rem;
   }
   .portfolio-item .modal .modal-body {
@@ -450,6 +450,9 @@ main section>hr {
   }
   .portfolio-item .modal .modal-body>p {
     font-size: 1.8rem;
+  }
+  .portfolio-item .modal .modal-footer>.social-icon {
+    font-size: 5rem;
   }
 }
 
@@ -462,7 +465,7 @@ main section>hr {
   .portfolio-item .overlay i {
     font-size: 1.8rem;
   }
-  .portfolio-item .modal .modal-banner {
+  .portfolio-item .modal .modal-header {
     height: 10rem;
   }
   .portfolio-item .modal .modal-body {
@@ -470,6 +473,9 @@ main section>hr {
   }
   .portfolio-item .modal .modal-body>p {
     font-size: 1.3rem;
+  }
+  .portfolio-item .modal .modal-footer>.social-icon {
+    font-size: 3rem;
   }
 }
 
@@ -517,14 +523,14 @@ main section>hr {
   background-color: white;
 }
 
-.portfolio-item .modal .modal-banner {
+.portfolio-item .modal .modal-header {
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
 }
 
-.portfolio-item .modal .modal-banner>img {
+.portfolio-item .modal .modal-header>img {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -537,7 +543,7 @@ main section>hr {
 
 .portfolio-item .modal .modal-body>h3 {
   color: #303e49;
-  margin: 0;
+  margin: 0rem 0rem 2rem 0rem;
 }
 
 .portfolio-item .modal .modal-body>p {
@@ -546,6 +552,22 @@ main section>hr {
   margin: 0;
 }
 
+.portfolio-item .modal .modal-footer {
+  border: none;
+  display: inline-block;
+}
+
+.portfolio-item .modal .modal-footer>.social-icon {
+  color: #7f8c97;
+}
+
+.portfolio-item .modal .modal-footer>.social-icon:hover,
+.portfolio-item .modal .modal-footer>.social-icon:focus,
+.portfolio-item .modal .modal-footer>.social-icon:active {
+  color: #303e49;
+  text-decoration: none;
+  outline: 0;
+}
 
 /* Contact */
 
