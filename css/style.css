@@ -487,7 +487,16 @@ main section>hr {
   padding: 0;
 }
 
-.portfolio-item .modal-banner {
+.portfolio-item .modal {
+  padding: 0;
+}
+
+.portfolio-item .modal .modal-content {
+  border: solid white 0.7rem;
+  border-radius: 0;
+}
+
+.portfolio-item .modal .modal-banner {
   width: 100%;
   height: 25rem;
   margin: 0 auto;
@@ -495,13 +504,17 @@ main section>hr {
   position: relative;
 }
 
-.portfolio-item .modal-banner>img {
+.portfolio-item .modal .modal-banner>img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
   width: 100%;
-  height: 100%;
-  left: 0;
-  right: 0;
-  position:absolute;
+  min-height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
+
 
 /* Contact */
 
