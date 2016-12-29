@@ -350,6 +350,16 @@ main section>hr {
   position: relative;
 }
 
+.timeline-moment>.moment-image .overlay {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 10rem;
+}
+
+.timeline-moment>.moment-image:hover .overlay {
+  background-color: rgba(0, 64, 128, 0.7);
+}
+
 .timeline-moment>.moment-image img {
   width: 10rem;
   height: 10rem;
@@ -424,42 +434,140 @@ main section>hr {
 /* Portfolio */
 
 @media (min-width: 768px) {
-  .portfolio-item figcaption {
+  .portfolio-item figcaption,
+  .portfolio-item .modal .modal-body>h3 {
     font-size: 2.5rem;
     padding: 1rem 2rem;
+  }
+  .portfolio-item .overlay i {
+    font-size: 2.5rem;
+  }
+  .portfolio-item .modal .modal-header {
+    height: 25rem;
+  }
+  .portfolio-item .modal .modal-body {
+    padding: 2rem 4rem;
+  }
+  .portfolio-item .modal .modal-body>p {
+    font-size: 1.8rem;
+  }
+  .portfolio-item .modal .modal-footer>.social-icon {
+    font-size: 5rem;
   }
 }
 
 @media (max-width: 768px) {
-  .portfolio-item figcaption {
+  .portfolio-item figcaption,
+  .portfolio-item .modal .modal-body>h3 {
     font-size: 1.8rem;
     padding: 0.5rem 1rem;
   }
-}
-
-.portfolio-page .portfolio-item {
-  display: inline-block;
+  .portfolio-item .overlay i {
+    font-size: 1.8rem;
+  }
+  .portfolio-item .modal .modal-header {
+    height: 10rem;
+  }
+  .portfolio-item .modal .modal-body {
+    padding: 0.5rem 1rem;
+  }
+  .portfolio-item .modal .modal-body>p {
+    font-size: 1.3rem;
+  }
+  .portfolio-item .modal .modal-footer>.social-icon {
+    font-size: 3rem;
+  }
 }
 
 .portfolio-item figure {
+  cursor: pointer;
   position: relative;
   border: solid white 0.7rem;
   box-sizing: border-box;
   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.05));
 }
 
-.portfolio-item figcaption {
+.portfolio-item .overlay {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-item:hover .overlay {
+  background-color: rgba(0, 64, 128, 0.7);
+}
+
+.portfolio-item>figure>figcaption {
   position: absolute;
   bottom: 5%;
   left: -1.5rem;
   color: #303e49;
   background-color: rgba(255, 255, 255, 0.97);
+  z-index: 1;
 }
 
-.portfolio-item img {
+.portfolio-item>figure>img {
   width: 100%;
 }
 
+.portfolio-item .modal-body {
+  padding: 0;
+}
+
+.portfolio-item .modal {
+  padding: 0;
+}
+
+.portfolio-item .modal .modal-content {
+  border: none;
+  border-radius: 0;
+  background-color: white;
+}
+
+.portfolio-item .modal .modal-header {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio-item .modal .modal-header>img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  min-height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.portfolio-item .modal .modal-body>h3 {
+  color: #303e49;
+  margin: 0rem 0rem 2rem 0rem;
+}
+
+.portfolio-item .modal .modal-body>p {
+  color: #7f8c97;
+  text-align: justify;
+  margin: 0;
+}
+
+.portfolio-item .modal .modal-footer {
+  border: none;
+  display: inline-block;
+}
+
+.portfolio-item .modal .modal-footer>.social-icon {
+  color: #7f8c97;
+}
+
+.portfolio-item .modal .modal-footer>.social-icon:hover,
+.portfolio-item .modal .modal-footer>.social-icon:focus,
+.portfolio-item .modal .modal-footer>.social-icon:active {
+  color: #303e49;
+  text-decoration: none;
+  outline: 0;
+}
 
 /* Contact */
 
@@ -652,6 +760,13 @@ footer>.lower-footer .social-icon:active {
   transform: translateY(-50%);
 }
 
+.overlay:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
 .overlay {
   color: #fff;
   text-align: center;
@@ -664,13 +779,11 @@ footer>.lower-footer .social-icon:active {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   opacity: 0;
-  width: 10rem;
-  height: 10rem;
-  line-height: 10rem;
-  border-radius: 10rem;
-  background-color: rgba(0, 64, 128, 0.7);
+  background-color: transparent;
+  transition: background-color 0.5s;
+  pointer-events: none;
 }
 
-a:hover .overlay {
+*:hover>.overlay {
   opacity: 1;
 }
