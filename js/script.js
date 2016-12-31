@@ -100,6 +100,7 @@ function setup() {
     scrollEvent();
     smoothAnchor();
     changeExtensionDisplay();
+    $('[data-toggle="tooltip"]').tooltip();
 }
 
 $(document).ready(setup);
