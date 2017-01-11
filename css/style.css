@@ -291,12 +291,12 @@ main section>hr {
 .timeline-content::before {
   content: '';
   position: absolute;
-  top: 1%;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
-  height: 90%;
+  height: 95%;
   width: 0.3rem;
   background: #d7e4ed;
 }
@@ -357,7 +357,8 @@ main section>hr {
 }
 
 .timeline-moment>.moment-image:hover .overlay {
-  background-color: rgba(0, 64, 128, 0.7);
+ /* background-color: rgba(0, 64, 128, 0.7); */
+  background-color: rgba(240, 173, 78, 0.90);
 }
 
 .timeline-moment>.moment-image img {
@@ -493,7 +494,8 @@ main section>hr {
 }
 
 .portfolio-item:hover .overlay {
-  background-color: rgba(0, 64, 128, 0.7);
+  /* background-color: rgba(0, 64, 128, 0.7); */
+  background-color: rgba(240, 173, 78, 0.90);
 }
 
 .portfolio-item>figure>figcaption {
@@ -530,6 +532,19 @@ main section>hr {
   position: relative;
 }
 
+.portfolio-item .modal .modal-header>.close {
+  font-size: 5rem;
+  line-height: 5rem;
+  color: white;
+  text-shadow: none;
+  opacity: 0.9;
+  margin-right: 1rem;
+}
+
+.portfolio-item .modal .modal-header>.close:hover {
+  color: #f0ad4e;
+}
+
 .portfolio-item .modal .modal-header>img {
   position: absolute;
   left: 50%;
@@ -564,7 +579,7 @@ main section>hr {
 .portfolio-item .modal .modal-footer>.social-icon:hover,
 .portfolio-item .modal .modal-footer>.social-icon:focus,
 .portfolio-item .modal .modal-footer>.social-icon:active {
-  color: #303e49;
+  color: #f0ad4e;
   text-decoration: none;
   outline: 0;
 }
