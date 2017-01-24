@@ -754,6 +754,7 @@ footer>.lower-footer .social-icon {
   display: inline-block;
   margin-right: -4px;
   padding: 1em;
+  transition: background-color 0.2s linear;
 }
 
 footer>.lower-footer .social-icon:hover,
