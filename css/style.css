@@ -357,7 +357,7 @@ main section>hr {
 }
 
 .timeline-moment>.moment-image:hover .overlay {
- /* background-color: rgba(0, 64, 128, 0.7); */
+  /* background-color: rgba(0, 64, 128, 0.7); */
   background-color: rgba(240, 173, 78, 0.90);
 }
 
@@ -480,6 +480,10 @@ main section>hr {
   }
 }
 
+.portfolio-item {
+  margin-bottom: 1rem;
+}
+
 .portfolio-item figure {
   cursor: pointer;
   position: relative;
@@ -583,6 +587,7 @@ main section>hr {
   text-decoration: none;
   outline: 0;
 }
+
 
 /* Contact */
 
