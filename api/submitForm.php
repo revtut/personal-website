@@ -1,6 +1,4 @@
 <?php
-require_once("recaptchalib.php");
-
 $response = array();
 
 // Validate parameters
@@ -10,9 +8,7 @@ if(
     empty($_POST["ext"]) ||
     empty($_POST["phone"]) ||
     empty($_POST["message"]) ||
-    empty($_POST["recaptcha_challenge_field"] ||
-    empty($_POST["recaptcha_response_field"]
-    )
+    empty($_POST["g-recaptcha-response"])
 ) {
     $response["success"] = "false";
     $response["message"] = "Missing fields!";
@@ -22,11 +18,14 @@ if(
 
 // Validate reCAPTCHA
 $privateKey = "6LehZxMUAAAAADKinTsGbsBLaEWie9kG7V09Qfdx";
-$captchaResponse = recaptcha_check_answer($privateKey,
-                            $_SERVER["REMOTE_ADDR"],
-                            $_POST["recaptcha_challenge_field"],
-                            $_POST["recaptcha_response_field"]);
-if (!$captchaResponse->is_valid) {
+$captchaResponse=file_get_contents(
+    "https://www.google.com/recaptcha/api/siteverify?secret="
+    .$privateKey
+    ."&response="
+    .$$_POST["g-recaptcha-response"]
+    ."&remoteip="
+    .$_SERVER["REMOTE_ADDR"]);
+if ($captchaResponse["success"] === "false") {
     $response["success"] = "false";
     $response["message"] = "The reCAPTCHA wasn't entered correctly.";
     echo json_encode($response);
@@ -38,8 +37,9 @@ $to = "hello@joaosilva.co";
 $from = $_POST["email"];
 $subject = "New contact request from " . $_POST["name"];
 $message = $_POST["message"];
+$headers = "From: $from"; 
 
-if(mail($to, $subject, $message)) {
+if(mail($to, $subject, $message, $headers, "-f " . $from)) {
     $response["success"] = "true";
     $response["message"] = "Your message has been sent!";
     echo json_encode($response);

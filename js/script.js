@@ -17,7 +17,12 @@ function scrollEvent() {
 
     // On resize
     windowElement.resize(function () {
-        navDistance = navigationElement.offset().top;
+        // Reset navigation bar
+        navigationElement.removeClass("navbar-fixed-top");
+        bodyElement.css("margin-top", 0);
+
+        // Recalculate distance to top
+        navDistance = $('nav').offset().top;
 
         stickyNavigation(navigationElement, bodyElement, y, navDistance);
         lastAnchor = highlightCurrentAnchor(navbarAnchorElements, y, navigationElement.height(), lastAnchor);
@@ -124,6 +129,26 @@ function changeExtensionDisplay() {
 }
 
 /**
+ * Submit the contact form
+ */
+function submitContact(event) {
+    event.preventDefault();
+
+    $.post(
+        "api/submitForm.php",
+        $("form#contactForm").serialize(),
+        function (data, status, xhr) {
+            data = JSON.parse(data);
+            if (data["success"] == "true") {
+                alert("Success:" + data["message"]);
+            } else {
+                alert("Error:" + data["message"]);
+            }
+        }
+    );
+}
+
+/**
  * Setup the javascript
  */
 function setup() {
@@ -131,6 +156,7 @@ function setup() {
     smoothAnchor();
     changeExtensionDisplay();
     $('[data-toggle="tooltip"]').tooltip();
+    $("#contactForm").submit(submitContact);
 }
 
-$(document).ready(setup);
+$(document).ready(setup); 
