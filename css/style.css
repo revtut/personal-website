@@ -105,6 +105,29 @@ header.intro hr {
   border: 0.1rem solid #004080;
 }
 
+header.intro .btn-round {
+  width: 18rem;
+  height: 6rem;
+  border-radius: 6rem;
+  font-size: 2.5rem;
+  line-height: 6rem;
+  background-color: #f0ad4e;
+  transition: background-color 0.2s linear;
+  color: white;
+  display: inline-block;
+}
+
+header.intro .btn-round:hover {
+  background-color: #004080;
+  text-decoration: none;
+}
+
+#know-more {
+  width: 100%;
+  position: absolute;
+  bottom: 5%;
+}
+
 
 /* Navigation Bar */
 
@@ -357,7 +380,7 @@ main section>hr {
 }
 
 .timeline-moment>.moment-image:hover .overlay {
- /* background-color: rgba(0, 64, 128, 0.7); */
+  /* background-color: rgba(0, 64, 128, 0.7); */
   background-color: rgba(240, 173, 78, 0.90);
 }
 
@@ -480,6 +503,10 @@ main section>hr {
   }
 }
 
+.portfolio-item {
+  margin-bottom: 3rem;
+}
+
 .portfolio-item figure {
   cursor: pointer;
   position: relative;
@@ -584,6 +611,7 @@ main section>hr {
   outline: 0;
 }
 
+
 /* Contact */
 
 @media (min-width: 768px) {
@@ -664,6 +692,7 @@ main section>hr {
 }
 
 .contact-form button {
+  transition: background-color 0.2s linear;
   background-color: #004080;
   color: white;
   font-weight: 100;
@@ -677,7 +706,7 @@ main section>hr {
 .contact-form .btn:focus,
 .contact-form .btn:active {
   background-color: #f0ad4e;
-  color: #303e49;
+  color: white;
   border: none;
   box-shadow: none;
 }
@@ -754,6 +783,7 @@ footer>.lower-footer .social-icon {
   display: inline-block;
   margin-right: -4px;
   padding: 1em;
+  transition: background-color 0.2s linear;
 }
 
 footer>.lower-footer .social-icon:hover,
@@ -795,7 +825,7 @@ footer>.lower-footer .social-icon:active {
   transform: translate(-50%, -50%);
   opacity: 0;
   background-color: transparent;
-  transition: background-color 0.5s;
+  transition: background-color 0.2s linear;
   pointer-events: none;
 }
 
