@@ -146,6 +146,9 @@ function submitContact(event) {
             }
         }
     );
+
+    grecaptcha.reset();
+    $("#contactForm")[0].reset();
 }
 
 /**

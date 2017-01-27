@@ -39,6 +39,7 @@ $subject = "New contact request from " . $_POST["name"];
 $message = $_POST["message"];
 $headers = "From: $from"; 
 
+die();
 if(mail($to, $subject, $message, $headers, "-f " . $from)) {
     $response["success"] = "true";
     $response["message"] = "Your message has been sent!";
