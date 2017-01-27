@@ -9,56 +9,91 @@ function scrollEvent() {
         navActiveElement;
 
     var lastAnchor = "#top",
-        currentAnchor = lastAnchor,
-        navDistance = navigationElement.offset().top;
+        navDistance = navigationElement.offset().top,
+        y = windowElement.scrollTop();
 
+    stickyNavigation(navigationElement, bodyElement, y, navDistance);
+    lastAnchor = highlightCurrentAnchor(navbarAnchorElements, y, navigationElement.height(), lastAnchor);
+
+    // On resize
+    windowElement.resize(function () {
+        // Reset navigation bar
+        navigationElement.removeClass("navbar-fixed-top");
+        bodyElement.css("margin-top", 0);
+
+        // Recalculate distance to top
+        navDistance = $('nav').offset().top;
+
+        stickyNavigation(navigationElement, bodyElement, y, navDistance);
+        lastAnchor = highlightCurrentAnchor(navbarAnchorElements, y, navigationElement.height(), lastAnchor);
+    });
+
+    // On scroll
     windowElement.scroll(function () {
-        var y = windowElement.scrollTop();
+        y = windowElement.scrollTop();
 
-        ////////////////////
-        // Navigation bar //
-        ////////////////////
-        if (y > navDistance && !navigationElement.hasClass("navbar-fixed-top")) {
-            navigationElement.addClass("navbar-fixed-top");
-            bodyElement.css("margin-top", navigationElement.height());
-        } else if (y <= navDistance && navigationElement.hasClass("navbar-fixed-top")) {
-            navigationElement.removeClass("navbar-fixed-top");
-            bodyElement.css("margin-top", 0);
-        }
+        stickyNavigation(navigationElement, bodyElement, y, navDistance);
+        lastAnchor = highlightCurrentAnchor(navbarAnchorElements, y, navigationElement.height(), lastAnchor);
+    });
+}
 
-        ///////////////////////
-        // Current menu item //
-        ///////////////////////
-        navActiveElement = null;
-        navbarAnchorElements.each(function () {
-            var anchorId = $(this).children().attr('href'),
-                target = $(anchorId).offset().top - navigationElement.height();
+/**
+ * Make the navigation bar sticky or not
+ * @param navigationElement navigation bar element
+ * @param bodyElement body element to add the margin
+ * @param y current scroll position
+ * @param distance distance to the top
+ */
+function stickyNavigation(navigationElement, bodyElement, y, distance) {
+    if (y > distance && !navigationElement.hasClass("navbar-fixed-top")) {
+        navigationElement.addClass("navbar-fixed-top");
+        bodyElement.css("margin-top", navigationElement.height());
+    } else if (y <= distance && navigationElement.hasClass("navbar-fixed-top")) {
+        navigationElement.removeClass("navbar-fixed-top");
+        bodyElement.css("margin-top", 0);
+    }
+}
 
-            // Update current active menu
-            if (y >= target) {
-                navActiveElement = $(this);
-                currentAnchor = anchorId;
-            }
-        });
+/**
+ * Highlight the current anchor in the navigation bar
+ * @param navigationAnchorsElement element with all anchors of the navigation bar
+ * @param y current scroll position
+ * @param height height of the navigation bar
+ * @param lastAnchor last anchor enabled
+ * @return current anchor
+ */
+function highlightCurrentAnchor(navigationAnchorsElement, y, height, lastAnchor) {
+    navActiveElement = null;
+    navigationAnchorsElement.each(function () {
+        var anchorId = $(this).children().attr('href'),
+            target = $(anchorId).offset().top - height;
 
-        // Apply classes to the current anchor
-        if (navActiveElement == null)
-            currentAnchor = "#top";
-        if (lastAnchor != currentAnchor) {
-            lastAnchor = currentAnchor;
-
-            // Update classes
-            navbarAnchorElements.removeClass("active", 200);
-            if (navActiveElement != null)
-                navActiveElement.addClass("active", 200);
-
-            // Added hash to browser
-            if (history.replaceState)
-                history.replaceState(null, "", currentAnchor);
-            else
-                location.hash = currentAnchor;
+        // Update current active menu
+        if (y >= target) {
+            navActiveElement = $(this);
+            currentAnchor = anchorId;
         }
     });
+
+    // Apply classes to the current anchor
+    if (navActiveElement == null)
+        currentAnchor = "#top";
+    if (lastAnchor != currentAnchor) {
+        lastAnchor = currentAnchor;
+
+        // Update classes
+        navigationAnchorsElement.removeClass("active", 200);
+        if (navActiveElement != null)
+            navActiveElement.addClass("active", 200);
+
+        // Added hash to browser
+        if (history.replaceState)
+            history.replaceState(null, "", currentAnchor);
+        else
+            location.hash = currentAnchor;
+    }
+
+    return currentAnchor;
 }
 
 /**
@@ -94,6 +129,29 @@ function changeExtensionDisplay() {
 }
 
 /**
+ * Submit the contact form
+ */
+function submitContact(event) {
+    event.preventDefault();
+
+    $.post(
+        "api/submitForm.php",
+        $("form#contactForm").serialize(),
+        function (data, status, xhr) {
+            data = JSON.parse(data);
+            if (data["success"] == "true") {
+                alert("Success:" + data["message"]);
+            } else {
+                alert("Error:" + data["message"]);
+            }
+        }
+    );
+
+    grecaptcha.reset();
+    $("#contactForm")[0].reset();
+}
+
+/**
  * Setup the javascript
  */
 function setup() {
@@ -101,6 +159,7 @@ function setup() {
     smoothAnchor();
     changeExtensionDisplay();
     $('[data-toggle="tooltip"]').tooltip();
+    $("#contactForm").submit(submitContact);
 }
 
-$(document).ready(setup);
+$(document).ready(setup); 

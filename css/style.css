@@ -56,6 +56,13 @@ body {
     width: 45rem;
     border: 0.1rem solid #004080;
   }
+  header.intro .btn-round {
+    width: 18rem;
+    height: 6rem;
+    border-radius: 6rem;
+    font-size: 2.5rem;
+    line-height: 6rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -73,6 +80,13 @@ body {
   header.intro hr {
     width: 25rem;
     border: 0.1rem solid #004080;
+  }
+  header.intro .btn-round {
+    width: 9rem;
+    height: 4rem;
+    border-radius: 4rem;
+    font-size: 1.5rem;
+    line-height: 4rem;
   }
 }
 
@@ -106,11 +120,6 @@ header.intro hr {
 }
 
 header.intro .btn-round {
-  width: 18rem;
-  height: 6rem;
-  border-radius: 6rem;
-  font-size: 2.5rem;
-  line-height: 6rem;
   background-color: #f0ad4e;
   transition: background-color 0.2s linear;
   color: white;
@@ -683,6 +692,7 @@ main section>hr {
 
 .contact-form label,
 .contact-form legend {
+  font-family: Roboto, sans-serif;
   text-align: left;
   color: #004080;
   font-weight: 100;
@@ -709,6 +719,10 @@ main section>hr {
   color: white;
   border: none;
   box-shadow: none;
+}
+
+.contact-form .g-recaptcha>* {
+  margin: 0 auto;
 }
 
 #ext {
