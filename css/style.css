@@ -792,6 +792,7 @@ footer>.lower-footer>.footer-quote {
 
 footer>.lower-footer>.footer-quote img {
   width: 3.5rem;
+  height: 100%;
 }
 
 footer>.lower-footer>.footer-quote p {
@@ -855,7 +856,6 @@ footer>.lower-footer .social-icon:active {
 }
 
 .col-centered {
-    display:inline-block;
-    text-align:left;
-    margin-right:-4px;
+  display: inline-block;
+  text-align: left;
 }
