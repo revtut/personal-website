@@ -132,9 +132,7 @@ header.intro .btn-round:hover {
 }
 
 #know-more {
-  width: 100%;
-  position: absolute;
-  bottom: 5%;
+  margin-top: 5%;
 }
 
 
