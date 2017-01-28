@@ -57,7 +57,7 @@ body {
     border: 0.1rem solid #004080;
   }
   header.intro .btn-round {
-    width: 18rem;
+    width: 20rem;
     height: 6rem;
     border-radius: 6rem;
     font-size: 2.5rem;
@@ -82,10 +82,10 @@ body {
     border: 0.1rem solid #004080;
   }
   header.intro .btn-round {
-    width: 9rem;
+    width: 10rem;
     height: 4rem;
     border-radius: 4rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 4rem;
   }
 }
@@ -131,8 +131,8 @@ header.intro .btn-round:hover {
   text-decoration: none;
 }
 
-#know-more {
-  margin-top: 5%;
+#know-more>a {
+  margin: 6rem 1rem;
 }
 
 
@@ -851,4 +851,10 @@ footer>.lower-footer .social-icon:active {
 
 *:hover>.overlay {
   opacity: 1;
+}
+
+.col-centered {
+    display:inline-block;
+    text-align:left;
+    margin-right:-4px;
 }
