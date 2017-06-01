@@ -659,6 +659,10 @@ main section>hr {
   }
 }
 
+.contact-form {
+  margin-bottom: 3rem;
+}
+
 .contact-form label,
 .contact-form legend,
 .contact-form input,
@@ -728,7 +732,11 @@ main section>hr {
   box-shadow: none;
 }
 
-.contact-form .g-recaptcha>* {
+.contact-form .g-recaptcha {
+  overflow: hidden;
+}
+
+.contact-form .g-recaptcha > * {
   margin: 0 auto;
 }
 
