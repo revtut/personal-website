@@ -693,6 +693,7 @@ main section>hr {
 }
 
 .contact-form button {
+  margin-top: 1.5rem;
   width: 15rem;
 }
 
@@ -704,6 +705,10 @@ main section>hr {
 #phone {
   float: right;
   width: 70%;
+}
+
+#submitResult {
+  display: none;
 }
 
 

@@ -148,16 +148,30 @@ function submitContact(event) {
         $("form#contactForm").serialize(),
         function (data, status, xhr) {
             data = JSON.parse(data);
-            if (data["success"] == "true") {
-                alert("Success:" + data["message"]);
+            if (data["success"] && data["success"] == "true") {
+                $("#submitResult a").after("<strong>Success!</strong> " + data["message"]);
+                $("#submitResult").addClass("alert-success");
+                $("#submitResult").fadeIn("slow");
+                $("#contactForm")[0].reset();
             } else {
-                alert("Error:" + data["message"]);
+                $("#submitResult a").after("<strong>Error!</strong> " + data["message"]);
+                $("#submitResult").addClass("alert-danger");
+                $("#submitResult").fadeIn("slow");
             }
         }
-    );
+    ).fail(function (data, status, xhr) {
+        if (data["success"] && data["success"] == "true") {
+            $("#submitResult a").after("<strong>Error!</strong> " + data["message"]);
+            $("#submitResult").addClass("alert-danger");
+            $("#submitResult").fadeIn("slow");
+        } else {
+            $("#submitResult a").after("<strong>Error!</strong> Your message could not be sent. Please try again.");
+            $("#submitResult").addClass("alert-danger");
+            $("#submitResult").fadeIn("slow");
+        }
+    });
 
     grecaptcha.reset();
-    $("#contactForm")[0].reset();
 }
 
 /**
