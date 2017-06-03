@@ -1,3 +1,5 @@
+var root = $('html, body');
+
 /**
  * Scroll event
  */
@@ -100,17 +102,24 @@ function highlightCurrentAnchor(navigationAnchorsElement, y, height, lastAnchor)
  * Enable smooth anchor scroll
  */
 function smoothAnchor() {
-    var root = $('html, body'),
-        smoothAnchorElements = $('a.smooth-scroll');
+    var smoothAnchorElements = $('a.smooth-scroll');
 
     smoothAnchorElements.click(function () {
         this.blur();
         var href = $.attr(this, 'href');
-        root.animate({
-            scrollTop: $(href).offset().top - 79
-        }, 500);
+        jumpToAnchor(href);
         return false;
     });
+}
+
+/**
+ * Jump to an anchor
+ * @param {string} anchor anchor to jump to
+ */
+function jumpToAnchor(anchor) {
+    root.animate({
+        scrollTop: $(anchor).offset().top - 79
+    }, 500);
 }
 
 /**
@@ -162,4 +171,4 @@ function setup() {
     $("#contactForm").submit(submitContact);
 }
 
-$(document).ready(setup); 
+$(document).ready(setup);

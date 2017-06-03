@@ -44,17 +44,13 @@
             <h1>João Silva</h1>
             <hr>
             <h2>Software Engineer &bull; Designer</h2>
-            <div class="text-center" id="know-more">
-                <a href="#about" class="smooth-scroll btn-round" title="Know more">
-                    <span>
-                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                        Know more</span>
-                </a>
-                <a href="archives/resumejoaosilva.pdf" class="smooth-scroll btn-round" target="_blank" title="Download my resume">
-                    <span>
-                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                        My Résumé</span>
-                </a>
+            <div class="text-center know-more">
+                <button type="button" class="btn-rectangle" onclick="jumpToAnchor('#about')">
+                    <i class="fa fa-arrow-down" aria-hidden="true"></i> Know more
+                </button>
+                <button type="button" class="btn-rectangle" onclick="window.open('archives/resumejoaosilva.pdf','_blank')">
+                    <i class="fa fa-graduation-cap" aria-hidden="true"></i> My Résumé
+                </button>
             </div>
         </div>
     </header>
@@ -1117,7 +1113,7 @@
                     <div class="form-group">
                         <div class="g-recaptcha" data-theme="light" data-sitekey="6LehZxMUAAAAAAnvqp5795NPW8U6swExPzmua0Qd"></div>
                     </div>
-                    <button type="submit" class="btn btn-default">Send</button>
+                    <button type="submit" class="btn-rectangle">Send</button>
                 </form>
                 <div class="col-md-offset-4 col-md-4 alert alert-success alert-dismissable">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -1140,8 +1136,7 @@
                 <div class="col-xs-10 text-left">
                     <p>
                         <i>
-                            <q>"Shoot for the moon. Even if you miss, you’ll land among the stars." - Oscar Wilde
-                            </q>
+                            <q>Shoot for the moon. Even if you miss, you’ll land among the stars.</q> - Oscar Wilde
                         </i>
                     </p>
                 </div>

@@ -56,12 +56,8 @@ body {
     width: 45rem;
     border: 0.1rem solid #004080;
   }
-  header.intro .btn-round {
-    width: 20rem;
-    height: 6rem;
-    border-radius: 6rem;
-    font-size: 2.5rem;
-    line-height: 6rem;
+  header .know-more button {
+    margin: 4rem 2rem;
   }
 }
 
@@ -81,12 +77,8 @@ body {
     width: 25rem;
     border: 0.1rem solid #004080;
   }
-  header.intro .btn-round {
-    width: 10rem;
-    height: 4rem;
-    border-radius: 4rem;
-    font-size: 1.2rem;
-    line-height: 4rem;
+  header .know-more button {
+    margin-top: 2rem;
   }
 }
 
@@ -118,21 +110,8 @@ header.intro hr {
   border: 0.1rem solid #004080;
 }
 
-header.intro .btn-round {
-  background-color: #f0ad4e;
-  -webkit-transition: background-color 0.2s linear;
-  transition: background-color 0.2s linear;
-  color: white;
-  display: inline-block;
-}
-
-header.intro .btn-round:hover {
-  background-color: #004080;
-  text-decoration: none;
-}
-
-#know-more>a {
-  margin: 6rem 1rem;
+header .know-more button {
+  width: 20rem;
 }
 
 
@@ -632,12 +611,9 @@ main section>hr {
     padding: 2rem;
   }
   .contact-form label,
-  .contact-form legend,
-  .contact-form button {
+  .contact-form legend {
     font-size: 2.5rem;
-  }
-  .contact-form button {
-    margin-top: 4rem;
+    line-height: 3rem;
   }
 }
 
@@ -650,12 +626,9 @@ main section>hr {
     padding: 1.2rem;
   }
   .contact-form label,
-  .contact-form legend,
-  .contact-form button {
-    font-size: 1.8rem;
-  }
-  .contact-form button {
-    margin-top: 2.5rem;
+  .contact-form legend {
+    font-size: 2rem;
+    line-height: 2rem;
   }
 }
 
@@ -668,6 +641,7 @@ main section>hr {
 .contact-form input,
 .contact-form textarea,
 .contact-form select {
+  font-weight: normal;
   display: block;
   height: auto;
 }
@@ -705,39 +679,21 @@ main section>hr {
   font-family: Roboto, sans-serif;
   text-align: left;
   color: #004080;
-  font-weight: 100;
   border: none;
   padding: 0;
   margin: 0.5rem;
-}
-
-.contact-form button {
-  -webkit-transition: background-color 0.2s linear;
-  transition: background-color 0.2s linear;
-  background-color: #004080;
-  color: white;
-  font-weight: 100;
-  border-radius: 0;
-  border: none;
-  width: 15rem;
-  height: 5rem;
-}
-
-.contact-form .btn:hover,
-.contact-form .btn:focus,
-.contact-form .btn:active {
-  background-color: #f0ad4e;
-  color: white;
-  border: none;
-  box-shadow: none;
 }
 
 .contact-form .g-recaptcha {
   overflow: hidden;
 }
 
-.contact-form .g-recaptcha > * {
+.contact-form .g-recaptcha>* {
   margin: 0 auto;
+}
+
+.contact-form button {
+  width: 15rem;
 }
 
 #ext {
@@ -763,6 +719,9 @@ main section>hr {
   footer>.lower-footer .fa {
     font-size: 4rem;
   }
+  footer>.lower-footer .social-icon {
+    padding: 1em;
+  }
 }
 
 @media (max-width: 768px) {
@@ -774,6 +733,9 @@ main section>hr {
   }
   footer>.lower-footer .fa {
     font-size: 3rem;
+  }
+  footer>.lower-footer .social-icon {
+    padding: 0.5em;
   }
 }
 
@@ -812,7 +774,6 @@ footer>.lower-footer .social-icon {
   box-sizing: border-box;
   display: inline-block;
   margin-right: -4px;
-  padding: 1em;
   -webkit-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
 }
@@ -866,4 +827,37 @@ footer>.lower-footer .social-icon:active {
 .col-centered {
   display: inline-block;
   text-align: left;
+}
+
+@media (min-width: 768px) {
+  .btn-rectangle {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-rectangle {
+    font-size: 1.8rem;
+  }
+}
+
+.btn-rectangle {
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  background-color: #004080;
+  color: white;
+  font-weight: normal;
+  border-radius: 0;
+  border: none;
+  height: 5rem;
+  text-align: center;
+}
+
+.btn-rectangle:hover,
+.btn-rectangle:focus,
+.btn-rectangle:active {
+  background-color: #f0ad4e;
+  color: white;
+  border: none;
+  box-shadow: none;
 }
