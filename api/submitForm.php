@@ -25,7 +25,7 @@ $captchaResponse=file_get_contents(
     .$$_POST["g-recaptcha-response"]
     ."&remoteip="
     .$_SERVER["REMOTE_ADDR"]);
-if ($captchaResponse["success"] === "false") {
+if (!empty($captchaResponse["success"]) || $captchaResponse["success"] === "false") {
     $response["success"] = "false";
     $response["message"] = "The reCAPTCHA wasn't entered correctly.";
     echo json_encode($response);

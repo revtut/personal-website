@@ -1,3 +1,5 @@
+var root = $('html, body');
+
 /**
  * Scroll event
  */
@@ -100,17 +102,24 @@ function highlightCurrentAnchor(navigationAnchorsElement, y, height, lastAnchor)
  * Enable smooth anchor scroll
  */
 function smoothAnchor() {
-    var root = $('html, body'),
-        smoothAnchorElements = $('a.smooth-scroll');
+    var smoothAnchorElements = $('a.smooth-scroll');
 
     smoothAnchorElements.click(function () {
         this.blur();
         var href = $.attr(this, 'href');
-        root.animate({
-            scrollTop: $(href).offset().top - 79
-        }, 500);
+        jumpToAnchor(href);
         return false;
     });
+}
+
+/**
+ * Jump to an anchor
+ * @param {string} anchor anchor to jump to
+ */
+function jumpToAnchor(anchor) {
+    root.animate({
+        scrollTop: $(anchor).offset().top - 79
+    }, 500);
 }
 
 /**
@@ -139,16 +148,30 @@ function submitContact(event) {
         $("form#contactForm").serialize(),
         function (data, status, xhr) {
             data = JSON.parse(data);
-            if (data["success"] == "true") {
-                alert("Success:" + data["message"]);
+            if (data["success"] && data["success"] == "true") {
+                $("#submitResult a").after("<strong>Success!</strong> " + data["message"]);
+                $("#submitResult").addClass("alert-success");
+                $("#submitResult").fadeIn("slow");
+                $("#contactForm")[0].reset();
             } else {
-                alert("Error:" + data["message"]);
+                $("#submitResult a").after("<strong>Error!</strong> " + data["message"]);
+                $("#submitResult").addClass("alert-danger");
+                $("#submitResult").fadeIn("slow");
             }
         }
-    );
+    ).fail(function (data, status, xhr) {
+        if (data["success"] && data["success"] == "true") {
+            $("#submitResult a").after("<strong>Error!</strong> " + data["message"]);
+            $("#submitResult").addClass("alert-danger");
+            $("#submitResult").fadeIn("slow");
+        } else {
+            $("#submitResult a").after("<strong>Error!</strong> Your message could not be sent. Please try again.");
+            $("#submitResult").addClass("alert-danger");
+            $("#submitResult").fadeIn("slow");
+        }
+    });
 
     grecaptcha.reset();
-    $("#contactForm")[0].reset();
 }
 
 /**
@@ -162,4 +185,4 @@ function setup() {
     $("#contactForm").submit(submitContact);
 }
 
-$(document).ready(setup); 
+$(document).ready(setup);
