@@ -1,0 +1,19 @@
+/* Firefox Dotted Line */
+a,
+a:active,
+a:hover,
+a:focus,
+a:link,
+a:visited,
+input::-moz-focus-inner,
+button::-moz-focus-inner,
+object,
+embed {
+  outline: none;
+}
+
+/* Bootstrap fixes */
+
+.row {
+  margin: 0;
+}

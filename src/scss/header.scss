@@ -1,0 +1,93 @@
+@media (min-width: 768px) {
+  header {
+    .intro {
+      img {
+        width: 25rem;
+        height: 25rem;
+        margin-bottom: 3rem;
+      }
+
+      h1 {
+        font-size: 10rem;
+      }
+
+      h2 {
+        font-size: 5rem;
+      }
+
+      hr {
+        width: 45rem;
+        border: 0.1rem solid #004080;
+      }
+    }
+
+    .know-more button {
+      margin: 4rem 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    .intro {
+      img {
+        width: 15rem;
+        height: 15rem;
+        margin-bottom: 3rem;
+      }
+
+      h1 {
+        font-size: 5rem;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      hr {
+        width: 25rem;
+        border: 0.1rem solid #004080;
+      }
+    }
+
+    .know-more button {
+      margin-top: 2rem;
+    }
+  }
+}
+
+header {
+  .intro {
+    background: #002e58;
+    background: -webkit-radial-gradient(at top center, #002e58 0%, #00192f 100%);
+    background: radial-gradient(at top center, #002e58 0%, #00192f 100%);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+
+    img {
+      box-shadow: 0px 0px 25px 3px rgba(0, 0, 0, 0.35);
+    }
+
+    h1 {
+      margin: 0;
+      color: white;
+    }
+
+    h2 {
+      margin: 0;
+      color: white;
+    }
+
+    hr {
+      border: 0.1rem solid #004080;
+    }
+  }
+
+  .know-more {
+    button {
+      width: 20rem;
+    }
+  }
+}
