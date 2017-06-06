@@ -1,7 +1,8 @@
-@import "header", "navbar", "utils";
+@import "navbar", "sections", "utils";
+@import "sections/header", "sections/about", "sections/timeline", "sections/skills", "sections/portfolio", "sections/contact", "sections/footer";
 
 /* Fonts */
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100);
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,100');
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
 
 html,

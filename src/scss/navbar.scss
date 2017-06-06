@@ -1,7 +1,7 @@
 @media (min-width: 768px) {
   .navbar-center {
     .navbar-collapse {
-      & > ul {
+      > ul {
         float: none;
         margin: 0 auto;
         display: table;
@@ -20,7 +20,7 @@
   .navbar-center {
     .navbar-collapse {
       .navbar-nav {
-        & > li > a {
+        > li > a {
           padding: 20px 30px;
           font-size: 1.8rem;
         }
@@ -37,7 +37,7 @@
 
   .navbar-collapse {
     .navbar-nav > li {
-      & > a {
+      > a {
         box-sizing: border-box;
         color: #004080;
         -webkit-transition: background-color 0.2s linear;
@@ -45,8 +45,8 @@
       }
 
       &.active > a,
-      & > a:hover,
-      & > a:active {
+      > a:hover,
+      > a:active {
         color: white;
         background-color: #004080;
       }

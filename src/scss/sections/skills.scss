@@ -1,0 +1,70 @@
+@media (min-width: 768px) {
+  .skill-set {
+    h3 {
+      font-size: 3.5rem;
+    }
+
+    hr {
+      width: 25rem;
+    }
+  }
+
+  .skill-element {
+    height: 3rem;
+    line-height: 3rem;
+
+    p {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-set {
+    h3 {
+      font-size: 2.2rem;
+    }
+
+    hr {
+      width: 15rem;
+    }
+  }
+
+  .skill-element {
+    height: 2rem;
+    line-height: 2rem;
+
+    p {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.skill-set {
+  h3 {
+    color: #004080;
+  }
+
+  hr {
+    border: 0.1rem solid #004080;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+}
+
+.skill-element {
+  margin-top: 1rem;
+
+  p {
+    text-align: right;
+    margin: 0;
+    color: #7f8c97;
+  }
+
+  div,
+  .progress {
+    overflow: unset;
+    height: 100%;
+    box-shadow: none;
+  }
+}
