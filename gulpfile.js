@@ -1,7 +1,9 @@
-var gulp        = require('gulp');
+var gulp = require('gulp');
 var browserSync = require('browser-sync');
-var sass        = require('gulp-sass');
-var prefix      = require('gulp-autoprefixer');
+var htmlMin = require('gulp-htmlmin');
+var sass = require('gulp-sass');
+var prefix = require('gulp-autoprefixer');
+var del = require('del');
 
 gulp.task('sass', function () {
     return gulp.src('src/scss/main.scss')
@@ -10,12 +12,20 @@ gulp.task('sass', function () {
             includePaths: ['css'],
             onError: browserSync.notify
         }))
-        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
         .pipe(gulp.dest('build/css'))
-        .pipe(browserSync.reload({stream:true}))
+        .pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task('browser-sync', function() {
+gulp.task('html', function () {
+    gulp.src('src/**/*.html')
+        .pipe(htmlMin({
+            collapseWhitespace: true
+        }))
+        .pipe(gulp.dest('build/'))
+});
+
+gulp.task('browser-sync', function () {
     browserSync({
         server: {
             baseDir: 'build'
@@ -28,6 +38,10 @@ gulp.task('watch', function () {
     gulp.watch('src/scss/**', ['sass']);
 });
 
-gulp.task('build', ['sass']);
-gulp.task('start', ['build', 'browser-sync', 'watch']);
+gulp.task('clean', function () {
+    del('build/**/*')
+});
+
+gulp.task('build', ['sass', 'html']);
+gulp.task('start', ['clean', 'build', 'browser-sync', 'watch']);
 gulp.task('default', ['start']);
