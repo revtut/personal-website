@@ -1,9 +1,11 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var htmlMin = require('gulp-htmlmin');
+var minify = require('gulp-minify');
 var sass = require('gulp-sass');
 var prefix = require('gulp-autoprefixer');
 var del = require('del');
+var concat = require('gulp-concat');
 
 gulp.task('sass', function () {
     return gulp.src('src/scss/main.scss')
@@ -17,8 +19,20 @@ gulp.task('sass', function () {
         .pipe(browserSync.reload({stream: true}))
 });
 
+gulp.task('javascript', function () {
+    return gulp.src('src/**/*.js')
+        .pipe(concat('script.js'))
+        .pipe(minify({
+            ext:{
+                min:'.js'
+            },
+            noSource: ['script.js']
+        }))
+        .pipe(gulp.dest('build/js'))
+});
+
 gulp.task('html', function () {
-    gulp.src('src/**/*.html')
+    return gulp.src('src/**/*.html')
         .pipe(htmlMin({
             collapseWhitespace: true
         }))
@@ -39,9 +53,9 @@ gulp.task('watch', function () {
 });
 
 gulp.task('clean', function () {
-    del('build/**/*')
+    return del('build/**/*')
 });
 
-gulp.task('build', ['sass', 'html']);
+gulp.task('build', ['sass', 'javascript', 'html']);
 gulp.task('start', ['clean', 'build', 'browser-sync', 'watch']);
 gulp.task('default', ['start']);
