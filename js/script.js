@@ -7,8 +7,7 @@ function scrollEvent() {
     var windowElement = $(window),
         bodyElement = $('body'),
         navigationElement = $('nav'),
-        navbarAnchorElements = $('nav li'),
-        navActiveElement;
+        navbarAnchorElements = $('nav li');
 
     var lastAnchor = "#top",
         navDistance = navigationElement.offset().top,
@@ -65,7 +64,7 @@ function stickyNavigation(navigationElement, bodyElement, y, distance) {
  * @return current anchor
  */
 function highlightCurrentAnchor(navigationAnchorsElement, y, height, lastAnchor) {
-    navActiveElement = null;
+    var navActiveElement = null, currentAnchor = null;
     navigationAnchorsElement.each(function () {
         var anchorId = $(this).children().attr('href'),
             target = $(anchorId).offset().top - height;
@@ -78,14 +77,13 @@ function highlightCurrentAnchor(navigationAnchorsElement, y, height, lastAnchor)
     });
 
     // Apply classes to the current anchor
-    if (navActiveElement == null)
+    if (navActiveElement === null)
         currentAnchor = "#top";
-    if (lastAnchor != currentAnchor) {
-        lastAnchor = currentAnchor;
-
+    if (lastAnchor !== currentAnchor) {
         // Update classes
         navigationAnchorsElement.removeClass("active", 200);
-        if (navActiveElement != null)
+
+        if (navActiveElement !== null)
             navActiveElement.addClass("active", 200);
 
         // Added hash to browser
@@ -143,32 +141,29 @@ function changeExtensionDisplay() {
 function submitContact(event) {
     event.preventDefault();
 
+    var resultMessageDiv = $("#submitResult");
+
+    // Send message
     $.post(
-        "api/submitForm.php",
+        $(this).attr('action'), // TODO: Make sure this function works
         $("form#contactForm").serialize(),
         function (data, status, xhr) {
             data = JSON.parse(data);
-            if (data["success"] && data["success"] == "true") {
-                $("#submitResult a").after("<strong>Success!</strong> " + data["message"]);
-                $("#submitResult").addClass("alert-success");
-                $("#submitResult").fadeIn("slow");
+            if (data["success"] && data["success"] === "true") {
+                resultMessageDiv.find("a").after("<strong>Success!</strong> " + data["message"]);
+                resultMessageDiv.addClass("alert-success");
+                resultMessageDiv.fadeIn("slow");
                 $("#contactForm")[0].reset();
             } else {
-                $("#submitResult a").after("<strong>Error!</strong> " + data["message"]);
-                $("#submitResult").addClass("alert-danger");
-                $("#submitResult").fadeIn("slow");
+                resultMessageDiv.find("a").after("<strong>Error!</strong> " + data["message"]);
+                resultMessageDiv.addClass("alert-danger");
+                resultMessageDiv.fadeIn("slow");
             }
         }
-    ).fail(function (data, status, xhr) {
-        if (data["success"] && data["success"] == "true") {
-            $("#submitResult a").after("<strong>Error!</strong> " + data["message"]);
-            $("#submitResult").addClass("alert-danger");
-            $("#submitResult").fadeIn("slow");
-        } else {
-            $("#submitResult a").after("<strong>Error!</strong> Your message could not be sent. Please try again.");
-            $("#submitResult").addClass("alert-danger");
-            $("#submitResult").fadeIn("slow");
-        }
+    ).fail(function () {
+        resultMessageDiv.find("a").after("<strong>Error!</strong> Your message could not be sent. Please try again.");
+        resultMessageDiv.addClass("alert-danger");
+        resultMessageDiv.fadeIn("slow");
     });
 
     grecaptcha.reset();
