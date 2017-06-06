@@ -1,6 +1,6 @@
 @media (min-width: 768px) {
   header {
-    .intro {
+    &.intro {
       img {
         width: 25rem;
         height: 25rem;
@@ -29,7 +29,7 @@
 
 @media (max-width: 768px) {
   header {
-    .intro {
+    &.intro {
       img {
         width: 15rem;
         height: 15rem;
@@ -57,7 +57,7 @@
 }
 
 header {
-  .intro {
+  &.intro {
     background: #002e58;
     background: -webkit-radial-gradient(at top center, #002e58 0%, #00192f 100%);
     background: radial-gradient(at top center, #002e58 0%, #00192f 100%);
