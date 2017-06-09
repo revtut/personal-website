@@ -7,6 +7,8 @@ var prefix = require('gulp-autoprefixer');
 var del = require('del');
 var concat = require('gulp-concat');
 
+var buildPath = "build/";
+
 gulp.task('clean', function () {
     return del('build/**/*')
 });
@@ -23,20 +25,20 @@ gulp.task('sass', function () {
             onError: browserSync.notify
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
-        .pipe(gulp.dest('build/css'))
+        .pipe(gulp.dest(buildPath + 'css'))
         .pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('js', function () {
     return gulp.src('src/**/*.js')
         .pipe(concat('script.js'))
-        .pipe(gulp.dest('build/js'))
+        .pipe(gulp.dest(buildPath + 'js'))
         .pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('html', function () {
     return gulp.src('src/**/*.html')
-        .pipe(gulp.dest('build/'))
+        .pipe(gulp.dest(buildPath))
         .pipe(browserSync.reload({stream: true}))
 });
 
