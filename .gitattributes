@@ -1,2 +1,0 @@
-src/archives/**/* filter=lfs diff=lfs merge=lfs -text
-src/vendor/**/* filter=lfs diff=lfs merge=lfs -text
