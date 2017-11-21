@@ -1,0 +1,40 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "index.html",
+  "scripts": {
+    "start": "gulp start",
+    "build-prod": "gulp build-prod",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaosilva2095/personal-website.git"
+  },
+  "keywords": [
+    "personal",
+    "portfolio",
+    "joao",
+    "silva"
+  ],
+  "author": "João Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaosilva2095/personal-website/issues"
+  },
+  "homepage": "https://www.joaosilva.co",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^1.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-minify": "^1.0.0",
+    "gulp-sass": "^3.1.0",
+    "merge-stream": "^1.0.1",
+    "streamqueue": "^1.1.1"
+  }
+}

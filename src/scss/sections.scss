@@ -1,0 +1,50 @@
+@media (min-width: 768px) {
+  main section {
+    > header > h2 {
+      font-size: 5rem;
+    }
+
+    > hr {
+      width: 45rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  main section {
+    > header > h2 {
+      font-size: 2.5rem;
+    }
+
+    > hr {
+      width: 25rem;
+    }
+  }
+}
+
+main section {
+  > div {
+    padding: 5rem 0;
+  }
+
+  > header > h2 {
+    text-align: center;
+    color: #004080;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 3rem 0rem 0.5rem 0rem;
+  }
+
+  > hr {
+    border: 0.1rem solid #004080;
+    margin: 0 auto;
+  }
+
+  &:nth-of-type(odd) {
+    background-color: #e9f0f5;
+  }
+
+  &:nth-of-type(even) {
+    background-color: #eff6fa;
+  }
+}
