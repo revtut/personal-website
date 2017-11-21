@@ -11,7 +11,7 @@ var streamQueue = require('streamqueue');
 var buildPath = "build/";
 
 gulp.task('clean', function () {
-    return del('build/**/*')
+    return del(buildPath + '**/*')
 });
 
 gulp.task('default', ['start']);
@@ -77,7 +77,6 @@ gulp.task('sass-prod', function () {
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
         .pipe(gulp.dest(buildPath + 'css'))
-        .pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('js-prod', function () {
@@ -94,7 +93,6 @@ gulp.task('js-prod', function () {
             noSource: ['script.js']
         }))
         .pipe(gulp.dest(buildPath + 'js'))
-        .pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('html-prod', function () {
@@ -103,7 +101,11 @@ gulp.task('html-prod', function () {
             collapseWhitespace: true
         }))
         .pipe(gulp.dest(buildPath))
-        .pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task('build-prod', ['clean', 'sass-prod', 'js-prod', 'html-prod']);
+gulp.task('files-prod', function () {
+    return gulp.src(['src/robots.txt', 'src/sitemap.xml'])
+        .pipe(gulp.dest(buildPath))
+});
+
+gulp.task('build-prod', ['clean', 'sass-prod', 'js-prod', 'html-prod', 'files-prod']);
