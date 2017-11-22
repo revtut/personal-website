@@ -7,20 +7,24 @@ var prefix = require('gulp-autoprefixer');
 var del = require('del');
 var concat = require('gulp-concat');
 
-var buildPath = "build/";
+var distPath = "dist/";
 
 gulp.task('clean', function () {
-    return del(buildPath + '**/*')
+    return del(distPath + '**')
 });
 
 gulp.task('other-files', function () {
-    return gulp.src([
+    gulp.src([
             'src/robots.txt',
             'src/sitemap.xml',
             'src/vendor/**'],
         {
             base: 'src'
-        }).pipe(gulp.dest(buildPath))
+        }).pipe(gulp.dest(distPath));
+
+    return gulp.src(['assets/**'], {
+        base: 'assets'
+    }).pipe(gulp.dest(distPath + 'assets'))
 });
 
 gulp.task('default', ['start']);
@@ -35,27 +39,27 @@ gulp.task('sass', function () {
             onError: browserSync.notify
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
-        .pipe(gulp.dest(buildPath + 'css'))
+        .pipe(gulp.dest(distPath + 'css'))
         .pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('js', function () {
     return gulp.src('src/js/**/*.js', {base: 'src'})
         .pipe(concat('script.js'))
-        .pipe(gulp.dest(buildPath + 'js'))
+        .pipe(gulp.dest(distPath + 'js'))
         .pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('html', function () {
     return gulp.src('src/**/*.html', {base: 'src'})
-        .pipe(gulp.dest(buildPath))
+        .pipe(gulp.dest(distPath))
         .pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('browser-sync', function () {
     browserSync({
         server: {
-            baseDir: buildPath
+            baseDir: distPath
         },
         notify: false
     });
@@ -81,7 +85,7 @@ gulp.task('sass-prod', function () {
             onError: browserSync.notify
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
-        .pipe(gulp.dest(buildPath + 'css'))
+        .pipe(gulp.dest(distPath + 'css'))
 });
 
 gulp.task('js-prod', function () {
@@ -93,7 +97,7 @@ gulp.task('js-prod', function () {
             },
             noSource: ['script.js']
         }))
-        .pipe(gulp.dest(buildPath + 'js'))
+        .pipe(gulp.dest(distPath + 'js'))
 });
 
 gulp.task('html-prod', function () {
@@ -101,7 +105,7 @@ gulp.task('html-prod', function () {
         .pipe(htmlMin({
             collapseWhitespace: true
         }))
-        .pipe(gulp.dest(buildPath))
+        .pipe(gulp.dest(distPath))
 });
 
 gulp.task('build-prod', ['clean', 'sass-prod', 'js-prod', 'html-prod', 'other-files']);
