@@ -955,6 +955,11 @@
         <div class="row text-center">
             <form id="contactForm" action="api/submitForm.php"
                   method="POST" class="col-md-offset-4 col-md-4 contact-form">
+                <div class="hidden form-group">
+                    <label for="bot-field">Unknown:</label>
+                    <input id="bot-field" type="text" name="bot-field" placeholder="Your bot field"
+                           class="form-control">
+                </div>
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input id="name" type="text" name="name" required="required" placeholder="Your name"
@@ -1194,10 +1199,6 @@
                     <textarea id="message" name="message" required="required" placeholder="Your message" rows="9"
                               class="form-control"></textarea>
                 </div>
-                <div class="form-group">
-                    <div class="g-recaptcha" data-theme="light"
-                         data-sitekey="6LehZxMUAAAAAAnvqp5795NPW8U6swExPzmua0Qd"></div>
-                </div>
                 <button type="submit" class="btn-rectangle">Send</button>
             </form>
             <div id="submitResult" class="col-md-offset-4 col-md-4 alert alert-dismissable">
@@ -1252,7 +1253,6 @@
 <!-- Vendor JavaScript -->
 <script defer rel="text/javascript" src="vendor/js/jquery-3.2.1.js"></script>
 <script defer rel="text/javascript" src="vendor/js/bootstrap-3.3.7.js"></script>
-<script defer src='https://www.google.com/recaptcha/api.js'></script>
 <!-- Local JavaScript -->
 <script defer rel="text/javascript" src="js/script.js"></script>
 <!-- Google Analytics -->
