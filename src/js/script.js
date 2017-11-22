@@ -143,30 +143,22 @@ function submitContact(event) {
 
     var resultMessageDiv = $("#submitResult");
 
+    var $form = $(this);
     // Send message
     $.post(
-        $(this).attr('action'), // TODO: Make sure this function works
+        $form.attr('action'),
         $("form#contactForm").serialize(),
-        function (data, status, xhr) {
-            data = JSON.parse(data);
-            if (data["success"] && data["success"] === "true") {
-                resultMessageDiv.find("a").after("<strong>Success!</strong> " + data["message"]);
-                resultMessageDiv.addClass("alert-success");
-                resultMessageDiv.fadeIn("slow");
-                $("#contactForm")[0].reset();
-            } else {
-                resultMessageDiv.find("a").after("<strong>Error!</strong> " + data["message"]);
-                resultMessageDiv.addClass("alert-danger");
-                resultMessageDiv.fadeIn("slow");
-            }
+        function () {
+            resultMessageDiv.find("a").after("<strong>Success!</strong>");
+            resultMessageDiv.addClass("alert-success");
+            resultMessageDiv.fadeIn("slow");
+            $("#contactForm")[0].reset();
         }
     ).fail(function () {
         resultMessageDiv.find("a").after("<strong>Error!</strong> Your message could not be sent. Please try again.");
         resultMessageDiv.addClass("alert-danger");
         resultMessageDiv.fadeIn("slow");
     });
-
-    grecaptcha.reset();
 }
 
 /**
