@@ -953,10 +953,10 @@
         </header>
         <hr>
         <div class="row text-center">
-            <form id="contactForm" action="api/submitForm.php"
-                  method="POST" class="col-md-offset-4 col-md-4 contact-form">
+            <form id="contactForm" name="contactForm" netlify-honeypot="bot-field" netlify
+                  class="col-md-offset-4 col-md-4 contact-form">
                 <div class="hidden form-group">
-                    <label for="bot-field">Unknown:</label>
+                    <label for="bot-field">Bot Field:</label>
                     <input id="bot-field" type="text" name="bot-field" placeholder="Your bot field"
                            class="form-control">
                 </div>
