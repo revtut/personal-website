@@ -13,20 +13,12 @@
     </div>
 
     <!-- Date -->
-    {% if even %}
-    <div class="col-md-push-4 col-md-3 moment-date">
-    {% else %}
-    <div class="col-md-push-1 col-md-3 moment-date">
-    {% endif %}
+    <div class="{% if even %}col-md-push-4{% else %}col-md-push-1{% endif %} col-md-3 moment-date">
         <p>{{ date }}</p>
     </div>
 
     <!-- Description -->
-    {% if even %}
-    <div class="col-md-pull-5 col-md-offset-3 col-md-2 moment-description">
-    {% else %}
-    <div class="col-md-pull-1 col-md-offset-3 col-md-2 moment-description">
-    {% endif %}
+    <div class="{% if even %}col-md-pull-5{% else %}col-md-pull-1{% endif %} col-md-offset-3 col-md-2 moment-description">
         <h3>{{ title }}</h3>
         <p>{{ description | safe }}</p>
     </div>

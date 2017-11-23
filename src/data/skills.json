@@ -1,0 +1,70 @@
+{
+  "hard": [
+    {
+      "title": "Java",
+      "value": 95
+    },
+    {
+      "title": "JavaScript",
+      "value": 80
+    },
+    {
+      "title": "C",
+      "value": 70
+    },
+    {
+      "title": "PHP",
+      "value": 75
+    },
+    {
+      "title": "HTML / CSS",
+      "value": 85
+    },
+    {
+      "title": "SQL",
+      "value": 80
+    },
+    {
+      "title": "C++",
+      "value": 60
+    },
+    {
+      "title": "C#",
+      "value": 40
+    }
+  ],
+  "soft": [
+    {
+      "title": "Leadership",
+      "value": 85
+    },
+    {
+      "title": "Design",
+      "value": 65
+    },
+    {
+      "title": "Marketing",
+      "value": 70
+    },
+    {
+      "title": "Teamwork",
+      "value": 90
+    },
+    {
+      "title": "Linux",
+      "value": 70
+    },
+    {
+      "title": "Git",
+      "value": 95
+    },
+    {
+      "title": "Video Edition",
+      "value": 70
+    },
+    {
+      "title": "Image Edition",
+      "value": 80
+    }
+  ]
+}
