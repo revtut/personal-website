@@ -1,1 +1,10 @@
-*.min.*
+# IDE
+.idea
+
+# NPM
+node_modules
+*.log
+
+# Build
+build
+dist
