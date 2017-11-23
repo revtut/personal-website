@@ -1,21 +1,34 @@
-{% macro item(title='', description='', date='', link='', link_title='', image='', icon='') %}
+{% macro item(even = false, title='', description='', date='', link='', link_title='', image='', icon='') %}
 <div class="row timeline-moment">
+    <!-- Image -->
     <div class="col-md-push-5 col-md-2 moment-image">
         <a href="{{ link }}" target="_blank" title="{{ link_title }}">
             <img src="{{ image }}"
                  width="100" height="100"
-                 alt="Logo {{ link_title }}">
+                 alt="Logo">
             <div class="overlay">
                 <i class="fa fa-fw {{ icon }}"></i>
             </div>
         </a>
     </div>
+
+    <!-- Date -->
+    {% if even %}
     <div class="col-md-push-4 col-md-3 moment-date">
+    {% else %}
+    <div class="col-md-push-1 col-md-3 moment-date">
+    {% endif %}
         <p>{{ date }}</p>
     </div>
+
+    <!-- Description -->
+    {% if even %}
     <div class="col-md-pull-5 col-md-offset-3 col-md-2 moment-description">
+    {% else %}
+    <div class="col-md-pull-1 col-md-offset-3 col-md-2 moment-description">
+    {% endif %}
         <h3>{{ title }}</h3>
-        <p>{{ description }}</p>
+        <p>{{ description | safe }}</p>
     </div>
 </div>
 {% endmacro %}

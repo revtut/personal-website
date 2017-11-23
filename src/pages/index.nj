@@ -8,12 +8,12 @@
 <body>
 <header id="top" class="intro">
     <div class="text-center v-align">
-        <img src="assets/images/profile-picture.png"
+        <img src="{{ settings.profile_picture }}"
              width="253"
              height="253" alt="Profile picture" class="img-circle">
-        <h1>João Silva</h1>
+        <h1>{{ settings.author }}</h1>
         <hr>
-        <h2>Software Engineer &bull; Designer</h2>
+        <h2>{{ settings.profession }}</h2>
         <div class="text-center know-more">
             <button type="button" class="btn-rectangle" onclick="jumpToAnchor('#about')">
                 <i class="fa fa-arrow-down" aria-hidden="true"></i> Know more
@@ -34,7 +34,7 @@
         </header>
         <hr>
         <div class="row text-left about-me">
-            {% import "macros/about-item.nj" as about %}
+            {% import "macros/about.nj" as about %}
             {% for item in about_items %}
                 {{ about.item(item.title, item.description, item.date, item.link, item.link_title, item.image, item.icon) }}
             {% endfor %}
@@ -171,174 +171,10 @@
         </header>
         <hr>
         <div class="timeline-content text-center">
-            <!-- YouTube momentum -->
-            <div class="row timeline-moment">
-                <div class="col-md-push-5 col-md-2 moment-image">
-                    <a href="https://www.youtube.com/RevTut" target="_blank" title="YouTube Channel">
-                        <img src="assets/images/timeline/revtut.png"
-                             width="100" height="100"
-                             alt="Logo">
-                        <div class="overlay">
-                            <i class="fa fa-fw fa-youtube"></i>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-push-4 col-md-3 moment-date">
-                    <p>Oct 4, 2011</p>
-                </div>
-                <div class="col-md-pull-5 col-md-offset-3 col-md-2 moment-description">
-                    <h3>RevTut</h3>
-                    <p>Created a YouTube channel with 17K subscribers and 3M views.</p>
-                </div>
-            </div>
-            <!-- Minecraft server momentum -->
-            <div class="row timeline-moment">
-                <div class="col-md-push-5 col-md-2 moment-image">
-                    <a href="https://www.youtube.com/watch?v=2YMLc9v_FX0" target="_blank" title="Minecraft server">
-                        <img src="assets/images/timeline/minecraft.png"
-                             width="100"
-                             height="100" alt="Logo">
-                        <div class="overlay">
-                            <i class="fa fa-fw fa-play"></i>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-push-1 col-md-3 moment-date">
-                    <p>Jun 13, 2012</p>
-                </div>
-                <div class="col-md-pull-1 col-md-offset-3 col-md-2 moment-description">
-                    <h3>Minecraft</h3>
-                    <p>Developed a custom server with more than
-                        <b>700</b> players online.
-                    </p>
-                </div>
-            </div>
-            <!-- FIS12 momentum -->
-            <div class="row timeline-moment">
-                <div class="col-md-push-5 col-md-2 moment-image">
-                    <a href="archives/fis12.jpg" target="_blank" title="FIS12">
-                        <img src="assets/images/timeline/pmate.png"
-                             width="100" height="100"
-                             alt="Logo">
-                        <div class="overlay">
-                            <i class="fa fa-fw fa-file-image-o"></i>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-push-4 col-md-3 moment-date">
-                    <p>Apr 24, 2013</p>
-                </div>
-                <div class="col-md-pull-5 col-md-offset-3 col-md-2 moment-description">
-                    <h3>FIS12</h3>
-                    <p>
-                        <b>2nd</b> place in a sciences and physics competition.</p>
-                </div>
-            </div>
-            <!-- High-school momentum -->
-            <div class="row timeline-moment">
-                <div class="col-md-push-5 col-md-2 moment-image">
-                    <a href="archives/cichighschool.pdf" target="_blank" title="High-school certificate">
-                        <img src="assets/images/timeline/cic.png"
-                             width="100" height="100"
-                             alt="Logo">
-                        <div class="overlay">
-                            <i class="fa fa-fw fa-file-pdf-o"></i>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-push-1 col-md-3 moment-date">
-                    <p>Jul 1, 2013</p>
-                </div>
-                <div class="col-md-pull-1 col-md-offset-3 col-md-2 moment-description">
-                    <h3>Colégio Internato dos Carvalhos (CIC)</h3>
-                    <p>Graduated from high-school with
-                        <b>19</b> out of 20.</p>
-                </div>
-            </div>
-            <!-- Ubisoft momentum -->
-            <div class="row timeline-moment">
-                <div class="col-md-push-5 col-md-2 moment-image">
-                    <a href="https://www.youtube.com/watch?v=uNef-aC9xDE" target="_blank" title="Ubisoft project">
-                        <img src="assets/images/timeline/ubisoft.png"
-                             width="100" height="100"
-                             alt="Logo">
-                        <div class="overlay">
-                            <i class="fa fa-fw fa-play"></i>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-push-4 col-md-3 moment-date">
-                    <p>Jul 11, 2013</p>
-                </div>
-                <div class="col-md-pull-5 col-md-offset-3 col-md-2 moment-description">
-                    <h3>Ubisoft</h3>
-                    <p>Partnered with
-                        <b>Ubisoft</b> in some videos.</p>
-                </div>
-            </div>
-            <!-- Turkish Airlines momentum -->
-            <div class="row timeline-moment">
-                <div class="col-md-push-5 col-md-2 moment-image">
-                    <a href="https://www.youtube.com/watch?v=jhFqSlvbKAM" target="_blank"
-                       title="Turkish airlines project">
-                        <img src="assets/images/timeline/turkish-airlines.png"
-                             width="100"
-                             height="100" alt="Logo">
-                        <div class="overlay">
-                            <i class="fa fa-fw fa-play"></i>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-push-1 col-md-3 moment-date">
-                    <p>Dec 03, 2013</p>
-                </div>
-                <div class="col-md-pull-1 col-md-offset-3 col-md-2 moment-description">
-                    <h3>Turkish Airlines</h3>
-                    <p>Cooperated with
-                        <b>Turkish Airlines</b> in some videos.</p>
-                </div>
-            </div>
-            <!-- FJSeguros momentum -->
-            <div class="row timeline-moment">
-                <div class="col-md-push-5 col-md-2 moment-image">
-                    <a href="http://fjseguros.eu/" target="_blank" title="FJSeguros">
-                        <img src="assets/images/timeline/fjseguros.png"
-                             width="100"
-                             height="100" alt="Logo">
-                        <div class="overlay">
-                            <i class="fa fa-fw fa-globe"></i>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-push-4 col-md-3 moment-date">
-                    <p>Oct 1, 2015</p>
-                </div>
-                <div class="col-md-pull-5 col-md-offset-3 col-md-2 moment-description">
-                    <h3>F.J.Seguros</h3>
-                    <p>As a Network & Security Engineer I've configured a private cloud system.</p>
-                </div>
-            </div>
-            <!-- Bachelor's momentum -->
-            <div class="row timeline-moment">
-                <div class="col-md-push-5 col-md-2 moment-image">
-                    <a href="archives/feupbachelors.pdf" target="_blank" title="Bachelor's grades">
-                        <img src="assets/images/timeline/feup.png"
-                             width="100" height="100"
-                             alt="Logo">
-                        <div class="overlay">
-                            <i class="fa fa-fw fa-file-pdf-o"></i>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-push-1 col-md-3 moment-date">
-                    <p>Jul 1, 2016</p>
-                </div>
-                <div class="col-md-pull-1 col-md-offset-3 col-md-2 moment-description">
-                    <h3>Faculdade de Engenharia da Universidade do Porto (FEUP)</h3>
-                    <p>Graduated from Bachelor's in Informatics and Computing Engineering with
-                        <b>16</b> out of 20.</p>
-                </div>
-            </div>
+            {% import "macros/timeline.nj" as timeline_macro %}
+            {% for item in timeline %}
+                {{ timeline_macro.item(loop.index0 % 2 == 0, item.title, item.description, item.date, item.link, item.link_title, item.image, item.icon) }}
+            {% endfor %}
         </div>
     </section>
     <!-- Skills section -->
