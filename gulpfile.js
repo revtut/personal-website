@@ -59,7 +59,8 @@ gulp.task('html', function () {
                 settings: require('./src/settings.json'),
                 about: require('./src/data/about.json'),
                 timeline: require('./src/data/timeline.json'),
-                skills: require('./src/data/skills.json')
+                skills: require('./src/data/skills.json'),
+                portfolio: require('./src/data/portfolio.json')
             };
 
             return result

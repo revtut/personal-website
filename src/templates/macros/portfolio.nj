@@ -1,59 +1,43 @@
+{% macro item(title='', description='', image='', links=[]) %}
+{% set itemID = range(1,999999) | random %}
 <div class="col-md-4 col-xs-6 portfolio-item">
-    <figure data-toggle="modal" data-target="#minecraftServerModal">
-        <img src='assets/images/portfolio/minecraft_team.png'
+    <figure data-toggle="modal" data-target="#{{ itemID }}">
+        <img src='{{ image }}'
              width="540"
-             height="360" alt='Logo'/>
-        <figcaption>Minecraft Server</figcaption>
+             height="360" alt='{{ title }}'/>
+        <figcaption>{{ title }}</figcaption>
         <!-- Plus sign overlay -->
         <div class="overlay">
             <i class="fa fa-fw fa-plus-square"></i>
         </div>
     </figure>
+
     <!-- Project's modal -->
-    <div class="modal fade" id="minecraftServerModal" tabindex="-1" role="dialog"
-         aria-label="minecraft server">
+    <div class="modal fade" id="{{ itemID }}" tabindex="-1" role="dialog"
+         aria-label="{{ title }}">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <img src='assets/images/portfolio/minecraft_team.png'
+                    <img src='{{ image }}'
                          width="540"
-                         height="360" alt='Logo'/>
+                         height="360" alt='{{ title }}'/>
                     <span class="close" data-dismiss="modal">&times;</span>
                 </div>
                 <div class="modal-body">
-                    <h3>Minecraft Server</h3>
-                    <p>In the early beginning of the server I was creating it using plugins that existed
-                        in the Internet.
-                        <br>One year after the opening of it I decided to create my own plugins so we
-                        could
-                        stand out from the crowd.
-                        <br>Several minigames were developed in JAVA, some already known by the players,
-                        others that no one ever played because they were 100% unique.
-                        <br>As the server grew we had to balance the load between several physical
-                        servers
-                        (four Linux servers more specifically). Everything was connected and we used
-                        an SQL server to save all the data of the players.
-                        <br>At that time the server was having a huge success! We were 25 people in the
-                        team
-                        and more than 700 players online in the game!
-                    </p>
+                    <h3>{{ title }}</h3>
+                    <p>{{ description | safe }}</p>
                 </div>
                 <div class="modal-footer text-center">
-                    <a class="social-icon"
-                       href="https://www.youtube.com/playlist?list=PL721luQ59uVJjnrI2E0pUr4d9We7_JZ0q"
-                       target="_blank" title="Minecraft server">
-                        <i class="fa fa-fw fa-youtube" aria-hidden="true"></i>
-                    </a>
-                    <a class="social-icon" href="https://github.com/joaosilva2095/minecraft-libraries/"
-                       target="_blank" title="Minecraft Libraries">
-                        <i class="fa fa-fw fa-github" aria-hidden="true"></i>
-                    </a>
-                    <a class="social-icon" href="https://github.com/joaosilva2095/minecraft-skywars"
-                       target="_blank" title="Minecraft SkyWars">
-                        <i class="fa fa-fw fa-github" aria-hidden="true"></i>
-                    </a>
+                    {% for link in links %}
+                        <a class="social-icon"
+                           href="{{ link.link }}"
+                           target="_blank" title="{{ link.title }}">
+                            <i class="fa fa-fw {{ link.icon }}" aria-hidden="true"></i>
+                        </a>
+                    {% endfor %}
                 </div>
             </div>
         </div>
     </div>
 </div>
+{% endmacro %}
