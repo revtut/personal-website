@@ -34,133 +34,21 @@
         </header>
         <hr>
         <div class="row text-left about-me">
-            {% import "macros/about.nj" as about %}
-            {% for item in about_items %}
-                {{ about.item(item.title, item.description, item.date, item.link, item.link_title, item.image, item.icon) }}
-            {% endfor %}
             <div class="col-md-offset-3 col-md-4">
-                <span data-toggle="tooltip" data-placement="left" title="My name">
-                    <div class="row about-me-element">
-                        <div class="col-xs-2 text-center">
-                            <i class="fa fa-2x fa-user" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-xs-10">
-                            <p>João Fernando Oliveira e Silva</p>
-                        </div>
-                    </div>
-                </span>
-                <span data-toggle="tooltip" data-placement="left" title="My birthday date">
-                        <div class="row about-me-element">
-                            <div class="col-xs-2 text-center">
-                                <i class="fa fa-2x fa-birthday-cake" aria-hidden="true"></i>
-                            </div>
-                            <div class="col-xs-10">
-                                <p>October 20th, 1995</p>
-                            </div>
-                        </div>
-                    </span>
-                <span data-toggle="tooltip" data-placement="left" title="Where I live">
-                        <div class="row about-me-element">
-                            <div class="col-xs-2 text-center">
-                                <i class="fa fa-2x fa-map-marker" aria-hidden="true"></i>
-                            </div>
-                            <div class="col-xs-10">
-                                <p>Porto, Portugal</p>
-                            </div>
-                        </div>
-                    </span>
-                <span data-toggle="tooltip" data-placement="left" title="My gender">
-                        <div class="row about-me-element">
-                            <div class="col-xs-2 text-center">
-                                <i class="fa fa-2x fa-intersex" aria-hidden="true"></i>
-                            </div>
-                            <div class="col-xs-10">
-                                <p>Male</p>
-                            </div>
-                        </div>
-                    </span>
-                <span data-toggle="tooltip" data-placement="left" title="My marital status">
-                        <div class="row about-me-element">
-                            <div class="col-xs-2 text-center">
-                                <i class="fa fa-2x fa-female" aria-hidden="true"></i>
-                            </div>
-                            <div class="col-xs-10">
-                                <p>Single</p>
-                            </div>
-                        </div>
-                    </span>
-                <span data-toggle="tooltip" data-placement="left" title="My height">
-                        <div class="row about-me-element">
-                            <div class="col-xs-2 text-center">
-                                <i class="fa fa-2x fa-arrow-up" aria-hidden="true"></i>
-                            </div>
-                            <div class="col-xs-10">
-                                <p>1.85m</p>
-                            </div>
-                        </div>
-                    </span>
+                {% import "macros/about.nj" as about_macro %}
+                {% for item in about %}
+                    {% if loop.index0 < (loop.length / 2) %}
+                        {{ about_macro.item(item.title, item.value, item.icon) }}
+                    {% endif %}
+                {% endfor %}
             </div>
             <div class="col-md-4">
-                <span data-toggle="tooltip" data-placement="left" title="Languages I speak">
-                        <div class="row about-me-element">
-                            <div class="col-xs-2 text-center">
-                                <i class="fa fa-2x fa-flag" aria-hidden="true"></i>
-                            </div>
-                            <div class="col-xs-10">
-                                <p>Portuguese and English</p>
-                            </div>
-                        </div>
-                    </span>
-                <span data-toggle="tooltip" data-placement="left" title="My sports">
-                        <div class="row about-me-element">
-                            <div class="col-xs-2 text-center">
-                                <i class="fa fa-2x fa-soccer-ball-o" aria-hidden="true"></i>
-                            </div>
-                            <div class="col-xs-10">
-                                <p>Scuba-diving, taekwondo and dance</p>
-                            </div>
-                        </div>
-                    </span>
-                <span data-toggle="tooltip" data-placement="left" title="Favorite desktop OS">
-                        <div class="row about-me-element">
-                            <div class="col-xs-2 text-center">
-                                <i class="fa fa-2x fa-laptop" aria-hidden="true"></i>
-                            </div>
-                            <div class="col-xs-10">
-                                <p>Windows</p>
-                            </div>
-                        </div>
-                    </span>
-                <span data-toggle="tooltip" data-placement="left" title="Favorite mobile OS">
-                        <div class="row about-me-element">
-                            <div class="col-xs-2 text-center">
-                                <i class="fa fa-2x fa-mobile" aria-hidden="true"></i>
-                            </div>
-                            <div class="col-xs-10">
-                                <p>Android</p>
-                            </div>
-                        </div>
-                    </span>
-                <span data-toggle="tooltip" data-placement="left" title="Favorite coding language">
-                        <div class="row about-me-element">
-                            <div class="col-xs-2 text-center">
-                                <i class="fa fa-2x fa-code" aria-hidden="true"></i>
-                            </div>
-                            <div class="col-xs-10">
-                                <p>Java</p>
-                            </div>
-                        </div>
-                    </span>
-                <span data-toggle="tooltip" data-placement="left" title="Favorite IDE">
-                        <div class="row about-me-element">
-                            <div class="col-xs-2 text-center">
-                                <i class="fa fa-2x fa-terminal" aria-hidden="true"></i>
-                            </div>
-                            <div class="col-xs-10">
-                                <p>IntelliJ IDEA</p>
-                            </div>
-                        </div>
-                    </span>
+                {% import "macros/about.nj" as about_macro %}
+                {% for item in about %}
+                    {% if loop.index0 >= (loop.length / 2) %}
+                        {{ about_macro.item(item.title, item.value, item.icon) }}
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
     </section>

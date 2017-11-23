@@ -1,10 +1,12 @@
-<span data-toggle="tooltip" data-placement="left" title="My name">
+{% macro item(title='', value='', icon='') %}
+<span data-toggle="tooltip" data-placement="left" title="{{ title }}">
     <div class="row about-me-element">
         <div class="col-xs-2 text-center">
-            <i class="fa fa-2x fa-user" aria-hidden="true"></i>
+            <i class="fa fa-2x {{ icon }}" aria-hidden="true"></i>
         </div>
         <div class="col-xs-10">
-            <p>João Fernando Oliveira e Silva</p>
+            <p>{{ value }}</p>
         </div>
     </div>
 </span>
+{% endmacro %}

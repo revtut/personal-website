@@ -57,6 +57,7 @@ gulp.task('html', function () {
         .pipe(data(function () {
             const result = {
                 settings: require('./src/settings.json'),
+                about: require('./src/data/about.json'),
                 timeline: require('./src/data/timeline.json')
             };
 
