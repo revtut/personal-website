@@ -34,7 +34,7 @@
         </header>
         <hr>
         <div class="row text-left about-me">
-            {% import "about-item.nj" as about %}
+            {% import "macros/about-item.nj" as about %}
             {% for item in about_items %}
                 {{ about.item(item.title, item.description, item.date, item.link, item.link_title, item.image, item.icon) }}
             {% endfor %}
