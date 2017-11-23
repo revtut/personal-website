@@ -66,7 +66,7 @@ gulp.task('html', function () {
             return result
         }))
         .pipe(nunjucks({
-            path: ['src/templates']
+            path: ['src/html']
         }))
         .pipe(gulp.dest(distPath))
         .pipe(browserSync.reload({stream: true}))
@@ -119,7 +119,7 @@ gulp.task('js-prod', function () {
 gulp.task('html-prod', function () {
     return gulp.src('src/pages/**/*.nj', {base: 'src/pages'})
         .pipe(nunjucks({
-            path: ['src/templates']
+            path: ['src/html']
         }))
         .pipe(htmlMin({
             collapseWhitespace: true

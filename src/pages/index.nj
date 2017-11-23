@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    {% include 'partials/head.nj' %}
+    {% include 'components/head.nj' %}
 </head>
 
 <body>
@@ -25,158 +25,38 @@
         </div>
     </div>
 </header>
-{% include 'partials/navbar.nj' %}
+{% block nav %}
+    {% include 'components/navbar.nj' %}
+{% endblock %}
 <main>
     <!-- About section -->
-    <section id="about">
-        <header>
-            <h2>About</h2>
-        </header>
-        <hr>
-        <div class="row text-left about-me">
-            <div class="col-md-offset-3 col-md-4">
-                {% import "macros/about.nj" as about_macro %}
-                {% for item in about %}
-                    {% if loop.index0 < (loop.length / 2) %}
-                        {{ about_macro.item(item.title, item.value, item.icon) }}
-                    {% endif %}
-                {% endfor %}
-            </div>
-            <div class="col-md-4">
-                {% import "macros/about.nj" as about_macro %}
-                {% for item in about %}
-                    {% if loop.index0 >= (loop.length / 2) %}
-                        {{ about_macro.item(item.title, item.value, item.icon) }}
-                    {% endif %}
-                {% endfor %}
-            </div>
-        </div>
-    </section>
+    {% block about %}
+        {% include 'components/about.nj' %}
+    {% endblock %}
     <!-- Timeline section -->
-    <section id="history">
-        <header>
-            <h2>History</h2>
-        </header>
-        <hr>
-        <div class="timeline-content text-center">
-            {% import "macros/timeline.nj" as timeline_macro %}
-            {% for item in timeline %}
-                {{ timeline_macro.item(loop.index0 % 2 == 0, item.title, item.description, item.date, item.link, item.link_title, item.image, item.icon) }}
-            {% endfor %}
-        </div>
-    </section>
+    {% block history %}
+        {% include 'components/timeline.nj' %}
+    {% endblock %}
     <!-- Skills section -->
-    <section id="skills">
-        <header>
-            <h2>Skills</h2>
-        </header>
-        <hr>
-        <div class="row text-center skill-set">
-            <!-- Left column -->
-            <div class="col-md-offset-2 col-md-4 col-xs-12">
-                <h3>Hard Skills</h3>
-                <hr>
-                {% import "macros/skill.nj" as skill_macro %}
-                {% for item in skills.hard %}
-                    {{ skill_macro.item(item.title, item.value) }}
-                {% endfor %}
-            </div>
-            <!-- Right column -->
-            <div class="col-md-4 col-xs-12">
-                <h3>Soft Skills</h3>
-                <hr>
-                {% import "macros/skill.nj" as skill_macro %}
-                {% for item in skills.soft %}
-                    {{ skill_macro.item(item.title, item.value) }}
-                {% endfor %}
-            </div>
-        </div>
-    </section>
+    {% block skills %}
+        {% include 'components/skills.nj' %}
+    {% endblock %}
     <!-- Portfolio section -->
-    <section id="portfolio">
-        <header>
-            <h2>Portfolio</h2>
-        </header>
-        <hr>
-        <div class="portfolio-content container">
-            <div class="row text-center portfolio-page">
-                {% import "macros/portfolio.nj" as portfolio_macro %}
-                {% for item in portfolio %}
-                    {{ portfolio_macro.item(item.title, item.description, item.image, item.links) }}
-                {% endfor %}
-            </div>
-        </div>
-    </section>
+    {% block portfolio %}
+        {% include 'components/portfolio.nj' %}
+    {% endblock %}
     <!-- Contact section -->
-    <section id="contact">
-        <header>
-            <h2>Contact</h2>
-        </header>
-        <hr>
-        <div class="row text-center">
-            <form id="contactForm" name="contactForm" netlify-honeypot="bot-field" netlify
-                  class="col-md-offset-4 col-md-4 contact-form">
-                <div class="hidden form-group">
-                    <label for="bot-field">Bot Field:</label>
-                    <input id="bot-field" type="text" name="bot-field" placeholder="Your bot field"
-                           class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input id="name" type="text" name="name" required="required" placeholder="Your name"
-                           class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input id="email" type="email" name="email" required="required" placeholder="Your email"
-                           class="form-control">
-                </div>
-                <div class="form-group">
-                    <fieldset>
-                        <legend>Phone:</legend>
-                        <select id="ext" name="ext" required="required" class="form-control">
-                            {% include 'partials/countryCodes.nj' %}
-                        </select>
-                        <input id="phone" type="tel" name="phone" required="required" placeholder="Your phone number"
-                               class="form-control">
-                    </fieldset>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required="required" placeholder="Your message" rows="9"
-                              class="form-control"></textarea>
-                </div>
-                <button type="submit" class="btn-rectangle">Send</button>
-            </form>
-            <div id="submitResult" class="col-md-offset-4 col-md-4 alert alert-dismissable">
-                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            </div>
-        </div>
-    </section>
+    {% block contact %}
+        {% include 'components/contact.nj' %}
+    {% endblock %}
 </main>
 </body>
-{% include 'partials/footer.nj' %}
+
+{% block footer %}
+    {% include 'components/footer.nj' %}
+{% endblock %}
+
+{% block footerScripts %}
+    {% include 'partials/footerScripts.nj' %}
+{% endblock %}
 </html>
-
-<!-- Vendor JavaScript -->
-<script defer rel="text/javascript" src="../vendor/js/jquery-3.2.1.js"></script>
-<script defer rel="text/javascript" src="../vendor/js/bootstrap-3.3.7.js"></script>
-<!-- Local JavaScript -->
-<script defer rel="text/javascript" src="../js/script.js"></script>
-<!-- Google Analytics -->
-<script defer>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-91030849-1', 'auto');
-    ga('send', 'pageview');
-</script>

@@ -1,0 +1,7 @@
+<section id="{{ id }}">
+    <header>
+        <h2>{{ title }}</h2>
+    </header>
+    <hr>
+    {% block content %}{% endblock %}
+</section>

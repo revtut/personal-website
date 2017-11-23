@@ -1,0 +1,15 @@
+{% set id = 'portfolio' %}
+{% set title = 'Portfolio' %}
+
+{% extends "partials/section.nj" %}
+
+{% block content %}
+    <div class="portfolio-content container">
+        <div class="row text-center portfolio-page">
+            {% import "macros/portfolio.nj" as portfolio_macro %}
+            {% for item in portfolio %}
+                {{ portfolio_macro.item(item.title, item.description, item.image, item.links) }}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

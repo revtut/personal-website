@@ -1,0 +1,10 @@
+{% set id = 'contact' %}
+{% set title = 'Contact' %}
+
+{% extends "partials/section.nj" %}
+
+{% block content %}
+    <div class="row text-center">
+        {% include 'components/contactForm.nj' %}
+    </div>
+{% endblock %}
