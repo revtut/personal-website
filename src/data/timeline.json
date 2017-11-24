@@ -2,7 +2,10 @@
   {
     "title": "RevTut",
     "description": "Created a YouTube channel with <b>17K</b> subscribers and <b>3M</b> views.",
-    "date": "Oct 4, 2011",
+    "date": {
+      "text": "Oct 04, 2011",
+      "date": "2011/10/04"
+    },
     "link": "https://www.youtube.com/RevTut",
     "link_title": "YouTube Channel",
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524362/Portfolio/timeline/revtut_mke5uk.png",
@@ -11,7 +14,10 @@
   {
     "title": "Minecraft",
     "description": "Developed a custom server with more than <b>700</b> players online.",
-    "date": "Jun 13, 2012",
+    "date": {
+      "text": "Jun 13, 2012",
+      "date": "2012/06/13"
+    },
     "link": "https://www.youtube.com/watch?v=2YMLc9v_FX0",
     "link_title": "Minecraft Server",
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524360/Portfolio/timeline/minecraft_sqxror.png",
@@ -20,7 +26,10 @@
   {
     "title": "FIS12",
     "description": "<b>2nd</b> place in a sciences and physics competition.",
-    "date": "Apr 24, 2013",
+    "date": {
+      "text": "Apr 24, 2013",
+      "date": "2013/04/24"
+    },
     "link": "archives/fis12.jpg",
     "link_title": "FIS12",
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524360/Portfolio/timeline/pmate_pkxynj.png",
@@ -29,7 +38,10 @@
   {
     "title": "Colégio Internato dos Carvalhos (CIC)",
     "description": "Graduated from high-school with <b>19</b> out of 20.",
-    "date": "Jul 1, 2013",
+    "date": {
+      "text": "Jul 01, 2013",
+      "date": "2013/07/01"
+    },
     "link": "archives/cichighschool.pdf",
     "link_title": "High-school certificate",
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524360/Portfolio/timeline/cic_d6zxhz.png",
@@ -38,7 +50,10 @@
   {
     "title": "Ubisoft",
     "description": "Partnered with <b>Ubisoft</b> in some videos.",
-    "date": "Jul 11, 2013",
+    "date": {
+      "text": "Jul 11, 2013",
+      "date": "2013/07/11"
+    },
     "link": "https://www.youtube.com/watch?v=uNef-aC9xDE",
     "link_title": "Ubisoft project",
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524361/Portfolio/timeline/ubisoft_i5iaub.png",
@@ -47,7 +62,10 @@
   {
     "title": "Turkish Airlines",
     "description": "Cooperated with <b>Turkish Airlines</b> in some videos.",
-    "date": "Dec 03, 2013",
+    "date": {
+      "text": "Dec 03, 2013",
+      "date": "2013/12/03"
+    },
     "link": "https://www.youtube.com/watch?v=jhFqSlvbKAM",
     "link_title": "Turkish airlines project",
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524361/Portfolio/timeline/turkish_airlines_vsgftq.png",
@@ -56,7 +74,10 @@
   {
     "title": "F.J.Seguros",
     "description": "As a Network & Security Engineer I've configured a private cloud system.",
-    "date": "Oct 1, 2015",
+    "date": {
+      "text": "Oct 1, 2015",
+      "date": "2015/10/01"
+    },
     "link": "http://fjseguros.pt/",
     "link_title": "FJSeguros",
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524360/Portfolio/timeline/fjseguros_s779hp.png",
@@ -65,7 +86,10 @@
   {
     "title": "Faculdade de Engenharia da Universidade do Porto (FEUP)",
     "description": "Graduated from Bachelor's in Informatics and Computing Engineering with <b>16</b> out of 20.",
-    "date": "Jul 1, 2016",
+    "date": {
+      "text": "Jul 1, 2016",
+      "date": "2016/07/01"
+    },
     "link": "archives/feupbachelors.pdf",
     "link_title": "Bachelor's grades",
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524360/Portfolio/timeline/feup_njzijw.png",
