@@ -6,25 +6,10 @@
 </head>
 
 <body>
-<header id="top" class="intro">
-    <div class="text-center v-align">
-        <img src="{{ settings.profile_picture }}"
-             width="253"
-             height="253" alt="Profile picture" class="img-circle">
-        <h1>{{ settings.author }}</h1>
-        <hr>
-        <h2>{{ settings.profession }}</h2>
-        <div class="text-center know-more">
-            <button type="button" class="btn-rectangle" onclick="jumpToAnchor('#about')">
-                <i class="fa fa-arrow-down" aria-hidden="true"></i> Know more
-            </button>
-            <button type="button" class="btn-rectangle"
-                    onclick="window.open('https://joaosilva2095.keybase.pub/personal-website/resumejoaosilva.pdf','_blank')">
-                <i class="fa fa-graduation-cap" aria-hidden="true"></i> My Résumé
-            </button>
-        </div>
-    </div>
-</header>
+{% block header %}
+    {% include 'components/header.nj' %}
+{% endblock %}
+
 {% block nav %}
     {% include 'components/navbar.nj' %}
 {% endblock %}

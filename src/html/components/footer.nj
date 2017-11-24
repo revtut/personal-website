@@ -13,27 +13,17 @@
             <div class="col-xs-10 text-left">
                 <p>
                     <i>
-                        <q>Shoot for the moon. Even if you miss, you’ll land among the stars.</q> - Oscar Wilde
+                        <q>{{ settings.quote.quote }}</q> - {{ settings.quote.author }}
                     </i>
                 </p>
             </div>
         </div>
         <div class="col-md-offset-1 col-md-4 col-centered">
-            <a class="social-icon" href="https://www.linkedin.com/in/joaosilva2095" target="_blank" title="LinkedIn">
-                <i class="fa fa-fw fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a class="social-icon" href="https://www.github.com/joaosilva2095" target="_blank" title="Github">
-                <i class="fa fa-fw fa-github" aria-hidden="true"></i>
-            </a>
-            <a class="social-icon" href="https://www.facebook.com/joaosilva2095" target="_blank" title="Facebook">
-                <i class="fa fa-fw fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a class="social-icon" href="https://www.instagram.com/joaosilva2095/" target="_blank" title="Instagram">
-                <i class="fa fa-fw fa-instagram" aria-hidden="true"></i>
-            </a>
-            <a class="social-icon" href="https://joaosilva2095.tumblr.com/" target="_blank" title="Tumblr">
-                <i class="fa fa-fw fa-tumblr" aria-hidden="true"></i>
-            </a>
+            {% for item in settings.social_media %}
+                <a class="social-icon" href="{{ item.link }}" target="_blank" title="{{ item.title }}">
+                    <i class="fa fa-fw {{ item.icon }}" aria-hidden="true"></i>
+                </a>
+            {% endfor %}
         </div>
     </div>
 </footer>
