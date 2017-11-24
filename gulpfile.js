@@ -16,17 +16,13 @@ gulp.task('clean', function () {
 });
 
 gulp.task('other-files', function () {
-    gulp.src([
+    return gulp.src([
             'src/robots.txt',
             'src/sitemap.xml',
             'src/vendor/**'],
         {
             base: 'src'
         }).pipe(gulp.dest(distPath));
-
-    return gulp.src(['assets/**'], {
-        base: 'assets'
-    }).pipe(gulp.dest(distPath + 'assets'))
 });
 
 gulp.task('default', ['start']);

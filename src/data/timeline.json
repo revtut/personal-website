@@ -5,7 +5,7 @@
     "date": "Oct 4, 2011",
     "link": "https://www.youtube.com/RevTut",
     "link_title": "YouTube Channel",
-    "image": "assets/images/timeline/revtut.png",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524362/Portfolio/timeline/revtut_mke5uk.png",
     "icon": "fa-youtube"
   },
   {
@@ -14,7 +14,7 @@
     "date": "Jun 13, 2012",
     "link": "https://www.youtube.com/watch?v=2YMLc9v_FX0",
     "link_title": "Minecraft Server",
-    "image": "assets/images/timeline/minecraft.png",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524360/Portfolio/timeline/minecraft_sqxror.png",
     "icon": "fa-play"
   },
   {
@@ -23,7 +23,7 @@
     "date": "Apr 24, 2013",
     "link": "archives/fis12.jpg",
     "link_title": "FIS12",
-    "image": "assets/images/timeline/pmate.png",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524360/Portfolio/timeline/pmate_pkxynj.png",
     "icon": "fa-file-image-o"
   },
   {
@@ -32,7 +32,7 @@
     "date": "Jul 1, 2013",
     "link": "archives/cichighschool.pdf",
     "link_title": "High-school certificate",
-    "image": "assets/images/timeline/cic.png",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524360/Portfolio/timeline/cic_d6zxhz.png",
     "icon": "fa-file-image-o"
   },
   {
@@ -41,7 +41,7 @@
     "date": "Jul 11, 2013",
     "link": "https://www.youtube.com/watch?v=uNef-aC9xDE",
     "link_title": "Ubisoft project",
-    "image": "assets/images/timeline/ubisoft.png",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524361/Portfolio/timeline/ubisoft_i5iaub.png",
     "icon": "fa-play"
   },
   {
@@ -50,7 +50,7 @@
     "date": "Dec 03, 2013",
     "link": "https://www.youtube.com/watch?v=jhFqSlvbKAM",
     "link_title": "Turkish airlines project",
-    "image": "assets/images/timeline/turkish-airlines.png",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524361/Portfolio/timeline/turkish_airlines_vsgftq.png",
     "icon": "fa-play"
   },
   {
@@ -59,7 +59,7 @@
     "date": "Oct 1, 2015",
     "link": "http://fjseguros.pt/",
     "link_title": "FJSeguros",
-    "image": "assets/images/timeline/fjseguros.png",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524360/Portfolio/timeline/fjseguros_s779hp.png",
     "icon": "fa-globe"
   },
   {
@@ -68,7 +68,7 @@
     "date": "Jul 1, 2016",
     "link": "archives/feupbachelors.pdf",
     "link_title": "Bachelor's grades",
-    "image": "assets/images/timeline/feup.png",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524360/Portfolio/timeline/feup_njzijw.png",
     "icon": "fa-file-pdf-o"
   }
 ]
