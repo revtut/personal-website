@@ -5,24 +5,36 @@
       "value": 95
     },
     {
+      "title": "Go",
+      "value": 75
+    },
+    {
+      "title": "SQL",
+      "value": 85
+    },
+    {
       "title": "JavaScript",
-      "value": 80
+      "value": 75
+    },
+    {
+      "title": "Python",
+      "value": 30
     },
     {
       "title": "C",
       "value": 70
     },
     {
+      "title": "TypeScript",
+      "value": 80
+    },
+    {
       "title": "PHP",
-      "value": 75
+      "value": 70
     },
     {
       "title": "HTML / CSS",
-      "value": 85
-    },
-    {
-      "title": "SQL",
-      "value": 80
+      "value": 90
     },
     {
       "title": "C++",
@@ -30,20 +42,20 @@
     },
     {
       "title": "C#",
-      "value": 40
+      "value": 50
     }
   ],
   "soft": [
     {
       "title": "Leadership",
-      "value": 85
+      "value": 90
     },
     {
       "title": "Design",
       "value": 65
     },
     {
-      "title": "Marketing",
+      "title": "Software Architecture",
       "value": 70
     },
     {
