@@ -1,7 +1,7 @@
 [
   {
     "title": "RevTut",
-    "description": "Created a YouTube channel with <b>17K</b> subscribers and <b>3M</b> views.",
+    "description": "Started a YouTube channel that got <b>17K+</b> subscribers with <b>3M+</b> views.",
     "date": {
       "text": "Oct 04, 2011",
       "date": "2011/10/04"
@@ -13,7 +13,7 @@
   },
   {
     "title": "Minecraft",
-    "description": "Developed a custom server with more than <b>700</b> players online.",
+    "description": "Developed a custom server with more than <b>700</b> players online, #1 in Portugal.",
     "date": {
       "text": "Jun 13, 2012",
       "date": "2012/06/13"
@@ -25,7 +25,7 @@
   },
   {
     "title": "FIS12",
-    "description": "<b>2nd</b> place in a sciences and physics competition.",
+    "description": "Won the <b>2nd</b> place in a sciences and physics competition.",
     "date": {
       "text": "Apr 24, 2013",
       "date": "2013/04/24"
@@ -37,7 +37,7 @@
   },
   {
     "title": "Colégio Internato dos Carvalhos (CIC)",
-    "description": "Graduated from high-school with <b>19</b> out of 20.",
+    "description": "Graduated from high-school with an average of <b>19</b> out of 20.",
     "date": {
       "text": "Jul 01, 2013",
       "date": "2013/07/01"
@@ -49,7 +49,7 @@
   },
   {
     "title": "Ubisoft",
-    "description": "Partnered with <b>Ubisoft</b> in some videos.",
+    "description": "Partnered with <b>Ubisoft</b> in a video project.",
     "date": {
       "text": "Jul 11, 2013",
       "date": "2013/07/11"
@@ -61,7 +61,7 @@
   },
   {
     "title": "Turkish Airlines",
-    "description": "Cooperated with <b>Turkish Airlines</b> in some videos.",
+    "description": "Worked with <b>Turkish Airlines</b> in the advertisement of a campaign.",
     "date": {
       "text": "Dec 03, 2013",
       "date": "2013/12/03"
@@ -73,7 +73,7 @@
   },
   {
     "title": "F.J.Seguros",
-    "description": "As a Network & Security Engineer I've configured a private cloud system.",
+    "description": "Configured a private cloud and a remote desktop system so all employees could work remotely.",
     "date": {
       "text": "Oct 1, 2015",
       "date": "2015/10/01"
@@ -85,7 +85,7 @@
   },
   {
     "title": "Faculdade de Engenharia da Universidade do Porto (FEUP)",
-    "description": "Graduated from Bachelor's in Informatics and Computing Engineering with <b>16</b> out of 20.",
+    "description": "Bachelor's in Informatics and Computing Engineering with an average of <b>16</b> out of 20.",
     "date": {
       "text": "Jul 1, 2016",
       "date": "2016/07/01"
@@ -94,5 +94,29 @@
     "link_title": "Bachelor's grades",
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524360/Portfolio/timeline/feup_njzijw.png",
     "icon": "fa-file-pdf-o"
+  },
+  {
+    "title": "UPTEC",
+    "description": "Developed a management platform for the <b>200+</b> start-ups here incubated.",
+    "date": {
+      "text": "Jul 1, 2017",
+      "date": "2017/07/01"
+    },
+    "link": "http://uptec.up.pt/en",
+    "link_title": "UPTEC",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524362/Portfolio/timeline/uptec_rsvqxm.png",
+    "icon": "fa-globe"
+  },
+  {
+    "title": "Make or Break",
+    "description": "Won the <b>1st</b> place in the hardcore category in a 3 day hackathon.",
+    "date": {
+      "text": "Sep 10, 2017",
+      "date": "2017/09/10"
+    },
+    "link": "https://makeorbreak.portosummerofcode.com/",
+    "link_title": "Make or Break",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511529450/Portfolio/timeline/porto-summer-of-code_pvohrn.png",
+    "icon": "fa-globe"
   }
 ]
