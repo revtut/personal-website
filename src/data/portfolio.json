@@ -2,7 +2,7 @@
   {
     "title": "Minecraft Server",
     "description": "In the early beginning of the server I was creating it using plugins that existed in the Internet. <br>One year after the opening of it I decided to create my own plugins so we could stand out from the crowd. <br>Several minigames were developed in JAVA, some already known by the players, others that no one ever played because they were 100% unique. <br>As the server grew we had to balance the load between several physical servers (four Linux servers more specifically). Everything was connected and we used an SQL server to save all the data of the players. <br>At that time the server was having a huge success! We were 25 people in the team and more than 700 players online in the game!",
-    "image": "assets/images/portfolio/minecraft_team.png",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524362/Portfolio/projects/minecraft_team_erkdmj.png",
     "links": [
       {
         "title": "Minecraft Server",
@@ -24,7 +24,7 @@
   {
     "title": "Nidhogg",
     "description": "At the beginning we started the development of this project as a clone of the game <b>Nidhogg</b>. However we changed our minds and developed a \"one vs one\" game where players have to jump between the moving platforms so they do not fall and lose. The last player not to fall wins the game. <br> This project was developed using JAVA without any framework. All the elements such as buttons, display graphics and sound were custom coded, this is, we extended the original classes from graphical JAVA library and modified them for our needs. <br> <br>Controls: <br>Player 1 - WASD + Space <br>Player 2 - Arrow Keys + Left Shift",
-    "image": "assets/images/portfolio/nidhogg.png",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524363/Portfolio/projects/nidhogg_zsteoz.png",
     "links": [
       {
         "title": "Nidhogg game",
@@ -36,7 +36,7 @@
   {
     "title": "The Maze",
     "description": "This is a game where a player is born in a maze and his goal is to find the exit and leave. However in order to accomplish that, he must kill all the dragons. They can be killed by throwing the coconuts gathered from the floor to them or with the only sword that exists in the maze. <br>Dragons shoot fireballs that kill the player if he does not have picked up the shield yet. <br>The game is fully configurable and we have a hidden feature that is the zoom (that is actually useful when you choose big mazes) that can be controlled with the <b>+</b> and <b>-</b> keys. You may also save your games for playing them at a later time. <br> This project was developed using JAVA without any framework. All the elements such as buttons, display graphics and sound were custom coded, this is, we extended the original classes from graphical JAVA library and modified them for our needs. Most of the art used in the game was also created by me.",
-    "image": "assets/images/portfolio/the_maze.png",
+    "image": "http://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524363/Portfolio/projects/the_maze_zab6bj.png",
     "links": [
       {
         "title": "The Maze game",
@@ -48,7 +48,7 @@
   {
     "title": "Portable Controller",
     "description": "We all love gaming controllers such as those from XBox or PlayStation so we thought, why not have one of those in our pocket? <br>That is the reason why we have created a portable controller that allows a player to play his favourite games using a smartphone. <br>The controller receptor must be running in the target computer and it allows up to four concurrent connections, that is, four players at the same time. All a player needs is to connect to the computer using the IP address displayed in the controller receptor. <br>Pure JAVA and Android API were used to develop this project.",
-    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/v1496246327/Portfolio/projects/portablecontroller.jpg",
+    "image": "http://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511525135/Portfolio/projects/portablecontroller_eqlzpb.jpg",
     "links": [
       {
         "title": "Portable controller Android",
@@ -65,7 +65,7 @@
   {
     "title": "ASSIS Mobile",
     "description": "ASSIS is an association for social integration. Elderly people are added to the platform and then users can donate to them. The money received is then used to buy medicines that for being expensive would not otherwise be bought. <br>With a six people team and a constant communication with the product owner we were able to develop the mobile application and its backend that would built-in the already existing online platform. <br>This was the first time using a cross-platform mobile framework that in our case was <b>Ionic</b>, an Angular based framework. The backend, a RESTful API, was coded in JAVA using the Jersey framework.",
-    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/v1496246327/Portfolio/projects/assis.jpg",
+    "image": "http://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511525136/Portfolio/projects/assis_gofqbg.jpg",
     "links": [
       {
         "title": "ASSIS Android",
@@ -82,7 +82,7 @@
   {
     "title": "Android Fighter",
     "description": "Android Fighter is the lowest level coding game that I ever done, it is a one vs one player game and the goal is to kill the opponent. <br>The game was developed in C using Minix as operative system. Without the help of any sort of external APIs or frameworks we had to develop it using direct access to peripherals, that is, in order to draw the graphics in the screen (we used the \"Dual Buffering\" technic) we had to copy the content of the RAM directly to the VRAM, to move the mouse we had to collect its accelaration data and calculate its position, keyboard inputs were also subscribed and even the datetime displayed in the screen was fetched from the \"Real Time Clock\".",
-    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/v1496246327/Portfolio/projects/androidfighter.jpg",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511525135/Portfolio/projects/androidfighter_qeedot.jpg",
     "links": [
       {
         "title": "Source code of Android Fighter",
