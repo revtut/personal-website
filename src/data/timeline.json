@@ -1,0 +1,74 @@
+[
+  {
+    "title": "RevTut",
+    "description": "Created a YouTube channel with <b>17K</b> subscribers and <b>3M</b> views.",
+    "date": "Oct 4, 2011",
+    "link": "https://www.youtube.com/RevTut",
+    "link_title": "YouTube Channel",
+    "image": "assets/images/timeline/revtut.png",
+    "icon": "fa-youtube"
+  },
+  {
+    "title": "Minecraft",
+    "description": "Developed a custom server with more than <b>700</b> players online.",
+    "date": "Jun 13, 2012",
+    "link": "https://www.youtube.com/watch?v=2YMLc9v_FX0",
+    "link_title": "Minecraft Server",
+    "image": "assets/images/timeline/minecraft.png",
+    "icon": "fa-play"
+  },
+  {
+    "title": "FIS12",
+    "description": "<b>2nd</b> place in a sciences and physics competition.",
+    "date": "Apr 24, 2013",
+    "link": "archives/fis12.jpg",
+    "link_title": "FIS12",
+    "image": "assets/images/timeline/pmate.png",
+    "icon": "fa-file-image-o"
+  },
+  {
+    "title": "Colégio Internato dos Carvalhos (CIC)",
+    "description": "Graduated from high-school with <b>19</b> out of 20.",
+    "date": "Jul 1, 2013",
+    "link": "archives/cichighschool.pdf",
+    "link_title": "High-school certificate",
+    "image": "assets/images/timeline/cic.png",
+    "icon": "fa-file-image-o"
+  },
+  {
+    "title": "Ubisoft",
+    "description": "Partnered with <b>Ubisoft</b> in some videos.",
+    "date": "Jul 11, 2013",
+    "link": "https://www.youtube.com/watch?v=uNef-aC9xDE",
+    "link_title": "Ubisoft project",
+    "image": "assets/images/timeline/ubisoft.png",
+    "icon": "fa-play"
+  },
+  {
+    "title": "Turkish Airlines",
+    "description": "Cooperated with <b>Turkish Airlines</b> in some videos.",
+    "date": "Dec 03, 2013",
+    "link": "https://www.youtube.com/watch?v=jhFqSlvbKAM",
+    "link_title": "Turkish airlines project",
+    "image": "assets/images/timeline/turkish-airlines.png",
+    "icon": "fa-play"
+  },
+  {
+    "title": "F.J.Seguros",
+    "description": "As a Network & Security Engineer I've configured a private cloud system.",
+    "date": "Oct 1, 2015",
+    "link": "http://fjseguros.pt/",
+    "link_title": "FJSeguros",
+    "image": "assets/images/timeline/fjseguros.png",
+    "icon": "fa-globe"
+  },
+  {
+    "title": "Faculdade de Engenharia da Universidade do Porto (FEUP)",
+    "description": "Graduated from Bachelor's in Informatics and Computing Engineering with <b>16</b> out of 20.",
+    "date": "Jul 1, 2016",
+    "link": "archives/feupbachelors.pdf",
+    "link_title": "Bachelor's grades",
+    "image": "assets/images/timeline/feup.png",
+    "icon": "fa-file-pdf-o"
+  }
+]

@@ -1,0 +1,29 @@
+<nav class="navbar navbar-default navbar-center">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-content">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="nav navbar-nav">
+            <li>
+                <a class="smooth-scroll" href="#about" title="About">About</a>
+            </li>
+            <li>
+                <a class="smooth-scroll" href="#history" title="History">History</a>
+            </li>
+            <li>
+                <a class="smooth-scroll" href="#skills" title="Skills">Skills</a>
+            </li>
+            <li>
+                <a class="smooth-scroll" href="#portfolio" title="Portfolio">Portfolio</a>
+            </li>
+            <li>
+                <a class="smooth-scroll" href="#contact" title="Contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>

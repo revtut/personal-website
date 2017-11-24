@@ -1,0 +1,43 @@
+{% macro item(title, description, image, links=[]) %}
+{% set itemID = range(1,999999) | random %}
+<div class="col-md-4 col-xs-6 portfolio-item">
+    <figure data-toggle="modal" data-target="#{{ itemID }}">
+        <img src='{{ image }}'
+             width="540"
+             height="360" alt='{{ title }}'/>
+        <figcaption>{{ title | title }}</figcaption>
+        <!-- Plus sign overlay -->
+        <div class="overlay">
+            <i class="fa fa-fw fa-plus-square"></i>
+        </div>
+    </figure>
+
+    <!-- Project's modal -->
+    <div class="modal fade" id="{{ itemID }}" tabindex="-1" role="dialog"
+         aria-label="{{ title }}">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img src='{{ image }}'
+                         width="540"
+                         height="360" alt='{{ title }}'/>
+                    <span class="close" data-dismiss="modal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <h3>{{ title | title }}</h3>
+                    <p>{{ description | safe }}</p>
+                </div>
+                <div class="modal-footer text-center">
+                    {% for link in links %}
+                        <a class="social-icon"
+                           href="{{ link.link }}"
+                           target="_blank" title="{{ link.title }}">
+                            <i class="fa fa-fw {{ link.icon }}" aria-hidden="true"></i>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endmacro %}
