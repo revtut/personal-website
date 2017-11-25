@@ -25,7 +25,16 @@
                 </div>
                 <div class="modal-body">
                     <h3>{{ title | title }}</h3>
-                    <p>{{ description | safe }}</p>
+                    {% for sentence in description.sentences %}
+                        <p>{{ sentence | safe }}</p><br>
+                    {% endfor %}
+
+                    <p class="technologies">
+                        <b>Technologies:</b>
+                        {% for technology in description.technologies %}
+                            {{ technology }}{% if not loop.last %},{% endif %}
+                        {% endfor %}
+                    </p>
                 </div>
                 <div class="modal-footer text-center">
                     {% for link in links %}

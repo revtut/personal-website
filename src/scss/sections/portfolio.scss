@@ -153,6 +153,10 @@
         color: #7f8c97;
         text-align: justify;
         margin: 0;
+
+        &.technologies {
+          text-align: center;
+        }
       }
     }
 

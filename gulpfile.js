@@ -11,6 +11,12 @@ var nunjucks = require('gulp-nunjucks-render');
 
 var distPath = "dist/";
 
+// De-caching for Data files
+function requireUncached($module) {
+    delete require.cache[require.resolve($module)];
+    return require($module);
+}
+
 gulp.task('clean', function () {
     return del(distPath + '**')
 });
@@ -52,11 +58,11 @@ gulp.task('html', function () {
     return gulp.src('src/pages/**/*.nj', {base: 'src/pages'})
         .pipe(data(function () {
             const result = {
-                settings: require('./src/settings.json'),
-                about: require('./src/data/about.json'),
-                timeline: require('./src/data/timeline.json'),
-                skills: require('./src/data/skills.json'),
-                portfolio: require('./src/data/portfolio.json')
+                settings: requireUncached('./src/settings.json'),
+                about: requireUncached('./src/data/about.json'),
+                timeline: requireUncached('./src/data/timeline.json'),
+                skills: requireUncached('./src/data/skills.json'),
+                portfolio: requireUncached('./src/data/portfolio.json')
             };
 
             return result
@@ -79,8 +85,8 @@ gulp.task('browser-sync', function () {
 
 gulp.task('watch', function () {
     gulp.watch(['src/**/*.html', 'src/**/*.nj', 'src/**/*.json'], ['html']);
-    gulp.watch('src/scss/*.scss', ['sass']);
-    gulp.watch('src/js/*.js', ['javascript']);
+    gulp.watch('src/**/*.scss', ['sass']);
+    gulp.watch('src/**/*.js', ['javascript']);
 });
 
 gulp.task('build', ['clean', 'sass', 'js', 'html', 'other-files']);
@@ -116,11 +122,11 @@ gulp.task('html-prod', function () {
     return gulp.src('src/pages/**/*.nj', {base: 'src/pages'})
         .pipe(data(function () {
             const result = {
-                settings: require('./src/settings.json'),
-                about: require('./src/data/about.json'),
-                timeline: require('./src/data/timeline.json'),
-                skills: require('./src/data/skills.json'),
-                portfolio: require('./src/data/portfolio.json')
+                settings: requireUncached('./src/settings.json'),
+                about: requireUncached('./src/data/about.json'),
+                timeline: requireUncached('./src/data/timeline.json'),
+                skills: requireUncached('./src/data/skills.json'),
+                portfolio: requireUncached('./src/data/portfolio.json')
             };
 
             return result
