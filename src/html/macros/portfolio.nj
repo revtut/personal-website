@@ -5,7 +5,7 @@
         <img src='{{ image }}'
              width="540"
              height="360" alt='{{ title }}'/>
-        <figcaption>{{ title | title }}</figcaption>
+        <figcaption>{{ title }}</figcaption>
         <!-- Plus sign overlay -->
         <div class="overlay">
             <i class="fa fa-fw fa-plus-square"></i>
@@ -24,7 +24,7 @@
                     <span class="close" data-dismiss="modal">&times;</span>
                 </div>
                 <div class="modal-body">
-                    <h3>{{ title | title }}</h3>
+                    <h3>{{ title }}</h3>
                     {% for sentence in description.sentences %}
                         <p>{{ sentence | safe }}</p><br>
                     {% endfor %}

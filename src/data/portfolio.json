@@ -36,6 +36,44 @@
     ]
   },
   {
+    "title": "UPTEConnect",
+    "description": {
+      "sentences": [
+        "UPTEC is a startup incubator hosting more than 200 start-ups",
+        "The management of all the information is very hard and time consuming and this is why a management platform was needed",
+        "This platform allows all companies to manage their own collaborators, see the notifications, create requests and more.",
+        "Every data stored can be also exported as Excel or PDF"
+      ],
+      "technologies": [
+        "Go",
+        "TypeScript",
+        "SQL",
+        "Angular 4"
+      ]
+    },
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524362/Portfolio/projects/upteconnect_sd313g.png",
+    "links": []
+  },
+  {
+    "title": "Cloud Desktops",
+    "description": {
+      "sentences": [
+        "Every day it is more important that the information is accessible from anywhere.",
+        "F.J. Seguros wanted that all the 10 employees could work remotely so they could meet with the clients and still have access to everything.",
+        "So, a Windows Server machine was configured with Remote Desktop Sessions and all the programs were there installed.",
+        "All the documents that were in the office were also moved to the remote machine. All of this was done at the same time employees were working.",
+        "To assure the replication of the data, another server (Linux) was configured with OwnCloud to sync all the files from the Windows machine."
+      ],
+      "technologies": [
+        "Windows Server",
+        "Linux",
+        "OwnCloud"
+      ]
+    },
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524362/Portfolio/projects/windows_server_k6liil.png",
+    "links": []
+  },
+  {
     "title": "Nidhogg",
     "description": {
       "sentences": [
