@@ -1,0 +1,25 @@
+{% set id = 'about' %}
+{% set title = 'About' %}
+
+{% extends "partials/section.nj" %}
+
+{% block content %}
+    <div class="row text-left about-me">
+        <div class="col-md-offset-3 col-md-4">
+            {% import "macros/about.nj" as about_macro %}
+            {% for item in about %}
+                {% if loop.index0 < (loop.length / 2) %}
+                    {{ about_macro.item(item.title, item.value, item.icon) }}
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="col-md-4">
+            {% import "macros/about.nj" as about_macro %}
+            {% for item in about %}
+                {% if loop.index0 >= (loop.length / 2) %}
+                    {{ about_macro.item(item.title, item.value, item.icon) }}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

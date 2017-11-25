@@ -6,25 +6,29 @@ var sass = require('gulp-sass');
 var prefix = require('gulp-autoprefixer');
 var del = require('del');
 var concat = require('gulp-concat');
+var data = require('gulp-data');
+var nunjucks = require('gulp-nunjucks-render');
 
 var distPath = "dist/";
+
+// De-caching for Data files
+function requireUncached($module) {
+    delete require.cache[require.resolve($module)];
+    return require($module);
+}
 
 gulp.task('clean', function () {
     return del(distPath + '**')
 });
 
 gulp.task('other-files', function () {
-    gulp.src([
+    return gulp.src([
             'src/robots.txt',
             'src/sitemap.xml',
             'src/vendor/**'],
         {
             base: 'src'
         }).pipe(gulp.dest(distPath));
-
-    return gulp.src(['assets/**'], {
-        base: 'assets'
-    }).pipe(gulp.dest(distPath + 'assets'))
 });
 
 gulp.task('default', ['start']);
@@ -51,7 +55,21 @@ gulp.task('js', function () {
 });
 
 gulp.task('html', function () {
-    return gulp.src('src/**/*.html', {base: 'src'})
+    return gulp.src('src/pages/**/*.nj', {base: 'src/pages'})
+        .pipe(data(function () {
+            const result = {
+                settings: requireUncached('./src/settings.json'),
+                about: requireUncached('./src/data/about.json'),
+                timeline: requireUncached('./src/data/timeline.json'),
+                skills: requireUncached('./src/data/skills.json'),
+                portfolio: requireUncached('./src/data/portfolio.json')
+            };
+
+            return result
+        }))
+        .pipe(nunjucks({
+            path: ['src/html']
+        }))
         .pipe(gulp.dest(distPath))
         .pipe(browserSync.reload({stream: true}))
 });
@@ -66,9 +84,9 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('src/**/*.html', ['html']);
-    gulp.watch('src/scss/*.scss', ['sass']);
-    gulp.watch('src/js/*.js', ['javascript']);
+    gulp.watch(['src/**/*.html', 'src/**/*.nj', 'src/**/*.json'], ['html']);
+    gulp.watch('src/**/*.scss', ['sass']);
+    gulp.watch('src/**/*.js', ['javascript']);
 });
 
 gulp.task('build', ['clean', 'sass', 'js', 'html', 'other-files']);
@@ -101,7 +119,21 @@ gulp.task('js-prod', function () {
 });
 
 gulp.task('html-prod', function () {
-    return gulp.src('src/**/*.html', {base: 'src'})
+    return gulp.src('src/pages/**/*.nj', {base: 'src/pages'})
+        .pipe(data(function () {
+            const result = {
+                settings: requireUncached('./src/settings.json'),
+                about: requireUncached('./src/data/about.json'),
+                timeline: requireUncached('./src/data/timeline.json'),
+                skills: requireUncached('./src/data/skills.json'),
+                portfolio: requireUncached('./src/data/portfolio.json')
+            };
+
+            return result
+        }))
+        .pipe(nunjucks({
+            path: ['src/html']
+        }))
         .pipe(htmlMin({
             collapseWhitespace: true
         }))

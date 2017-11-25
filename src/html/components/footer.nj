@@ -1,0 +1,29 @@
+<footer>
+    <div class="row text-center upper-footer">
+        <i class="fa fa-fw fa-heart" aria-hidden="true"></i>
+        <span>Handcrafted and designed by myself</span>
+    </div>
+    <div class="row text-center lower-footer">
+        <div class="col-md-offset-2 col-md-4 footer-quote col-centered">
+            <div class="col-xs-2 text-right">
+                <img src="{{ settings.logo_gray }}"
+                     width="59" height="74"
+                     alt="Logo">
+            </div>
+            <div class="col-xs-10 text-left">
+                <p>
+                    <i>
+                        <q>{{ settings.quote.quote }}</q> - {{ settings.quote.author }}
+                    </i>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-offset-1 col-md-4 col-centered">
+            {% for item in settings.social_media %}
+                <a class="social-icon" href="{{ item.link }}" target="_blank" title="{{ item.title }}" itemprop="url">
+                    <i class="fa fa-fw {{ item.icon }}" aria-hidden="true"></i>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</footer>

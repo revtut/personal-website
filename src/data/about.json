@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Name",
+    "value": "João Fernando Oliveira e Silva",
+    "icon": "fa-user"
+  },
+  {
+    "title": "Birthday",
+    "value": "October 20th, 1995",
+    "icon": "fa-birthday-cake"
+  },
+  {
+    "title": "Location",
+    "value": "Porto, Portugal",
+    "icon": "fa-map-marker"
+  },
+  {
+    "title": "Gender",
+    "value": "Male",
+    "icon": "fa-intersex"
+  },
+  {
+    "title": "Marital Status",
+    "value": "Single",
+    "icon": "fa-female"
+  },
+  {
+    "title": "Height",
+    "value": "1.85m",
+    "icon": "fa-arrow-up"
+  },
+  {
+    "title": "Languages",
+    "value": "Portuguese and English",
+    "icon": "fa-flag"
+  },
+  {
+    "title": "Sports",
+    "value": "Scuba-diving and dance",
+    "icon": "fa-soccer-ball-o"
+  },
+  {
+    "title": "Favorite OS",
+    "value": "Windows",
+    "icon": "fa-laptop"
+  },
+  {
+    "title": "Favorite mobile OS",
+    "value": "Android",
+    "icon": "fa-mobile"
+  },
+  {
+    "title": "Favorite coding language",
+    "value": "Java",
+    "icon": "fa-code"
+  },
+  {
+    "title": "Favorite IDE",
+    "value": "IntelliJ IDEA",
+    "icon": "fa-terminal"
+  }
+]

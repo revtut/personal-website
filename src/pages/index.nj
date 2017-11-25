@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% include 'components/head.nj' %}
+</head>
+
+<body>
+{% block header %}
+    {% include 'components/header.nj' %}
+{% endblock %}
+
+{% block nav %}
+    {% include 'components/navbar.nj' %}
+{% endblock %}
+<main>
+    <!-- About section -->
+    {% block about %}
+        {% include 'components/about.nj' %}
+    {% endblock %}
+    <!-- Timeline section -->
+    {% block history %}
+        {% include 'components/timeline.nj' %}
+    {% endblock %}
+    <!-- Skills section -->
+    {% block skills %}
+        {% include 'components/skills.nj' %}
+    {% endblock %}
+    <!-- Portfolio section -->
+    {% block portfolio %}
+        {% include 'components/portfolio.nj' %}
+    {% endblock %}
+    <!-- Contact section -->
+    {% block contact %}
+        {% include 'components/contact.nj' %}
+    {% endblock %}
+</main>
+</body>
+
+{% block footer %}
+    {% include 'components/footer.nj' %}
+{% endblock %}
+
+{% block footerScripts %}
+    {% include 'partials/footerScripts.nj' %}
+{% endblock %}
+</html>

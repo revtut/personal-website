@@ -1,0 +1,16 @@
+{% macro item(title, value) %}
+<span data-toggle="tooltip" data-placement="right" title="{{ value }}%">
+    <div class="row skill-element">
+        <div class="col-xs-6">
+            <p>{{ title }}</p>
+        </div>
+            <div class="col-xs-6">
+                    <div class="progress-bar progress-bar-warning" aria-valuenow="{{ value }}" aria-valuemin="0"
+                         aria-valuemax="100" style="width: {{ value }}%;"
+                         role="progressbar">
+                        <span class="sr-only">{{ value }}%</span>
+                    </div>
+            </div>
+    </div>
+</span>
+{% endmacro %}

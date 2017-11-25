@@ -1,0 +1,35 @@
+{
+  "title": "João Silva | Software Engineer",
+  "description": "I am João Silva, a skilled software engineer and designer with outstanding projects in JAVA, Go, C, PHP and others. Checkout my portfolio and get in touch!",
+  "author": "João Silva",
+  "profession": "Software Engineer",
+  "favicon": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524360/Portfolio/favicon_lkrhey.png",
+  "profile_picture": "http://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524361/Portfolio/profile-picture_pcmvh1.png",
+  "logo_gray": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524360/Portfolio/logo-gray_rkrgks.png",
+  "quote": {
+    "quote": "Shoot for the moon. Even if you miss, you’ll land among the stars.",
+    "author": "Oscar Wilde"
+  },
+  "social_media": [
+    {
+      "title": "LinkedIn",
+      "icon": "fa-linkedin",
+      "link": "https://www.linkedin.com/in/joaosilva2095"
+    },
+    {
+      "title": "GitHub",
+      "icon": "fa-github",
+      "link": "https://www.github.com/joaosilva2095"
+    },
+    {
+      "title": "Facebook",
+      "icon": "fa-facebook",
+      "link": "https://www.facebook.com/joaosilva2095"
+    },
+    {
+      "title": "Instagram",
+      "icon": "fa-instagram",
+      "link": "https://www.instagram.com/joaosilva2095/"
+    }
+  ]
+}

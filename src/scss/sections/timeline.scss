@@ -19,7 +19,7 @@
     }
 
     > .moment-description > p,
-    > .moment-date > p {
+    > .moment-date > time {
       font-size: 2rem;
     }
 
@@ -46,7 +46,7 @@
     }
 
     > .moment-description > p,
-    > .moment-date > p {
+    > .moment-date > time {
       font-size: 1.8rem;
     }
   }
@@ -99,18 +99,19 @@
   > .moment-date {
     pointer-events: none;
 
-    > p {
+    > time {
       margin: 3rem 0rem;
       color: #7f8c97;
+      display: block;
     }
   }
 
-  &:nth-of-type(odd) > .moment-date > p {
+  &:nth-of-type(odd) > .moment-date > time {
     text-align: left;
     margin-left: 5rem;
   }
 
-  &:nth-of-type(even) > .moment-date > p {
+  &:nth-of-type(even) > .moment-date > time {
     text-align: right;
     margin-right: 5rem;
   }

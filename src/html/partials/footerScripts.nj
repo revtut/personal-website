@@ -1,0 +1,15 @@
+<!-- Vendor JavaScript -->
+<script defer rel="text/javascript" src="../vendor/js/jquery-3.2.1.js"></script>
+<script defer rel="text/javascript" src="../vendor/js/bootstrap-3.3.7.js"></script>
+<!-- Local JavaScript -->
+<script defer rel="text/javascript" src="../js/script.js"></script>
+<!-- Google Analytics -->
+<script defer>
+    (function(e,t,n,i,s,a,c){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)}
+    ;a=t.createElement(i);c=t.getElementsByTagName(i)[0];a.async=true;a.src=s
+    ;c.parentNode.insertBefore(a,c)
+    })(window,document,"galite","script","https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js");
+
+    galite('create', 'UA-91030849-1', 'auto');
+    galite('send', 'pageview');
+</script>

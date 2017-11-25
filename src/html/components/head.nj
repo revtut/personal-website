@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+<title>{{ settings.title }}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="{{ settings.author }}">
+<meta name="description" content="{{ settings.description }}">
+<!-- Social metadata -->
+<meta property="og:title" content="{{ settings.title }}"/>
+<meta property="og:description" content="{{ settings.description }}"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="{{ settings.profile_picture }}"/>
+<meta property="og:url" content="https://www.joaosilva.co"/>
+<!-- Twitter metadata -->
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="joaosilva2095"/>
+<meta name="twitter:title" content="{{ settings.title }}"/>
+<meta name="twitter:description" content="{{ settings.description }}"/>
+<meta name="twitter:image" content="{{ settings.profile_picture }}"/>
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/png" href="{{ settings.favicon }}"/>
+<!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+<![endif]-->
+
+<!-- Vendor CSS -->
+<link rel="stylesheet" href="vendor/css/bootstrap-3.3.7.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<!-- Local CSS -->
+<link rel="stylesheet" href="css/main.css"/>

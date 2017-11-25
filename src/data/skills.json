@@ -1,0 +1,82 @@
+{
+  "hard": [
+    {
+      "title": "Java",
+      "value": 95
+    },
+    {
+      "title": "Go",
+      "value": 75
+    },
+    {
+      "title": "SQL",
+      "value": 85
+    },
+    {
+      "title": "JavaScript",
+      "value": 75
+    },
+    {
+      "title": "Python",
+      "value": 30
+    },
+    {
+      "title": "C",
+      "value": 70
+    },
+    {
+      "title": "TypeScript",
+      "value": 80
+    },
+    {
+      "title": "PHP",
+      "value": 70
+    },
+    {
+      "title": "HTML / CSS",
+      "value": 90
+    },
+    {
+      "title": "C++",
+      "value": 60
+    },
+    {
+      "title": "C#",
+      "value": 50
+    }
+  ],
+  "soft": [
+    {
+      "title": "Leadership",
+      "value": 90
+    },
+    {
+      "title": "Design",
+      "value": 65
+    },
+    {
+      "title": "Soft. Architecture",
+      "value": 70
+    },
+    {
+      "title": "Teamwork",
+      "value": 90
+    },
+    {
+      "title": "Linux",
+      "value": 70
+    },
+    {
+      "title": "Git",
+      "value": 95
+    },
+    {
+      "title": "Video Edition",
+      "value": 70
+    },
+    {
+      "title": "Image Edition",
+      "value": 80
+    }
+  ]
+}
