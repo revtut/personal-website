@@ -48,7 +48,9 @@
         "Go",
         "TypeScript",
         "SQL",
-        "Angular 4"
+        "Angular 4",
+        "HTML",
+        "CSS"
       ]
     },
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524362/Portfolio/projects/upteconnect_sd313g.png",
@@ -72,6 +74,31 @@
     },
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524362/Portfolio/projects/windows_server_k6liil.png",
     "links": []
+  },
+  {
+    "title": "Goatie",
+    "description": {
+      "sentences": [
+        "A goat population simulator developed during a 2 day coding hackathon in Porto, Portugal.",
+        "It simulates the evolution of a goat population in a random terrain. Gray dots are males, orange dots females and red dots females ready to breed.",
+        "The terrain has three biomes: water (no food but high walking speed), plains (medium level of food growth and medium walking speed), mountains (plenty of food but very low walking speed).",
+        "The goats desires are: breed if they are not young, eat if it is starving or explore the world if doesn't want to breed or eat.",
+        "All the decisions are powered by an artificial intelligence algorithm based on a BDI architecture (beliefs, desires and intentions)."
+      ],
+      "technologies": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ]
+    },
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1514905060/Portfolio/projects/goatie_fbilxk.png",
+    "links": [
+      {
+        "title": "Goatie Simulator",
+        "link": "https://goatie.joaosilva.co/",
+        "icon": "fa-external-link"
+      }
+    ]
   },
   {
     "title": "Nidhogg",
