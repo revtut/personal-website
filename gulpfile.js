@@ -37,7 +37,7 @@ gulp.task('default', ['start']);
  * Development
  */
 gulp.task('sass', function () {
-    return gulp.src('src/scss/main.scss', {base: 'src/scss'})
+    return gulp.src('src/scss/*', {base: 'src/scss'})
         .pipe(sass({
             includePaths: ['css'],
             onError: browserSync.notify
@@ -96,7 +96,7 @@ gulp.task('start', ['build', 'browser-sync', 'watch']);
  * Production
  */
 gulp.task('sass-prod', function () {
-    return gulp.src('src/scss/main.scss', {base: 'src/scss'})
+    return gulp.src('src/scss/*', {base: 'src/scss'})
         .pipe(sass({
             outputStyle: 'compressed',
             includePaths: ['css'],
