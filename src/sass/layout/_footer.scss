@@ -1,16 +1,16 @@
 @media (min-width: 768px) {
   footer {
     > .upper-footer {
-      font-size: 2.2rem;
+      font-size: $font-normal-size;
     }
 
     > .lower-footer {
       > .footer-quote p {
-        font-size: 1.5rem;
+        font-size: $font-tiny-size;
       }
 
       .fa {
-        font-size: 4rem;
+        font-size: $font-large-size;
       }
 
       .social-icon {
@@ -23,16 +23,16 @@
 @media (max-width: 768px) {
   footer {
     > .upper-footer {
-      font-size: 1.8rem;
+      font-size: $font-small-size;
     }
 
     > .lower-footer {
       > .footer-quote p {
-        font-size: 1.2rem;
+        font-size: $font-tiny-size;
       }
 
       .fa {
-        font-size: 3rem;
+        font-size: $font-normal-size;
       }
 
       .social-icon {
@@ -45,9 +45,9 @@
 footer {
   > .upper-footer {
     padding: 1rem 0rem;
-    background-color: #585a5d;
-    color: #eff6fa;
-    font-family: 'Dancing Script', cursive, sans-serif;
+    background-color: $footer-background-color-one;
+    color: $color-gray-light;
+    font-family: $font-hand-written;
     box-sizing: border-box;
 
     > span {
@@ -56,8 +56,8 @@ footer {
   }
 
   > .lower-footer {
-    background-color: #303134;
-    color: #eff6fa;
+    background-color: $footer-background-color-two;
+    color: $color-gray-light;
 
     > .footer-quote {
       padding: 1rem;
@@ -73,7 +73,7 @@ footer {
     }
 
     .social-icon {
-      color: #eff6fa;
+      color: $color-gray-light;
       box-sizing: border-box;
       display: inline-block;
       margin-right: -4px;
@@ -83,7 +83,7 @@ footer {
       &:hover,
       &:focus,
       &:active {
-        background-color: #585a5d;
+        background-color: $footer-background-color-one;
         text-decoration: none;
         outline: 0;
       }

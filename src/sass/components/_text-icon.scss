@@ -1,13 +1,10 @@
 @media (min-width: 768px) {
   .about-me {
     .about-me-element {
-      p {
-        font-size: 2.5rem;
-        line-height: 3rem;
-      }
-
+      p,
       i {
-        font-size: 3rem;
+        font-size: $font-small-size;
+        line-height: $font-small-size;
       }
     }
   }
@@ -16,13 +13,10 @@
 @media (max-width: 768px) {
   .about-me {
     .about-me-element {
-      p {
-        font-size: 1.8rem;
-        line-height: 1.8rem;
-      }
-
+      p,
       i {
-        font-size: 1.8rem;
+        font-size: $font-tiny-size;
+        line-height: $font-tiny-size;
       }
     }
   }
@@ -39,11 +33,11 @@
 
     p {
       display: inline-block;
-      color: #7f8c97;
+      color: $color-gray-normal;
     }
 
     i {
-      color: #f0ad4e;
+      color: $color-secondary;
     }
   }
 }

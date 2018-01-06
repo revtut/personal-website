@@ -1,7 +1,7 @@
 @media (min-width: 768px) {
   main section {
     > header > h2 {
-      font-size: 5rem;
+      font-size: $font-large-size;
     }
 
     > hr {
@@ -13,7 +13,7 @@
 @media (max-width: 768px) {
   main section {
     > header > h2 {
-      font-size: 2.5rem;
+      font-size: $font-normal-size;
     }
 
     > hr {
@@ -29,22 +29,22 @@ main section {
 
   > header > h2 {
     text-align: center;
-    color: #004080;
+    color: $color-primary;
     margin: 0;
     box-sizing: border-box;
     padding: 3rem 0rem 0.5rem 0rem;
   }
 
   > hr {
-    border-top: 0.3rem solid #004080;
+    border-top: 0.3rem solid $color-primary;
     margin: 0 auto;
   }
 
   &:nth-of-type(odd) {
-    background-color: #e9f0f5;
+    background-color: $background-color-one;
   }
 
   &:nth-of-type(even) {
-    background-color: #eff6fa;
+    background-color: $background-color-two;
   }
 }

@@ -3,7 +3,7 @@
     i,
     > .moment-description {
       > h3 {
-        font-size: 2.5rem;
+        font-size: $font-normal-size;
       }
 
       &::after {
@@ -20,7 +20,7 @@
 
     > .moment-description > p,
     > .moment-date > time {
-      font-size: 2rem;
+      font-size: $font-small-size;
     }
 
     &:nth-of-type(odd) > .moment-description::after {
@@ -41,13 +41,13 @@
       margin: 0 2rem;
 
       > h3 {
-        font-size: 1.8rem;
+        font-size: $font-small-size;
       }
     }
 
     > .moment-description > p,
     > .moment-date > time {
-      font-size: 1.8rem;
+      font-size: $font-tiny-size;
     }
   }
 }
@@ -75,22 +75,21 @@
 
   > .moment-description {
     background-color: white;
-    color: #000;
     position: relative;
     padding: 1rem;
     box-sizing: border-box;
-    -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.05));
-    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.05));
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(#000, 0.05));
+    filter: drop-shadow(0px 0px 5px rgba(#000, 0.05));
 
     > h3 {
       margin: 0rem 0rem 2rem 0rem;
-      color: #303e49;
+      color: $color-dark;
       text-align: left;
     }
 
     > p {
       margin: 0;
-      color: #7f8c97;
+      color: $color-gray-normal;
       text-align: justify;
       text-justify: inter-word;
     }
@@ -101,7 +100,7 @@
 
     > time {
       margin: 3rem 0rem;
-      color: #7f8c97;
+      color: $color-gray-normal;
       display: block;
     }
   }
@@ -136,7 +135,7 @@
     }
 
     &:hover .overlay {
-      background-color: rgba(240, 173, 78, 0.90);
+      background-color: rgba($color-secondary, $opacity);
     }
   }
 }
