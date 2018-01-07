@@ -1,6 +1,6 @@
 {% macro item(title, value, icon) %}
 <span data-toggle="tooltip" data-placement="left" title="{{ title }}">
-    <div class="row about-me-element">
+    <div class="row text-icon">
         <div class="col-xs-2 text-center">
             <i class="fa fa-2x {{ icon }}" aria-hidden="true"></i>
         </div>

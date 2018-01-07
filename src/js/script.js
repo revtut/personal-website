@@ -116,7 +116,7 @@ function smoothAnchor() {
  */
 function jumpToAnchor(anchor) {
     root.animate({
-        scrollTop: $(anchor).offset().top - 79
+        scrollTop: $(anchor).offset().top - $('nav').height() + 1
     }, 500);
 }
 

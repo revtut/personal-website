@@ -1,0 +1,27 @@
+/* Firefox Dotted Line */
+a,
+a:active,
+a:hover,
+a:focus,
+a:link,
+a:visited,
+input::-moz-focus-inner,
+button::-moz-focus-inner,
+object,
+embed {
+  outline: none;
+}
+
+/* Utilities */
+
+.v-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.col-centered {
+  display: inline-block;
+  text-align: left;
+}
