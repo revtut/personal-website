@@ -8,15 +8,16 @@ body {
   font-family: $font-primary
 }
 
+// TODO: Move this to other place
 @media (min-width: 768px) {
   .btn-rectangle {
-    font-size: $font-normal-size;
+    font-size: $font-regular;
   }
 }
 
 @media (max-width: 768px) {
   .btn-rectangle {
-    font-size: $font-small-size;
+    font-size: $font-small;
   }
 }
 

@@ -1,16 +1,16 @@
 @media (min-width: 768px) {
   footer {
     > .upper-footer {
-      font-size: $font-normal-size;
+      font-size: $font-regular;
     }
 
     > .lower-footer {
       > .footer-quote p {
-        font-size: $font-tiny-size;
+        font-size: $font-tiny;
       }
 
       .fa {
-        font-size: $font-large-size;
+        font-size: $font-large;
       }
 
       .social-icon {
@@ -23,16 +23,16 @@
 @media (max-width: 768px) {
   footer {
     > .upper-footer {
-      font-size: $font-small-size;
+      font-size: $font-small;
     }
 
     > .lower-footer {
       > .footer-quote p {
-        font-size: $font-tiny-size;
+        font-size: $font-tiny;
       }
 
       .fa {
-        font-size: $font-normal-size;
+        font-size: $font-regular;
       }
 
       .social-icon {

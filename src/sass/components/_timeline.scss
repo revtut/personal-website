@@ -3,7 +3,7 @@
     i,
     > .moment-description {
       > h3 {
-        font-size: $font-normal-size;
+        font-size: $font-regular;
       }
 
       &::after {
@@ -20,7 +20,7 @@
 
     > .moment-description > p,
     > .moment-date > time {
-      font-size: $font-small-size;
+      font-size: $font-small;
     }
 
     &:nth-of-type(odd) > .moment-description::after {
@@ -41,13 +41,13 @@
       margin: 0 2rem;
 
       > h3 {
-        font-size: $font-small-size;
+        font-size: $font-small;
       }
     }
 
     > .moment-description > p,
     > .moment-date > time {
-      font-size: $font-tiny-size;
+      font-size: $font-tiny;
     }
   }
 }

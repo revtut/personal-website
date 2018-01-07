@@ -3,15 +3,29 @@
 
   @include phone {
     p, i {
-      font-size: $font-tiny-size;
-      line-height: $font-tiny-size;
+      font-size: $font-small;
+      line-height: $font-small;
     }
   }
 
-  @include tablet; @include desktop; @include tv {
+  @include tablet {
     p, i {
-      font-size: $font-small-size;
-      line-height: $font-small-size;
+      font-size: $font-regular;
+      line-height: $font-regular;
+    }
+  }
+
+  @include desktop {
+    p, i {
+      font-size: $font-large;
+      line-height: $font-large;
+    }
+  }
+
+  @include tv {
+    p, i {
+      font-size: $font-x-large;
+      line-height: $font-x-large;
     }
   }
 

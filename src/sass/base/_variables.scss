@@ -1,13 +1,18 @@
-// Fonts
+// Font Family
 $font-primary: Roboto, sans-serif;
 $font-hand-written: 'Dancing Script', cursive, sans-serif;
-$font-tiny-size: 1.4rem;
-$font-small-size: 2rem;
-$font-normal-size: 2.3rem;
-$font-large-size: 3.3rem;
-$font-giant-size: 6rem;
 
-// Colors
+// Font Size
+$font-tiny: 0.75rem;
+$font-small: 1rem;
+$font-regular: 1.5rem;
+$font-large: 2rem;
+$font-x-large: 3rem;
+$font-xx-large: 4rem;
+$font-xxx-large: 6rem;
+$font-xxxx-large: 9rem;
+
+// Font Color
 $color-primary: #004080;
 $color-primary-dark: #002D4E;
 $color-secondary: #F0AD4E;
@@ -16,6 +21,7 @@ $color-gray-light: #EFF6FA;
 $color-gray-normal: #7F8C97;
 $color-dark: #303E49;
 
+// Layout Color
 $background-color-one: #E9F0F5;
 $background-color-two: #EFF6FA;
 

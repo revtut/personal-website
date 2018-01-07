@@ -3,15 +3,15 @@
     input,
     textarea,
     select {
-      font-size: $font-small-size;
-      line-height: $font-small-size;
-      padding: $font-small-size;
+      font-size: $font-small;
+      line-height: $font-small;
+      padding: $font-small;
     }
 
     label,
     legend {
-      font-size: $font-normal-size;
-      line-height: $font-normal-size;
+      font-size: $font-regular;
+      line-height: $font-regular;
     }
   }
 }
@@ -21,15 +21,15 @@
     input,
     textarea,
     select {
-      font-size: $font-tiny-size;
-      line-height: $font-tiny-size;
-      padding: $font-tiny-size;
+      font-size: $font-tiny;
+      line-height: $font-tiny;
+      padding: $font-tiny;
     }
 
     label,
     legend {
-      font-size: $font-small-size;
-      line-height: $font-small-size;
+      font-size: $font-small;
+      line-height: $font-small;
     }
   }
 

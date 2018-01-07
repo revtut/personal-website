@@ -1,7 +1,7 @@
 @media (min-width: 768px) {
   .skill-set {
     h3 {
-      font-size: $font-normal-size;
+      font-size: $font-regular;
     }
 
     hr {
@@ -10,11 +10,11 @@
   }
 
   .skill-element {
-    height: $font-small-size;
-    line-height: $font-small-size;
+    height: $font-small;
+    line-height: $font-small;
 
     p {
-      font-size: $font-small-size;
+      font-size: $font-small;
     }
   }
 }
@@ -22,7 +22,7 @@
 @media (max-width: 768px) {
   .skill-set {
     h3 {
-      font-size: $font-small-size;
+      font-size: $font-small;
     }
 
     hr {
@@ -31,11 +31,11 @@
   }
 
   .skill-element {
-    height: $font-tiny-size;
-    line-height: $font-tiny-size;
+    height: $font-tiny;
+    line-height: $font-tiny;
 
     p {
-      font-size: $font-tiny-size;
+      font-size: $font-tiny;
     }
   }
 }

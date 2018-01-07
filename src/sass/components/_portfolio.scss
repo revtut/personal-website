@@ -2,12 +2,12 @@
   .portfolio-item {
     figcaption,
     .modal .modal-body > h3 {
-      font-size: $font-normal-size;
+      font-size: $font-regular;
       padding: 1rem 2rem;
     }
 
     .overlay i {
-      font-size: $font-normal-size;
+      font-size: $font-regular;
     }
 
     .modal {
@@ -19,12 +19,12 @@
         padding: 2rem 4rem;
 
         > p {
-          font-size: $font-small-size;
+          font-size: $font-small;
         }
       }
 
       .modal-footer > .social-icon {
-        font-size: $font-normal-size;
+        font-size: $font-regular;
       }
     }
   }
@@ -34,12 +34,12 @@
   .portfolio-item {
     figcaption,
     .modal .modal-body > h3 {
-      font-size: $font-tiny-size;
+      font-size: $font-tiny;
       padding: 0.5rem 1rem;
     }
 
     .overlay i {
-      font-size: $font-tiny-size;
+      font-size: $font-tiny;
     }
 
     .modal {
@@ -51,12 +51,12 @@
         padding: 0.5rem 1rem;
 
         > p {
-          font-size: $font-tiny-size;
+          font-size: $font-tiny;
         }
       }
 
       .modal-footer > .social-icon {
-        font-size: $font-normal-size;
+        font-size: $font-regular;
       }
     }
   }
@@ -119,8 +119,8 @@
       position: relative;
 
       > .close {
-        font-size: $font-large-size;
-        line-height: $font-large-size;
+        font-size: $font-large;
+        line-height: $font-large;
         color: white;
         text-shadow: none;
         opacity: 0.9;

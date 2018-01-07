@@ -1,7 +1,7 @@
 @media (min-width: 768px) {
   main section {
     > header > h2 {
-      font-size: $font-large-size;
+      font-size: $font-large;
     }
 
     > hr {
@@ -13,7 +13,7 @@
 @media (max-width: 768px) {
   main section {
     > header > h2 {
-      font-size: $font-normal-size;
+      font-size: $font-regular;
     }
 
     > hr {
