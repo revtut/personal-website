@@ -1,13 +1,3 @@
-// Padding (up/down, left-right) 16:9 measures
-$padding-tiny: 0.75rem 1.2rem;
-$padding-small: 1rem 1.8rem;
-$padding-regular: 1.5rem 2.7rem;
-$padding-large: 2rem 3.6rem;
-$padding-x-large: 3rem 5.3rem;
-$padding-xx-large: 4rem 7.1rem;
-$padding-xxx-large: 6rem 10.7rem;
-$padding-xxxx-large: 9rem 16rem;
-
 // Font Family
 $font-primary: Roboto, sans-serif;
 $font-hand-written: 'Dancing Script', cursive, sans-serif;
@@ -37,6 +27,40 @@ $background-color-two: #EFF6FA;
 
 $footer-background-color-one: #585a5d;
 $footer-background-color-two: #303134;
+
+// Sizes 16:9 measures
+$width-tiny: 7.11rem;
+$width-small: 12rem;
+$width-regular: 18rem;
+$width-large: 27rem;
+$width-x-large: 36rem;
+$width-xx-large: 53rem;
+$width-xxx-large: 71rem;
+$width-xxxx-large: 107rem;
+
+$height-tiny: 4.5rem;
+$height-small: 7.5rem;
+$height-regular: 10rem;
+$height-large: 15rem;
+$height-x-large: 20rem;
+$height-xx-large: 30rem;
+$height-xxx-large: 40rem;
+$height-xxxx-large: 60rem;
+
+// Padding (up/down, left-right)
+$padding-tiny: 0.75rem 1.2rem;
+$padding-small: 1rem 1.8rem;
+$padding-regular: 1.5rem 2.7rem;
+$padding-large: 2rem 3.6rem;
+$padding-x-large: 3rem 5.3rem;
+$padding-xx-large: 4rem 7.1rem;
+$padding-xxx-large: 6rem 10.7rem;
+$padding-xxxx-large: 9rem 16rem;
+
+// Transitions
+$transition-slow: 1.2s;
+$transition-medium: 0.6s;
+$transition-fast: 0.2s;
 
 // Others
 $opacity: 0.9;

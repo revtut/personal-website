@@ -1,6 +1,51 @@
 @media (min-width: 768px) {
   header {
-    &.intro {
+    .know-more button {
+      margin: 4rem 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    .know-more button {
+      margin-top: 2rem;
+    }
+  }
+}
+
+header {
+  &.intro {
+    background: #002e58;
+    background: -webkit-radial-gradient(at top center, $color-primary 0%, $color-primary-dark 100%);
+    background: radial-gradient(at top center, $color-primary 0%, $color-primary-dark 100%);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+
+    @include phone {
+      img {
+        width: $width-small;
+        height: $width-small;
+        margin-bottom: 3rem;
+      }
+
+      h1 {
+        font-size: $font-x-large;
+      }
+
+      h2 {
+        font-size: $font-large;
+      }
+
+      hr {
+        width: 25rem;
+        border: 0.1rem solid $color-primary;
+      }
+    }
+
+    @include desktop {
       img {
         width: 25rem;
         height: 25rem;
@@ -21,73 +66,23 @@
       }
     }
 
-    .know-more button {
-      margin: 4rem 2rem;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    &.intro {
-      img {
-        width: 15rem;
-        height: 15rem;
-        margin-bottom: 3rem;
-      }
-
-      h1 {
-        font-size: $font-large;
-      }
-
-      h2 {
-        font-size: $font-regular;
-      }
-
-      hr {
-        width: 25rem;
-        border: 0.1rem solid $color-primary;
-      }
-    }
-
-    .know-more button {
-      margin-top: 2rem;
-    }
-  }
-}
-
-header {
-  &.intro {
-    background: #002e58;
-    background: -webkit-radial-gradient(at top center, $color-primary 0%, $color-primary-dark 100%);
-    background: radial-gradient(at top center, $color-primary 0%, $color-primary-dark 100%);
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-    height: 100%;
-
     img {
       box-shadow: 0px 0px 25px 3px rgba(0, 0, 0, 0.35);
     }
 
-    h1 {
-      margin: 0;
-      color: white;
-    }
-
-    h2 {
+    h1, h2 {
       margin: 0;
       color: white;
     }
 
     hr {
-      border: 0.1rem solid $color-primary;
+      border-top: 0.3rem solid $color-primary;
     }
   }
 
   .know-more {
     button {
-      width: 20rem;
+      padding: $padding-large;
     }
   }
 }
