@@ -4,7 +4,7 @@
 {% extends "partials/section.nj" %}
 
 {% block content %}
-    <div class="row text-left about-me">
+    <div class="row text-left">
         <div class="col-md-offset-3 col-md-4">
             {% import "macros/about.nj" as about_macro %}
             {% for item in about %}

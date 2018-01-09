@@ -1,6 +1,21 @@
-@media (min-width: 768px) {
-  .navbar-center {
-    .navbar-collapse {
+.navbar-center {
+  background-color: $background-color-one;
+  border: 0;
+  margin: 0;
+  box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 0.4);
+  min-height: 0px;
+
+  .navbar-collapse {
+    @include phone {
+      .navbar-nav {
+        > li > a {
+          padding: $padding-small;
+          font-size: $font-small;
+        }
+      }
+    }
+
+    @include tablet {
       > ul {
         float: none;
         margin: 0 auto;
@@ -9,33 +24,39 @@
       }
 
       .navbar-nav > li > a {
-        padding: 2rem 3rem;
+        padding: $padding-regular;
         font-size: $font-regular;
       }
     }
-  }
-}
 
-@media (max-width: 768px) {
-  .navbar-center {
-    .navbar-collapse {
-      .navbar-nav {
-        > li > a {
-          padding: 10px 15px;
-          font-size: $font-tiny;
-        }
+    @include desktop {
+      > ul {
+        float: none;
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+      }
+
+      .navbar-nav > li > a {
+        padding: $padding-large;
+        font-size: $font-large;
       }
     }
-  }
-}
 
-.navbar-center {
-  background-color: $background-color-one;
-  border: 0;
-  margin: 0;
-  box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 0.4);
+    @include tv {
+      > ul {
+        float: none;
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+      }
 
-  .navbar-collapse {
+      .navbar-nav > li > a {
+        padding: $padding-x-large;
+        font-size: $font-x-large;
+      }
+    }
+
     .navbar-nav > li {
       > a {
         box-sizing: border-box;

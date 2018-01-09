@@ -3,25 +3,25 @@ $desktop-width: 1280px;
 $tv-width: 2160px;
 
 @mixin phone {
-  @media (max-width: #{$tablet-width - 1px}) {
+  @media (max-width: ($tablet-width - 1px)) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+  @media (min-width: $tablet-width) and (max-width: ($desktop-width - 1px)) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: #{$desktop-width}) and (max-width: #{$tv-width - 1px}) {
+  @media (min-width: $desktop-width) and (max-width: ($tv-width - 1px)) {
     @content;
   }
 }
 
 @mixin tv {
-  @media (min-width: #{$tv-width}) {
+  @media (min-width: $tv-width) {
     @content;
   }
 }
