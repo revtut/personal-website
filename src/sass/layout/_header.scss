@@ -1,25 +1,9 @@
-@media (min-width: 768px) {
-  header {
-    .know-more button {
-      margin: 4rem 2rem;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    .know-more button {
-      margin-top: 2rem;
-    }
-  }
-}
-
 header {
   &.intro {
     background: #002e58;
-    background: -webkit-radial-gradient(at top center, $color-primary 0%, $color-primary-dark 100%);
-    background: radial-gradient(at top center, $color-primary 0%, $color-primary-dark 100%);
-    background-attachment: fixed;
+    background: -moz-linear-gradient(to bottom, $color-primary, $color-primary-dark);
+    background: linear-gradient(to bottom, $color-primary, $color-primary-dark);
+    // background-attachment: fixed;
     background-position: center center;
     background-size: cover;
     height: 100%;
@@ -28,7 +12,6 @@ header {
       img {
         width: $width-small;
         height: $width-small;
-        margin-bottom: 3rem;
       }
 
       h1 {
@@ -39,34 +22,78 @@ header {
         font-size: $font-large;
       }
 
-      hr {
-        width: 25rem;
-        border: 0.1rem solid $color-primary;
+      button {
+        display: block;
+        font-size: $font-small;
+        margin: $margin-large auto;
+        padding: $padding-small;
+      }
+    }
+
+    @include tablet {
+      img {
+        width: $width-regular;
+        height: $width-regular;
+      }
+
+      h1 {
+        font-size: $font-xx-large;
+      }
+
+      h2 {
+        font-size: $font-x-large;
+      }
+
+      button {
+        font-size: $font-regular;
+        margin: $margin-large $margin-regular;
+        padding: $padding-regular;
       }
     }
 
     @include desktop {
       img {
-        width: 25rem;
-        height: 25rem;
-        margin-bottom: 3rem;
+        width: $width-regular;
+        height: $width-regular;
       }
 
       h1 {
-        font-size: $font-x-large;
+        font-size: $font-xxx-large;
       }
 
       h2 {
-        font-size: $font-large;
+        font-size: $font-xx-large;
       }
 
-      hr {
-        width: 45rem;
-        border: 0.1rem solid $color-primary;
+      button {
+        font-size: $font-large;
+        margin: $margin-x-large $margin-large;
+        padding: $padding-large;
+      }
+    }
+
+    @include tv {
+      img {
+        width: $width-large;
+        height: $width-large;
+      }
+
+      h1 {
+        font-size: $font-xxxx-large;
+      }
+
+      h2 {
+        font-size: $font-xxx-large;
+      }
+
+      button {
+        margin: $padding-x-large;
+        padding: $padding-x-large;
       }
     }
 
     img {
+      margin-bottom: 3rem;
       box-shadow: 0px 0px 25px 3px rgba(0, 0, 0, 0.35);
     }
 
@@ -76,13 +103,8 @@ header {
     }
 
     hr {
+      width: 25%;
       border-top: 0.3rem solid $color-primary;
-    }
-  }
-
-  .know-more {
-    button {
-      padding: $padding-large;
     }
   }
 }
