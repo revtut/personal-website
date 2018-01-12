@@ -1,36 +1,28 @@
 .text-icon {
   margin-top: 1rem;
 
-  @include phone {
-    p, i {
+  p, i {
+    margin: 0;
+
+    @include phone {
       font-size: $font-small;
       line-height: $font-small;
     }
-  }
 
-  @include tablet {
-    p, i {
+    @include tablet {
       font-size: $font-regular;
       line-height: $font-regular;
     }
-  }
 
-  @include desktop {
-    p, i {
+    @include desktop {
       font-size: $font-large;
       line-height: $font-large;
     }
-  }
 
-  @include tv {
-    p, i {
+    @include tv {
       font-size: $font-x-large;
       line-height: $font-x-large;
     }
-  }
-
-  p, i {
-    margin: 0;
   }
 
   p {

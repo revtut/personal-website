@@ -1,111 +1,108 @@
-header {
-  &.intro {
-    background: #002e58;
-    background: -moz-linear-gradient(to bottom, $color-primary, $color-primary-dark);
-    background: linear-gradient(to bottom, $color-primary, $color-primary-dark);
-    // background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-    height: 100%;
+header.intro {
+  background: $color-primary-dark;
+  background: -moz-linear-gradient(to bottom, $color-primary, $color-primary-dark);
+  background: linear-gradient(to bottom, $color-primary, $color-primary-dark);
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+
+  @include phone {
+    h1 {
+      font-size: $font-x-large;
+    }
+
+    h2 {
+      font-size: $font-large;
+    }
+
+    button {
+      display: block;
+      font-size: $font-small;
+      margin: $margin-large auto;
+      padding: $padding-small;
+    }
+  }
+
+  @include tablet {
+    h1 {
+      font-size: $font-xx-large;
+    }
+
+    h2 {
+      font-size: $font-x-large;
+    }
+
+    button {
+      font-size: $font-regular;
+      margin: $margin-large $margin-regular;
+      padding: $padding-regular;
+    }
+  }
+
+  @include desktop {
+    h1 {
+      font-size: $font-xxx-large;
+    }
+
+    h2 {
+      font-size: $font-xx-large;
+    }
+
+    button {
+      font-size: $font-large;
+      margin: $margin-x-large $margin-large;
+      padding: $padding-large;
+    }
+  }
+
+  @include tv {
+    h1 {
+      font-size: $font-xxxx-large;
+    }
+
+    h2 {
+      font-size: $font-xxx-large;
+    }
+
+    button {
+      font-size: $font-x-large;
+      margin: $margin-xx-large $margin-x-large;
+      padding: $padding-x-large;
+    }
+  }
+
+  img {
+    margin-bottom: $margin-large;
+    box-shadow: 0px 0px 25px 3px rgba(0, 0, 0, 0.35);
 
     @include phone {
-      img {
-        width: $width-small;
-        height: $width-small;
-      }
-
-      h1 {
-        font-size: $font-x-large;
-      }
-
-      h2 {
-        font-size: $font-large;
-      }
-
-      button {
-        display: block;
-        font-size: $font-small;
-        margin: $margin-large auto;
-        padding: $padding-small;
-      }
+      width: $width-small;
+      height: $width-small;
     }
 
     @include tablet {
-      img {
-        width: $width-regular;
-        height: $width-regular;
-      }
-
-      h1 {
-        font-size: $font-xx-large;
-      }
-
-      h2 {
-        font-size: $font-x-large;
-      }
-
-      button {
-        font-size: $font-regular;
-        margin: $margin-large $margin-regular;
-        padding: $padding-regular;
-      }
+      width: $width-regular;
+      height: $width-regular;
     }
 
     @include desktop {
-      img {
-        width: $width-regular;
-        height: $width-regular;
-      }
-
-      h1 {
-        font-size: $font-xxx-large;
-      }
-
-      h2 {
-        font-size: $font-xx-large;
-      }
-
-      button {
-        font-size: $font-large;
-        margin: $margin-x-large $margin-large;
-        padding: $padding-large;
-      }
+      width: $width-regular;
+      height: $width-regular;
     }
 
     @include tv {
-      img {
-        width: $width-large;
-        height: $width-large;
-      }
-
-      h1 {
-        font-size: $font-xxxx-large;
-      }
-
-      h2 {
-        font-size: $font-xxx-large;
-      }
-
-      button {
-        font-size: $font-x-large;
-        margin: $margin-xx-large $margin-x-large;
-        padding: $padding-x-large;
-      }
+      width: $width-large;
+      height: $width-large;
     }
+  }
 
-    img {
-      margin-bottom: 3rem;
-      box-shadow: 0px 0px 25px 3px rgba(0, 0, 0, 0.35);
-    }
+  h1, h2 {
+    margin: 0;
+    color: white;
+  }
 
-    h1, h2 {
-      margin: 0;
-      color: white;
-    }
-
-    hr {
-      width: 10%;
-      border-top: 0.3rem solid $color-primary;
-    }
+  hr {
+    width: 10%;
+    border-top: 0.3rem solid $color-primary;
   }
 }
