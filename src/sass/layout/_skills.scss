@@ -1,35 +1,27 @@
-@media (min-width: 768px) {
-  .skill-set {
-    h3 {
-      font-size: $font-regular;
-    }
-
-    hr {
-      width: 25rem;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .skill-set {
-    h3 {
-      font-size: $font-small;
-    }
-
-    hr {
-      width: 15rem;
-    }
-  }
-}
-
 .skill-set {
   h3 {
     color: $color-primary;
+
+    @include phone {
+      font-size: $font-regular;
+    }
+
+    @include tablet {
+      font-size: $font-large;
+    }
+
+    @include desktop {
+      font-size: $font-x-large;
+    }
+
+    @include tv {
+      font-size: $font-xx-large;
+    }
   }
 
   hr {
-    border: 0.1rem solid $color-primary;
-    margin: 0 auto;
-    margin-bottom: 2rem;
+    width: $width-regular;
+    border-top: 0.3rem solid $color-primary;
+    margin: 0 auto $margin-x-large;
   }
 }

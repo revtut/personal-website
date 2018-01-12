@@ -1,6 +1,6 @@
 main section {
   > div {
-    padding: 5rem 0;
+    padding: 3rem 0;
   }
 
   > header > h2 {
@@ -28,8 +28,8 @@ main section {
   }
 
   > hr {
-    width: 20%;
-    border-top: 0.2rem solid $color-primary;
+    width: $width-regular;
+    border-top: 0.3em solid $color-primary;
     margin: 0 auto;
   }
 
