@@ -54,7 +54,7 @@
 
     h3 {
       margin: 0 0 $margin-regular;
-      color: $color-dark;
+      color: $color-gray-dark;
       text-align: left;
 
       @include phone {
@@ -116,32 +116,9 @@
       box-shadow: 0 0 0 0.5rem white;
       -webkit-filter: drop-shadow(0px 0px 5px rgba($background-color-two-dark, $opacity-tiny));
       filter: drop-shadow(0px 0px 5px rgba($background-color-two-dark, $opacity-tiny));
-
-      @include phone {
-        height: $height-small;
-        width: $height-small;
-        border-radius: $height-small;
-      }
-
-      @include tablet {
-        height: $height-regular;
-        width: $height-regular;
-        border-radius: $height-regular;
-      }
-
-      @include desktop {
-        height: $height-regular;
-        width: $height-regular;
-        border-radius: $height-regular;
-      }
-
-      @include tv {
-        height: $height-large;
-        width: $height-large;
-        border-radius: $height-large;
-      }
     }
 
+    img,
     .overlay {
       @include phone {
         width: $height-small;
@@ -263,7 +240,7 @@
     }
   }
 
-  .moment-image .overlay,
+  .moment-image .overlay i,
   .moment-description p,
   .moment-date time {
     @include phone {

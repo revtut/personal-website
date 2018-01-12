@@ -1,0 +1,211 @@
+.portfolio-item {
+  margin-bottom: $margin-x-large;
+
+  figure {
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    @include phone {
+      width: $width-large;
+      height: $height-large;
+    }
+
+    @include tablet {
+      width: $width-large;
+      height: $height-large;
+    }
+
+    @include desktop {
+      width: $width-x-large;
+      height: $height-x-large;
+    }
+
+    @include tv {
+      width: $width-x-large;
+      height: $height-x-large;
+    }
+
+    &:hover .overlay {
+      background-color: rgba($color-secondary, $opacity-x-high);
+    }
+
+    figcaption {
+      padding: $padding-small;
+      position: absolute;
+      bottom: 5%;
+      left: -3%;
+      color: $color-gray-dark;
+      background-color: #fff;
+      z-index: 1;
+    }
+
+    img {
+      // TODO: Add this to a mixin
+      padding: 1px; // FIXME: 1 pixel border caused by overlay
+      background-color: #fff;
+      box-shadow: 0 0 0 0.5rem white;
+      -webkit-filter: drop-shadow(0px 0px 5px rgba($background-color-two-dark, $opacity-tiny));
+      filter: drop-shadow(0px 0px 5px rgba($background-color-two-dark, $opacity-tiny));
+    }
+  }
+
+  figure img,
+  .overlay {
+    width: 100%;
+    height: 100%;
+  }
+
+  figure figcaption,
+  .overlay i,
+  .modal .modal-body h4 {
+    @include phone {
+      font-size: $font-small;
+      line-height: $font-small;
+    }
+
+    @include tablet {
+      font-size: $font-regular;
+      line-height: $font-regular;
+    }
+
+    @include desktop {
+      font-size: $font-large;
+      line-height: $font-large;
+    }
+
+    @include tv {
+      font-size: $font-x-large;
+      line-height: $font-x-large;
+    }
+  }
+
+  .modal .modal-header .close,
+  .modal .modal-footer .social-icon i {
+    @include phone {
+      font-size: $font-large;
+    }
+
+    @include tablet {
+      font-size: $font-large;
+    }
+
+    @include desktop {
+      font-size: $font-x-large;
+    }
+
+    @include tv {
+      font-size: $font-xx-large;
+    }
+  }
+
+  .modal-body {
+    padding: 0;
+  }
+
+  .modal {
+    padding: 0;
+
+    .modal-content {
+      border: none;
+      border-radius: 0;
+      background-color: white;
+    }
+
+    .modal-header {
+      width: 100%;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+
+      @include phone {
+        height: $height-regular;
+      }
+
+      @include tablet {
+        height: $height-large;
+      }
+
+      @include desktop {
+        height: $height-x-large;
+      }
+
+      @include tv {
+        height: $height-xx-large;
+      }
+
+      .close {
+        color: white;
+        text-shadow: none;
+        opacity: 0.9;
+        margin-right: 1rem;
+
+        &:hover {
+          color: $color-secondary;
+        }
+      }
+
+      img {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .modal-body {
+      padding: $padding-regular;
+
+      h4 {
+        color: $color-gray-dark;
+        margin: $margin-large;
+      }
+
+      p {
+        color: $color-gray-normal;
+        text-align: justify;
+        margin: 0;
+
+        @include phone {
+          font-size: $font-small;
+        }
+
+        @include tablet {
+          font-size: $font-small;
+        }
+
+        @include desktop {
+          font-size: $font-regular;
+        }
+
+        @include tv {
+          font-size: $font-large;
+        }
+
+        &.technologies {
+          text-align: center;
+        }
+      }
+    }
+
+    .modal-footer {
+      border: none;
+      display: inline-block;
+
+      .social-icon {
+        color: $color-gray-normal;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $color-secondary;
+          text-decoration: none;
+          outline: 0;
+        }
+      }
+    }
+  }
+}
