@@ -267,7 +267,7 @@
   .moment-description p,
   .moment-date time {
     @include phone {
-      font-size: $font-tiny;
+      font-size: $font-small;
     }
 
     @include tablet {
