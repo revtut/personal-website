@@ -1,16 +1,9 @@
+// Size scaling, all sizes will be multiplied by this factor
+$size-scaling: 0.9;
+
 // Font Family
 $font-primary: Roboto, sans-serif;
 $font-hand-written: 'Dancing Script', cursive, sans-serif;
-
-// Font Size
-$font-tiny: 1rem;
-$font-small: 1.2rem;
-$font-regular: 1.5rem;
-$font-large: 2rem;
-$font-x-large: 3rem;
-$font-xx-large: 4rem;
-$font-xxx-large: 6rem;
-$font-xxxx-large: 9rem;
 
 // Font Color
 $color-primary: #004080;
@@ -30,44 +23,54 @@ $background-color-two-dark: #ABB0B3;
 $footer-background-color-one: #585a5d;
 $footer-background-color-two: #303134;
 
-// Sizes 16:9 measures
-$width-tiny: 7.11rem;
-$width-small: 12rem;
-$width-regular: 18rem;
-$width-large: 27rem;
-$width-x-large: 36rem;
-$width-xx-large: 53rem;
-$width-xxx-large: 71rem;
-$width-xxxx-large: 107rem;
+// Font Size
+$font-tiny: $size-scaling * 1rem;
+$font-small: $size-scaling * 1.2rem;
+$font-regular: $size-scaling * 1.5rem;
+$font-large: $size-scaling * 2rem;
+$font-x-large: $size-scaling * 3rem;
+$font-xx-large: $size-scaling * 4rem;
+$font-xxx-large: $size-scaling * 6rem;
+$font-xxxx-large: $size-scaling * 9rem;
 
-$height-tiny: 4.5rem;
-$height-small: 7.5rem;
-$height-regular: 10rem;
-$height-large: 15rem;
-$height-x-large: 20rem;
-$height-xx-large: 30rem;
-$height-xxx-large: 40rem;
-$height-xxxx-large: 60rem;
+// Sizes 16:9 measures
+$width-tiny: $size-scaling * 7.11rem;
+$width-small: $size-scaling * 12rem;
+$width-regular: $size-scaling * 18rem;
+$width-large: $size-scaling * 27rem;
+$width-x-large: $size-scaling * 36rem;
+$width-xx-large: $size-scaling * 53rem;
+$width-xxx-large: $size-scaling * 71rem;
+$width-xxxx-large: $size-scaling * 107rem;
+
+$height-tiny: $size-scaling * 4.5rem;
+$height-small: $size-scaling * 7.5rem;
+$height-regular: $size-scaling * 10rem;
+$height-large: $size-scaling * 15rem;
+$height-x-large: $size-scaling * 20rem;
+$height-xx-large: $size-scaling * 30rem;
+$height-xxx-large: $size-scaling * 40rem;
+$height-xxxx-large: $size-scaling * 60rem;
 
 // Margin
-$margin-tiny: 0.75rem;
-$margin-small: 1rem;
-$margin-regular: 1.5rem;
-$margin-large: 2rem;
-$margin-x-large: 3rem;
-$margin-xx-large: 4rem;
-$margin-xxx-large: 6rem;
-$margin-xxxx-large: 9rem;
+$margin-tiny: $size-scaling * 0.75rem;
+$margin-small: $size-scaling * 1rem;
+$margin-regular: $size-scaling * 1.5rem;
+$margin-large: $size-scaling * 2rem;
+$margin-x-large: $size-scaling * 3rem;
+$margin-xx-large: $size-scaling * 4rem;
+$margin-xxx-large: $size-scaling * 6rem;
+$margin-xxxx-large: $size-scaling * 9rem;
 
 // Padding (up/down, left-right)
-$padding-tiny: 0.75rem 1.2rem;
-$padding-small: 1rem 1.8rem;
-$padding-regular: 1.5rem 2.7rem;
-$padding-large: 2rem 3.6rem;
-$padding-x-large: 3rem 5.3rem;
-$padding-xx-large: 4rem 7.1rem;
-$padding-xxx-large: 6rem 10.7rem;
-$padding-xxxx-large: 9rem 16rem;
+$padding-tiny: ($size-scaling * 0.75rem) ($size-scaling * 1.2rem);
+$padding-small: ($size-scaling * 1rem) ($size-scaling * 1.8rem);
+$padding-regular: ($size-scaling * 1.5rem) ($size-scaling * 2.7rem);
+$padding-large: ($size-scaling * 2rem) ($size-scaling * 3.6rem);
+$padding-x-large: ($size-scaling * 3rem) ($size-scaling * 5.3rem);
+$padding-xx-large: ($size-scaling * 4rem) ($size-scaling * 7.1rem);
+$padding-xxx-large: ($size-scaling * 6rem) ($size-scaling * 10.7rem);
+$padding-xxxx-large: ($size-scaling * 9rem) ($size-scaling * 16rem);
 
 // Transitions
 $transition-slow: 1.2s;

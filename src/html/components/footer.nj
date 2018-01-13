@@ -1,7 +1,7 @@
 <footer>
     <div class="row text-center upper-footer">
         <i class="fa fa-fw fa-heart" aria-hidden="true"></i>
-        <span>Handcrafted and designed by myself</span>
+        Handcrafted and designed by myself
     </div>
     <div class="row text-center lower-footer">
         <div class="col-md-offset-2 col-md-4 footer-quote col-centered">
@@ -11,11 +11,7 @@
                      alt="Logo">
             </div>
             <div class="col-xs-10 text-left">
-                <p>
-                    <i>
-                        <q>{{ settings.quote.quote }}</q> - {{ settings.quote.author }}
-                    </i>
-                </p>
+                <p><q>{{ settings.quote.quote }}</q> - {{ settings.quote.author }}</p>
             </div>
         </div>
         <div class="col-md-offset-1 col-md-4 col-centered">

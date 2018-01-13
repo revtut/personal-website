@@ -1,14 +1,6 @@
 @media (min-width: 768px) {
   footer {
-    > .upper-footer {
-      font-size: $font-regular;
-    }
-
     > .lower-footer {
-      > .footer-quote p {
-        font-size: $font-tiny;
-      }
-
       .fa {
         font-size: $font-large;
       }
@@ -22,15 +14,7 @@
 
 @media (max-width: 768px) {
   footer {
-    > .upper-footer {
-      font-size: $font-small;
-    }
-
     > .lower-footer {
-      > .footer-quote p {
-        font-size: $font-tiny;
-      }
-
       .fa {
         font-size: $font-regular;
       }
@@ -43,24 +27,52 @@
 }
 
 footer {
-  > .upper-footer {
+  .upper-footer {
     padding: 1rem 0rem;
     background-color: $footer-background-color-one;
     color: $color-gray-light;
     font-family: $font-hand-written;
     box-sizing: border-box;
 
-    > span {
-      margin-left: 1rem;
+    @include phone {
+      font-size: $font-small;
+    }
+
+    @include tablet {
+      font-size: $font-regular;
+    }
+
+    @include desktop {
+      font-size: $font-large;
+    }
+
+    @include tv {
+      font-size: $font-x-large;
     }
   }
 
-  > .lower-footer {
+  .lower-footer {
     background-color: $footer-background-color-two;
     color: $color-gray-light;
 
-    > .footer-quote {
+    .footer-quote {
       padding: 1rem;
+
+      @include phone {
+        font-size: $font-tiny;
+      }
+
+      @include tablet {
+        font-size: $font-small;
+      }
+
+      @include desktop {
+        font-size: $font-regular;
+      }
+
+      @include tv {
+        font-size: $font-large;
+      }
 
       img {
         width: 4rem;
@@ -69,6 +81,24 @@ footer {
 
       p {
         margin: 0;
+      }
+    }
+
+    .fa {
+      @include phone {
+        font-size: $font-large;
+      }
+
+      @include tablet {
+        font-size: $font-x-large;
+      }
+
+      @include desktop {
+        font-size: $font-xx-large;
+      }
+
+      @include tv {
+        font-size: $font-xxx-large;
       }
     }
 

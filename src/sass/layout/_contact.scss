@@ -1,6 +1,4 @@
 .contact-form {
-  margin-bottom: $margin-regular;
-
   label,
   legend,
   input,
@@ -98,7 +96,7 @@
     text-align: left;
     border: none;
     padding: 0;
-    margin: 0.5rem;
+    margin: $margin-small;
 
     @include phone {
       font-size: $font-small;
