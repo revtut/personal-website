@@ -1,6 +1,6 @@
 {% macro item(title, value) %}
 <span data-toggle="tooltip" data-placement="right" title="{{ value }}%">
-    <div class="row skill-element">
+    <div class="row text-bar">
         <div class="col-xs-6">
             <p>{{ title }}</p>
         </div>

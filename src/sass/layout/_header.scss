@@ -1,0 +1,112 @@
+header.intro {
+  background: $color-primary-dark;
+  background: -moz-linear-gradient(to bottom, $color-primary, $color-primary-dark);
+  background: linear-gradient(to bottom, $color-primary, $color-primary-dark);
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+
+  @include phone {
+    h1 {
+      font-size: $font-x-large;
+    }
+
+    h2 {
+      font-size: $font-large;
+    }
+
+    button {
+      display: block;
+      line-height: $font-small;
+      font-size: $font-small;
+      margin: $margin-large auto;
+      padding: $padding-small;
+    }
+  }
+
+  @include tablet {
+    h1 {
+      font-size: $font-xx-large;
+    }
+
+    h2 {
+      font-size: $font-x-large;
+    }
+
+    button {
+      line-height: $font-regular;
+      font-size: $font-regular;
+      margin: $margin-large $margin-regular;
+      padding: $padding-regular;
+    }
+  }
+
+  @include desktop {
+    h1 {
+      font-size: $font-xxx-large;
+    }
+
+    h2 {
+      font-size: $font-xx-large;
+    }
+
+    button {
+      line-height: $font-large;
+      font-size: $font-large;
+      margin: $margin-x-large $margin-large;
+      padding: $padding-large;
+    }
+  }
+
+  @include tv {
+    h1 {
+      font-size: $font-xxxx-large;
+    }
+
+    h2 {
+      font-size: $font-xxx-large;
+    }
+
+    button {
+      line-height: $font-x-large;
+      font-size: $font-x-large;
+      margin: $margin-xx-large $margin-x-large;
+      padding: $padding-x-large;
+    }
+  }
+
+  img {
+    margin-bottom: $margin-large;
+    box-shadow: 0px 0px 25px 3px rgba(0, 0, 0, 0.35);
+
+    @include phone {
+      width: $width-small;
+      height: $width-small;
+    }
+
+    @include tablet {
+      width: $width-regular;
+      height: $width-regular;
+    }
+
+    @include desktop {
+      width: $width-regular;
+      height: $width-regular;
+    }
+
+    @include tv {
+      width: $width-large;
+      height: $width-large;
+    }
+  }
+
+  h1, h2 {
+    margin: 0;
+    color: white;
+  }
+
+  hr {
+    width: $width-regular;
+    border-top: 0.3rem solid $color-primary;
+  }
+}

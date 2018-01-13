@@ -1,0 +1,122 @@
+@media (min-width: 768px) {
+  footer {
+    > .lower-footer {
+      .fa {
+        font-size: $font-large;
+      }
+
+      .social-icon {
+        padding: 1em;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    > .lower-footer {
+      .fa {
+        font-size: $font-regular;
+      }
+
+      .social-icon {
+        padding: 0.5em;
+      }
+    }
+  }
+}
+
+footer {
+  .upper-footer {
+    padding: 1rem 0rem;
+    background-color: $footer-background-color-one;
+    color: $color-gray-light;
+    font-family: $font-hand-written;
+    box-sizing: border-box;
+
+    @include phone {
+      font-size: $font-small;
+    }
+
+    @include tablet {
+      font-size: $font-regular;
+    }
+
+    @include desktop {
+      font-size: $font-large;
+    }
+
+    @include tv {
+      font-size: $font-x-large;
+    }
+  }
+
+  .lower-footer {
+    background-color: $footer-background-color-two;
+    color: $color-gray-light;
+
+    .footer-quote {
+      padding: 1rem;
+
+      @include phone {
+        font-size: $font-tiny;
+      }
+
+      @include tablet {
+        font-size: $font-small;
+      }
+
+      @include desktop {
+        font-size: $font-regular;
+      }
+
+      @include tv {
+        font-size: $font-large;
+      }
+
+      img {
+        width: 4rem;
+        height: 100%;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .fa {
+      @include phone {
+        font-size: $font-large;
+      }
+
+      @include tablet {
+        font-size: $font-x-large;
+      }
+
+      @include desktop {
+        font-size: $font-xx-large;
+      }
+
+      @include tv {
+        font-size: $font-xxx-large;
+      }
+    }
+
+    .social-icon {
+      color: $color-gray-light;
+      box-sizing: border-box;
+      display: inline-block;
+      margin-right: -4px;
+      -webkit-transition: background-color 0.2s linear;
+      transition: background-color 0.2s linear;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $footer-background-color-one;
+        text-decoration: none;
+        outline: 0;
+      }
+    }
+  }
+}

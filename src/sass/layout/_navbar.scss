@@ -1,0 +1,75 @@
+.navbar-center {
+  background-color: $background-color-one;
+  border: 0;
+  margin: 0;
+  box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 0.4);
+  min-height: 0px;
+
+  .navbar-collapse {
+    @include phone {
+      .navbar-nav {
+        > li > a {
+          padding: $padding-small;
+          font-size: $font-small;
+        }
+      }
+    }
+
+    @include tablet {
+      > ul {
+        float: none;
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+      }
+
+      .navbar-nav > li > a {
+        padding: $padding-regular;
+        font-size: $font-regular;
+      }
+    }
+
+    @include desktop {
+      > ul {
+        float: none;
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+      }
+
+      .navbar-nav > li > a {
+        padding: $padding-large;
+        font-size: $font-large;
+      }
+    }
+
+    @include tv {
+      > ul {
+        float: none;
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+      }
+
+      .navbar-nav > li > a {
+        padding: $padding-x-large;
+        font-size: $font-x-large;
+      }
+    }
+
+    .navbar-nav > li {
+      > a {
+        box-sizing: border-box;
+        color: $color-primary;
+        transition: background-color $transition-fast linear;
+      }
+
+      &.active > a,
+      > a:hover,
+      > a:active {
+        color: white;
+        background-color: $color-primary;
+      }
+    }
+  }
+}

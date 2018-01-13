@@ -1,0 +1,36 @@
+.icon-text {
+  margin-top: 1rem;
+
+  p, i {
+    margin: 0;
+
+    @include phone {
+      font-size: $font-small;
+      line-height: $font-small;
+    }
+
+    @include tablet {
+      font-size: $font-regular;
+      line-height: $font-regular;
+    }
+
+    @include desktop {
+      font-size: $font-large;
+      line-height: $font-large;
+    }
+
+    @include tv {
+      font-size: $font-x-large;
+      line-height: $font-x-large;
+    }
+  }
+
+  p {
+    display: inline-block;
+    color: $color-gray-normal;
+  }
+
+  i {
+    color: $color-secondary;
+  }
+}

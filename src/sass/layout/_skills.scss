@@ -1,0 +1,27 @@
+.skill-set {
+  h3 {
+    color: $color-primary;
+
+    @include phone {
+      font-size: $font-regular;
+    }
+
+    @include tablet {
+      font-size: $font-large;
+    }
+
+    @include desktop {
+      font-size: $font-x-large;
+    }
+
+    @include tv {
+      font-size: $font-xx-large;
+    }
+  }
+
+  hr {
+    width: $width-regular;
+    border-top: 0.3rem solid $color-primary;
+    margin: 0 auto $margin-x-large;
+  }
+}

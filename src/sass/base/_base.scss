@@ -1,0 +1,44 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 10px;
+  font-family: $font-primary
+}
+
+// TODO: Move this to other place
+@media (min-width: 768px) {
+  .btn-rectangle {
+    font-size: $font-regular;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-rectangle {
+    font-size: $font-small;
+  }
+}
+
+.btn-rectangle {
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  background-color: $color-primary;
+  color: white;
+  font-weight: normal;
+  border-radius: 0;
+  border: none;
+  //height: 5rem;
+  text-align: center;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color-secondary;
+    color: white;
+    border: none;
+    box-shadow: none;
+  }
+}
+

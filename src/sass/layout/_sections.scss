@@ -1,0 +1,43 @@
+main section {
+  > div {
+    padding: 3rem 0;
+  }
+
+  > header > h2 {
+    text-align: center;
+    color: $color-primary;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 3rem 0rem 0.5rem 0rem;
+
+    @include phone {
+      font-size: $font-regular;
+    }
+
+    @include tablet {
+      font-size: $font-large;
+    }
+
+    @include desktop {
+      font-size: $font-x-large;
+    }
+
+    @include tv {
+      font-size: $font-xx-large;
+    }
+  }
+
+  > hr {
+    width: $width-regular;
+    border-top: 0.3em solid $color-primary;
+    margin: 0 auto;
+  }
+
+  &:nth-of-type(odd) {
+    background-color: $background-color-one;
+  }
+
+  &:nth-of-type(even) {
+    background-color: $background-color-two;
+  }
+}

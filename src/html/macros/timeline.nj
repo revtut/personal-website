@@ -1,10 +1,10 @@
 {% macro item(even, title, description, date, link, link_title, image, icon) %}
-<div class="row timeline-moment">
+<div class="row time-moment">
     <!-- Image -->
     <div class="col-md-push-5 col-md-2 moment-image">
         <a href="{{ link }}" target="_blank" title="{{ link_title }}" itemprop="url">
             <img src="{{ image }}"
-                 width="100" height="100"
+                 width="300" height="300"
                  alt="Logo">
             <div class="overlay">
                 <i class="fa fa-fw {{ icon }}"></i>

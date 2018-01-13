@@ -1,0 +1,262 @@
+.time-moment {
+  margin-top: $margin-large;
+
+  .moment-description {
+    background-color: white;
+    position: relative;
+    padding: $padding-small;
+    box-sizing: border-box;
+    -webkit-filter: drop-shadow(0px 0px 5px rgba($background-color-two-dark, $opacity-tiny));
+    filter: drop-shadow(0px 0px 5px rgba($background-color-two-dark, $opacity-tiny));
+
+    @include phone {
+      margin: 0 $margin-x-large;
+    }
+
+    @include tablet {
+      &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 5%;
+        width: 0;
+        height: 0;
+        border-top: 1.4rem solid transparent;
+        border-bottom: 1.4rem solid transparent;
+      }
+    }
+
+    @include desktop {
+      &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 5%;
+        width: 0;
+        height: 0;
+        border-top: 1.4rem solid transparent;
+        border-bottom: 1.4rem solid transparent;
+      }
+    }
+
+    @include tv {
+      &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 5%;
+        width: 0;
+        height: 0;
+        border-top: 1.4rem solid transparent;
+        border-bottom: 1.4rem solid transparent;
+      }
+    }
+
+    h3 {
+      margin: 0 0 $margin-regular;
+      color: $color-gray-dark;
+      text-align: left;
+
+      @include phone {
+        font-size: $font-small;
+      }
+
+      @include tablet {
+        font-size: $font-regular;
+      }
+
+      @include desktop {
+        font-size: $font-large;
+      }
+
+      @include tv {
+        font-size: $font-x-large;
+      }
+    }
+
+    p {
+      margin: 0;
+      color: $color-gray-normal;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+  }
+
+  .moment-date {
+    pointer-events: none;
+
+    time {
+      @include phone {
+        margin: $margin-regular 0rem;
+      }
+
+      @include tablet {
+        margin: $margin-large 0rem;
+      }
+
+      @include desktop {
+        margin: $margin-x-large 0rem;
+      }
+
+      @include tv {
+        margin: $margin-xx-large 0rem;
+      }
+
+      color: $color-gray-normal;
+      display: block;
+    }
+  }
+
+  .moment-image {
+    position: relative;
+
+    img {
+      padding: 1px; // FIXME: 1 pixel border caused by overlay
+      background-color: #fff;
+      box-shadow: 0 0 0 0.5rem white;
+      -webkit-filter: drop-shadow(0px 0px 5px rgba($background-color-two-dark, $opacity-tiny));
+      filter: drop-shadow(0px 0px 5px rgba($background-color-two-dark, $opacity-tiny));
+    }
+
+    img,
+    .overlay {
+      @include phone {
+        width: $height-small;
+        height: $height-small;
+        border-radius: $height-small;
+      }
+
+      @include tablet {
+        width: $height-regular;
+        height: $height-regular;
+        border-radius: $height-regular;
+      }
+
+      @include desktop {
+        width: $height-regular;
+        height: $height-regular;
+        border-radius: $height-regular;
+      }
+
+      @include tv {
+        width: $height-large;
+        height: $height-large;
+        border-radius: $height-large;
+      }
+    }
+
+    &:hover .overlay {
+      background-color: rgba($color-secondary, $opacity-x-high);
+    }
+  }
+
+  &:nth-of-type(odd) {
+    @include phone {
+      .moment-date time {
+        margin-left: $margin-xxxx-large;
+      }
+    }
+
+    @include tablet {
+      .moment-description::after {
+        right: -2rem;
+        border-left: 2rem solid white;
+      }
+
+      .moment-date time {
+        margin-left: $margin-xxx-large;
+      }
+    }
+
+    @include desktop {
+      .moment-description::after {
+        right: -2rem;
+        border-left: 2rem solid white;
+      }
+
+      .moment-date time {
+        margin-left: $margin-xxxx-large;
+      }
+    }
+
+    @include tv {
+      .moment-description::after {
+        right: -2rem;
+        border-left: 2rem solid white;
+      }
+
+      .moment-date time {
+        margin-left: $margin-xxxx-large;
+      }
+    }
+
+    .moment-date time {
+      text-align: left;
+    }
+  }
+
+  &:nth-of-type(even) {
+    @include phone {
+      .moment-date time {
+        margin-right: $margin-xxxx-large;
+      }
+    }
+
+    @include tablet {
+      .moment-description::after {
+        left: -2rem;
+        border-right: 2rem solid white;
+      }
+
+      .moment-date time {
+        margin-right: $margin-xxx-large;
+      }
+    }
+
+    @include desktop {
+      .moment-description::after {
+        left: -2rem;
+        border-right: 2rem solid white;
+      }
+
+      .moment-date time {
+        margin-right: $margin-xxxx-large;
+      }
+    }
+
+    @include tv {
+      .moment-description::after {
+        left: -2rem;
+        border-right: 2rem solid white;
+      }
+
+      .moment-date time {
+        margin-right: $margin-xxxx-large;
+      }
+    }
+
+    .moment-date time {
+      text-align: right;
+    }
+  }
+
+  .moment-image .overlay i,
+  .moment-description p,
+  .moment-date time {
+    @include phone {
+      font-size: $font-small;
+    }
+
+    @include tablet {
+      font-size: $font-small;
+    }
+
+    @include desktop {
+      font-size: $font-regular;
+    }
+
+    @include tv {
+      font-size: $font-large;
+    }
+  }
+}

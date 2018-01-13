@@ -18,7 +18,7 @@ function requireUncached($module) {
 }
 
 gulp.task('clean', function () {
-    return del(distPath + '**')
+    return del.sync(distPath + '**/*')
 });
 
 gulp.task('other-files', function () {
@@ -37,7 +37,7 @@ gulp.task('default', ['start']);
  * Development
  */
 gulp.task('sass', function () {
-    return gulp.src('src/scss/main.scss', {base: 'src/scss'})
+    return gulp.src('src/sass/*', {base: 'src/sass'})
         .pipe(sass({
             includePaths: ['css'],
             onError: browserSync.notify
@@ -86,7 +86,7 @@ gulp.task('browser-sync', function () {
 gulp.task('watch', function () {
     gulp.watch(['src/**/*.html', 'src/**/*.nj', 'src/**/*.json'], ['html']);
     gulp.watch('src/**/*.scss', ['sass']);
-    gulp.watch('src/**/*.js', ['javascript']);
+    gulp.watch('src/**/*.js', ['js']);
 });
 
 gulp.task('build', ['clean', 'sass', 'js', 'html', 'other-files']);
@@ -96,7 +96,7 @@ gulp.task('start', ['build', 'browser-sync', 'watch']);
  * Production
  */
 gulp.task('sass-prod', function () {
-    return gulp.src('src/scss/main.scss', {base: 'src/scss'})
+    return gulp.src('src/sass/*', {base: 'src/sass'})
         .pipe(sass({
             outputStyle: 'compressed',
             includePaths: ['css'],

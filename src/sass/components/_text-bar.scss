@@ -1,0 +1,53 @@
+.text-bar {
+  margin-top: $margin-small;
+
+  @include phone {
+    height: $font-small;
+    line-height: $font-small;
+  }
+
+  @include tablet {
+    height: $font-regular;
+    line-height: $font-regular;
+  }
+
+  @include desktop {
+    height: $font-large;
+    line-height: $font-large;
+  }
+
+  @include tv {
+    height: $font-x-large;
+    line-height: $font-x-large;
+  }
+
+  p {
+    text-align: right;
+    margin: 0;
+    color: $color-gray-normal;
+
+    @include phone {
+      font-size: $font-small;
+    }
+
+    @include tablet {
+      font-size: $font-regular;
+    }
+
+    @include desktop {
+      font-size: $font-large;
+    }
+
+    @include tv {
+      font-size: $font-x-large;
+    }
+  }
+
+  div,
+  .progress {
+    overflow: unset;
+    height: 100%;
+    box-shadow: none;
+    filter: drop-shadow(0px 0px 5px rgba($background-color-one-dark, $opacity-tiny));
+  }
+}
