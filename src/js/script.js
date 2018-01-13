@@ -1,13 +1,13 @@
-var root = $('html, body');
+var root = $("html, body");
 
 /**
  * Scroll event
  */
 function scrollEvent() {
     var windowElement = $(window),
-        bodyElement = $('body'),
-        navigationElement = $('nav'),
-        navbarAnchorElements = $('nav li');
+        bodyElement = $("body"),
+        navigationElement = $("nav"),
+        navbarAnchorElements = $("nav li");
 
     var lastAnchor = "#top",
         navDistance = navigationElement.offset().top,
@@ -23,7 +23,7 @@ function scrollEvent() {
         bodyElement.css("margin-top", 0);
 
         // Recalculate distance to top
-        navDistance = $('nav').offset().top;
+        navDistance = $("nav").offset().top;
 
         stickyNavigation(navigationElement, bodyElement, y, navDistance);
         lastAnchor = highlightCurrentAnchor(navbarAnchorElements, y, navigationElement.height(), lastAnchor);
@@ -66,7 +66,7 @@ function stickyNavigation(navigationElement, bodyElement, y, distance) {
 function highlightCurrentAnchor(navigationAnchorsElement, y, height, lastAnchor) {
     var navActiveElement = null, currentAnchor = null;
     navigationAnchorsElement.each(function () {
-        var anchorId = $(this).children().attr('href'),
+        var anchorId = $(this).children().attr("href"),
             target = $(anchorId).offset().top - height;
 
         // Update current active menu
@@ -100,11 +100,11 @@ function highlightCurrentAnchor(navigationAnchorsElement, y, height, lastAnchor)
  * Enable smooth anchor scroll
  */
 function smoothAnchor() {
-    var smoothAnchorElements = $('a.smooth-scroll');
+    var smoothAnchorElements = $("a.smooth-scroll");
 
     smoothAnchorElements.click(function () {
         this.blur();
-        var href = $.attr(this, 'href');
+        var href = $.attr(this, "href");
         jumpToAnchor(href);
         return false;
     });
@@ -116,7 +116,7 @@ function smoothAnchor() {
  */
 function jumpToAnchor(anchor) {
     root.animate({
-        scrollTop: $(anchor).offset().top - $('nav').height() + 1
+        scrollTop: $(anchor).offset().top - $("nav").height() + 1
     }, 500);
 }
 
@@ -124,13 +124,13 @@ function jumpToAnchor(anchor) {
  * Change the text of selected phone extension to its value
  */
 function changeExtensionDisplay() {
-    $('#ext').on('blur focus', function (e) {
+    $("#ext").on("blur focus", function (e) {
         $(this.options).text(function () {
-            return e.type === 'focus' ? this.getAttribute('data-default-text') : "+" + this.value;
+            return e.type === "focus" ? this.getAttribute("data-default-text") : "+" + this.value;
         });
-    }).children().attr('data-default-text', function () {
+    }).children().attr("data-default-text", function () {
         return this.textContent;
-    }).end().on('change', function () {
+    }).end().on("change", function () {
         $(this).blur();
     }).blur();
 }
@@ -146,7 +146,7 @@ function submitContact(event) {
     var $form = $(this);
     // Send message
     $.post(
-        $form.attr('action'),
+        $form.attr("action"),
         $("form#contactForm").serialize(),
         function () {
             resultMessageDiv.find("a").after("<strong>Success!</strong>");
@@ -168,7 +168,7 @@ function setup() {
     scrollEvent();
     smoothAnchor();
     changeExtensionDisplay();
-    $('[data-toggle="tooltip"]').tooltip();
+    $("[data-toggle='tooltip']").tooltip();
     $("#contactForm").submit(submitContact);
 }
 
