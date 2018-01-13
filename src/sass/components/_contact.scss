@@ -1,42 +1,5 @@
-@media (min-width: 768px) {
-  .contact-form {
-    input,
-    textarea,
-    select {
-      font-size: $font-small;
-      line-height: $font-small;
-      padding: $font-small;
-    }
-
-    label,
-    legend {
-      font-size: $font-regular;
-      line-height: $font-regular;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .contact-form {
-    input,
-    textarea,
-    select {
-      font-size: $font-tiny;
-      line-height: $font-tiny;
-      padding: $font-tiny;
-    }
-
-    label,
-    legend {
-      font-size: $font-small;
-      line-height: $font-small;
-    }
-  }
-
-}
-
 .contact-form {
-  margin-bottom: 3rem;
+  margin-bottom: $margin-regular;
 
   label,
   legend,
@@ -65,6 +28,30 @@
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
     box-sizing: border-box;
 
+    @include phone {
+      font-size: $font-small;
+      line-height: $font-regular;
+      padding: $padding-tiny;
+    }
+
+    @include tablet {
+      font-size: $font-small;
+      line-height: $font-regular;
+      padding: $padding-small;
+    }
+
+    @include desktop {
+      font-size: $font-regular;
+      line-height: $font-large;
+      padding: $padding-regular;
+    }
+
+    @include tv {
+      font-size: $font-large;
+      line-height: $font-x-large;
+      padding: $padding-large;
+    }
+
     &:focus {
       box-shadow: 0px 0px 5px 0px rgba(0, 64, 128, 0.25);
     }
@@ -74,6 +61,37 @@
     resize: none;
   }
 
+  button {
+    @include phone {
+      display: block;
+      line-height: $font-small;
+      font-size: $font-small;
+      margin: $margin-large auto;
+      padding: $padding-small;
+    }
+
+    @include tablet {
+      line-height: $font-regular;
+      font-size: $font-regular;
+      margin: $margin-large $margin-regular;
+      padding: $padding-regular;
+    }
+
+    @include desktop {
+      line-height: $font-large;
+      font-size: $font-large;
+      margin: $margin-x-large $margin-large;
+      padding: $padding-large;
+    }
+
+    @include tv {
+      line-height: $font-x-large;
+      font-size: $font-x-large;
+      margin: $margin-xx-large $margin-x-large;
+      padding: $padding-x-large;
+    }
+  }
+
   label,
   legend {
     color: $color-primary;
@@ -81,19 +99,26 @@
     border: none;
     padding: 0;
     margin: 0.5rem;
-  }
 
-  .g-recaptcha {
-    overflow: hidden;
-
-    > * {
-      margin: 0 auto;
+    @include phone {
+      font-size: $font-small;
+      line-height: $font-small;
     }
-  }
 
-  button {
-    margin-top: 1.5rem;
-    width: 15rem;
+    @include tablet {
+      font-size: $font-regular;
+      line-height: $font-regular;
+    }
+
+    @include desktop {
+      font-size: $font-large;
+      line-height: $font-large;
+    }
+
+    @include tv {
+      font-size: $font-x-large;
+      line-height: $font-x-large;
+    }
   }
 }
 
