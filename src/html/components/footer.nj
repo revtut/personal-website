@@ -16,7 +16,10 @@
         </div>
         <div class="col-md-offset-1 col-md-4 col-centered">
             {% for item in settings.social_media %}
-                <a class="social-icon" href="{{ item.link }}" target="_blank" title="{{ item.title }}" itemprop="url">
+                <a class="social-icon"
+                   href="{{ item.link }}" target="_blank"
+                   rel="noopener noreferrer"
+                   title="{{ item.title }}" itemprop="url">
                     <i class="fa fa-fw {{ item.icon }}" aria-hidden="true"></i>
                 </a>
             {% endfor %}

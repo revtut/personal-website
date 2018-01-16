@@ -2,7 +2,9 @@
 <div class="row time-moment">
     <!-- Image -->
     <div class="col-md-push-5 col-md-2 moment-image">
-        <a href="{{ link }}" target="_blank" title="{{ link_title }}" itemprop="url">
+        <a href="{{ link }}" target="_blank"
+           rel="noopener noreferrer"
+           title="{{ link_title }}" itemprop="url">
             <img src="{{ image }}"
                  width="300" height="300"
                  alt="Logo">

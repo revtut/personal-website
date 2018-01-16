@@ -39,8 +39,9 @@
                 <div class="modal-footer text-center">
                     {% for link in links %}
                         <a class="social-icon"
-                           href="{{ link.link }}"
-                           target="_blank" title="{{ link.title }}" itemprop="url">
+                           href="{{ link.link }}" target="_blank"
+                           rel="noopener noreferrer"
+                           title="{{ link.title }}" itemprop="url">
                             <i class="fa fa-fw {{ link.icon }}" aria-hidden="true"></i>
                         </a>
                     {% endfor %}
