@@ -1,11 +1,12 @@
-{% macro item(even, title, description, date, link, link_title, image, icon) %}
+{% macro item(even, title, description, date, link, link_title, image, loading_icon, icon) %}
 <div class="row time-moment">
     <!-- Image -->
     <div class="col-md-push-5 col-md-2 moment-image">
         <a href="{{ link }}" target="_blank"
            rel="noopener noreferrer"
            title="{{ link_title }}" itemprop="url">
-            <img src="{{ image }}"
+            <img src="{{ loading_icon }}"
+                 data-src="{{ image }}"
                  width="300" height="300"
                  alt="Logo">
             <div class="overlay">

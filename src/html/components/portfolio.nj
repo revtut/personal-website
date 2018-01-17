@@ -8,7 +8,7 @@
         <div class="row text-center portfolio-page">
             {% import "macros/portfolio.nj" as portfolio_macro %}
             {% for item in portfolio %}
-                {{ portfolio_macro.item(item.title, item.description, item.image, item.links) }}
+                {{ portfolio_macro.item(item.title, item.description, item.image, settings.loading_icon, item.links) }}
             {% endfor %}
         </div>
     </div>

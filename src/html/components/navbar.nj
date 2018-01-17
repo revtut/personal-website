@@ -10,19 +10,19 @@
     <div class="collapse navbar-collapse" id="navbar-content">
         <ul class="nav navbar-nav">
             <li>
-                <a class="smooth-scroll" href="#about" title="About">About</a>
+                <a class="js-smooth-scroll" href="#about" title="About">About</a>
             </li>
             <li>
-                <a class="smooth-scroll" href="#history" title="History">History</a>
+                <a class="js-smooth-scroll" href="#history" title="History">History</a>
             </li>
             <li>
-                <a class="smooth-scroll" href="#skills" title="Skills">Skills</a>
+                <a class="js-smooth-scroll" href="#skills" title="Skills">Skills</a>
             </li>
             <li>
-                <a class="smooth-scroll" href="#portfolio" title="Portfolio">Portfolio</a>
+                <a class="js-smooth-scroll" href="#portfolio" title="Portfolio">Portfolio</a>
             </li>
             <li>
-                <a class="smooth-scroll" href="#contact" title="Contact">Contact</a>
+                <a class="js-smooth-scroll" href="#contact" title="Contact">Contact</a>
             </li>
         </ul>
     </div>

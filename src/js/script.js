@@ -100,7 +100,7 @@ function highlightCurrentAnchor(navigationAnchorsElement, y, height, lastAnchor)
  * Enable smooth anchor scroll
  */
 function smoothAnchor() {
-    var smoothAnchorElements = $("a.smooth-scroll");
+    var smoothAnchorElements = $("a.js-smooth-scroll");
 
     smoothAnchorElements.click(function () {
         this.blur();
@@ -162,9 +162,19 @@ function submitContact(event) {
 }
 
 /**
+ * Lazy load the images in the website
+ */
+function lazyLoadImages() {
+    $('img.js-image-async').unveil(200, function () {
+        this.style.background = null;
+    });
+}
+
+/**
  * Setup the javascript
  */
 function setup() {
+    lazyLoadImages();
     scrollEvent();
     smoothAnchor();
     changeExtensionDisplay();

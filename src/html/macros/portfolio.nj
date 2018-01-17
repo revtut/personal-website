@@ -1,8 +1,9 @@
-{% macro item(title, description, image, links=[]) %}
+{% macro item(title, description, image, loading_icon, links=[]) %}
 {% set itemID = range(1,999999) | random %}
 <div class="col-md-4 col-xs-12 portfolio-item">
     <figure data-toggle="modal" data-target="#{{ itemID }}">
-        <img src='{{ image }}'
+        <img src="{{ loading_icon }}"
+             data-src='{{ image }}'
              width="540"
              height="360" alt='{{ title }}'/>
         <figcaption>{{ title }}</figcaption>
@@ -18,7 +19,8 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <img src='{{ image }}'
+                    <img src="{{ loading_icon }}"
+                         data-src='{{ image }}'
                          width="540"
                          height="360" alt='{{ title }}'/>
                     <span class="close" data-dismiss="modal">&times;</span>
