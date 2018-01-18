@@ -9,6 +9,11 @@
                  data-src="{{ image }}"
                  width="300" height="300"
                  alt="Logo">
+            <noscript>
+                <img src="{{ image }}"
+                     width="300" height="300"
+                     alt="Logo">
+            </noscript>
             <div class="overlay">
                 <i class="fa fa-fw {{ icon }}"></i>
             </div>

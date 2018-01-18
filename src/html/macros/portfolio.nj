@@ -6,6 +6,11 @@
              data-src='{{ image }}'
              width="540"
              height="360" alt='{{ title }}'/>
+        <noscript>
+            <img src='{{ image }}'
+                 width="540"
+                 height="360" alt='{{ title }}'/>
+        </noscript>
         <figcaption>{{ title }}</figcaption>
         <!-- Plus sign overlay -->
         <div class="overlay">
@@ -23,6 +28,11 @@
                          data-src='{{ image }}'
                          width="540"
                          height="360" alt='{{ title }}'/>
+                    <noscript>
+                        <img src='{{ image }}'
+                             width="540"
+                             height="360" alt='{{ title }}'/>
+                    </noscript>
                     <span class="close" data-dismiss="modal">&times;</span>
                 </div>
                 <div class="modal-body">

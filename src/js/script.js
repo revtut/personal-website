@@ -162,11 +162,13 @@ function submitContact(event) {
 }
 
 /**
- * Lookup images when opening modal to be unveiled
+ * Lazy image loading
  */
-function lookupImages() {
+function lazyImageLoading() {
+    $('img').unveil(200);
+
     $(window).on('shown.bs.modal', function() {
-        $(window).trigger("lookup");
+        $('img').trigger("lookup");
     });
 }
 
@@ -174,13 +176,12 @@ function lookupImages() {
  * Setup the javascript
  */
 function setup() {
-    lookupImages();
+    lazyImageLoading();
     scrollEvent();
     smoothAnchor();
     changeExtensionDisplay();
     $("[data-toggle='tooltip']").tooltip();
     $("#contactForm").submit(submitContact);
-    $('img').unveil(200);
 }
 
 $(document).ready(setup);

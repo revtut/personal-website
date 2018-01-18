@@ -5,6 +5,12 @@
              data-src="{{ settings.profile_picture }}"
              width="253"
              height="253" alt="Profile picture">
+        <noscript>
+            <img class="img-circle"
+                 src="{{ settings.profile_picture }}"
+                 width="253"
+                 height="253" alt="Profile picture">
+        </noscript>
         <h1>{{ settings.author }}</h1>
         <hr>
         <h2>{{ settings.profession }}</h2>
