@@ -11,7 +11,7 @@
                  width="253"
                  height="253" alt="Profile picture">
         </noscript>
-        <h1>{{ settings.author }}</h1>
+        <h1>$ <span class="js-type-effect">{{ settings.author }}</span><span class="blink-caret"></span></h1>
         <hr>
         <h2>{{ settings.profession }}</h2>
         <div class="text-center">

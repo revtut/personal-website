@@ -1,0 +1,15 @@
+.blink-caret {
+  margin-left: 0.2rem;
+  border-color: white;
+  border-right: 0.5rem solid;
+  animation: blink-caret .75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent
+  }
+  50% {
+    border-color: white;
+  }
+}
