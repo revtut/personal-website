@@ -118,5 +118,29 @@
     "link_title": "Make or Break",
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1513101728/Portfolio/timeline/25151941_2057556831155909_2226757228638656011_n_u4xgkb.png",
     "icon": "fa-globe"
+  },
+  {
+    "title": "Upwork",
+    "description": "Started working as freelancer software developer",
+    "date": {
+      "text": "Dec 25, 2017",
+      "date": "2017/12/25"
+    },
+    "link": "https://www.upwork.com/freelancers/~010d5f857f3edf1ecb",
+    "link_title": "Profile",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1519038673/Portfolio/timeline/upwork_zuduip.png",
+    "icon": "fa-globe"
+  },
+  {
+    "title": "Faculty of Engineering and Architecture of Ghent University (FEA UGent)",
+    "description": "Exchange student (Erasmus+) in the MSc of Computer Science",
+    "date": {
+      "text": "Feb 01, 2018",
+      "date": "2018/02/01"
+    },
+    "link": "https://joaosilva2095.keybase.pub/personal-website/feaugentexchange.pdf",
+    "link_title": "Exchange Grades",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1519038115/Portfolio/timeline/ugent_bnvybx.png",
+    "icon": "fa-file-pdf-o"
   }
 ]
