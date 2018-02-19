@@ -1,41 +1,5 @@
 [
   {
-    "title": "Minecraft Server",
-    "description": {
-      "sentences": [
-        "In the early beginning of the server I was creating it using plugins that existed in the Internet.",
-        "One year after the opening of it I decided to create my own plugins so we could stand out from the crowd.",
-        "Several minigames were developed in JAVA, some already known by the players, others that no one ever played because they were 100% unique.",
-        "As the server grew we had to balance the load between several physical servers (four Linux servers more specifically). Everything was connected and we used an SQL server to save all the data of the players.",
-        "At that time the server was having a huge success! We were 25 people in the team with more than 700 players online playing!"
-      ],
-      "technologies": [
-        "Java",
-        "SQL",
-        "Batch",
-        "Linux"
-      ]
-    },
-    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524362/Portfolio/projects/minecraft_team_erkdmj.png",
-    "links": [
-      {
-        "title": "Minecraft Server",
-        "link": "https://www.youtube.com/playlist?list=PL721luQ59uVJjnrI2E0pUr4d9We7_JZ0q",
-        "icon": "fa-youtube"
-      },
-      {
-        "title": "Minecraft Libraries",
-        "link": "https://github.com/joaosilva2095/minecraft-libraries/",
-        "icon": "fa-github"
-      },
-      {
-        "title": "Minecraft SkyWars",
-        "link": "https://github.com/joaosilva2095/minecraft-skywars/",
-        "icon": "fa-github"
-      }
-    ]
-  },
-  {
     "title": "UPTEConnect",
     "description": {
       "sentences": [
@@ -76,6 +40,62 @@
     "links": []
   },
   {
+    "title": "G.A.S. Porto",
+    "description": {
+      "sentences": [
+        "G.A.S. Porto is a social actions group that uses the donations received for organizing events like \"fado\" night, dance and so on.",
+        "They have recurring donors, called inside the organization of friends.",
+        "I was the lead developer of the online management platform where friends could donate and track their donations.",
+        "At the same time administrators of the organization had access to some statistics, like seeing whose friends had committed to donate and had not done it yet, monthly earnings and more."
+      ],
+      "technologies": [
+        "PHP",
+        "Smarty",
+        "SQL",
+        "HTML",
+        "CSS"
+      ]
+    },
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1519040017/Portfolio/projects/gasporto_jqswo8.png",
+    "links": []
+  },
+  {
+    "title": "Minecraft Server",
+    "description": {
+      "sentences": [
+        "In the early beginning of the server I was creating it using plugins that existed in the Internet.",
+        "One year after the opening of it I decided to create my own plugins so we could stand out from the crowd.",
+        "Several minigames were developed in JAVA, some already known by the players, others that no one ever played because they were 100% unique.",
+        "As the server grew we had to balance the load between several physical servers (four Linux servers more specifically). Everything was connected and we used an SQL server to save all the data of the players.",
+        "At that time the server was having a huge success! We were 25 people in the team with more than 700 players online playing!"
+      ],
+      "technologies": [
+        "Java",
+        "SQL",
+        "Batch",
+        "Linux"
+      ]
+    },
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524362/Portfolio/projects/minecraft_team_erkdmj.png",
+    "links": [
+      {
+        "title": "Minecraft Server",
+        "link": "https://www.youtube.com/playlist?list=PL721luQ59uVJjnrI2E0pUr4d9We7_JZ0q",
+        "icon": "fa-youtube"
+      },
+      {
+        "title": "Minecraft Libraries",
+        "link": "https://github.com/joaosilva2095/minecraft-libraries/",
+        "icon": "fa-github"
+      },
+      {
+        "title": "Minecraft SkyWars",
+        "link": "https://github.com/joaosilva2095/minecraft-skywars/",
+        "icon": "fa-github"
+      }
+    ]
+  },
+  {
     "title": "Goatie",
     "description": {
       "sentences": [
@@ -97,6 +117,34 @@
         "title": "Goatie Simulator",
         "link": "https://goatie.joaosilva.co/",
         "icon": "fa-external-link"
+      }
+    ]
+  },
+  {
+    "title": "ASSIS Mobile",
+    "description": {
+      "sentences": [
+        "ASSIS is an association for social integration. Elderly people are added to the platform and then users can donate to them.",
+        "The money received is then used to buy medicines that for being expensive would not otherwise be bought.",
+        "With a six people team and a constant communication with the product owner we were able to develop the mobile application and its backend that would built-in the already existing online platform."
+      ],
+      "technologies": [
+        "JavaScript",
+        "Java",
+        "Ionic"
+      ]
+    },
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511525136/Portfolio/projects/assis_gofqbg.jpg",
+    "links": [
+      {
+        "title": "ASSIS Android",
+        "link": "https://joaosilva2095.keybase.pub/personal-website/assis.apk",
+        "icon": "fa-android"
+      },
+      {
+        "title": "Promotion video",
+        "link": "https://vimeo.com/198324295",
+        "icon": "fa-vimeo"
       }
     ]
   },
@@ -175,56 +223,6 @@
         "title": "Portable controller receptor",
         "link": "https://joaosilva2095.keybase.pub/personal-website/portablecontroller.jar",
         "icon": "fa-download"
-      }
-    ]
-  },
-  {
-    "title": "ASSIS Mobile",
-    "description": {
-      "sentences": [
-        "ASSIS is an association for social integration. Elderly people are added to the platform and then users can donate to them.",
-        "The money received is then used to buy medicines that for being expensive would not otherwise be bought.",
-        "With a six people team and a constant communication with the product owner we were able to develop the mobile application and its backend that would built-in the already existing online platform."
-      ],
-      "technologies": [
-        "JavaScript",
-        "Java",
-        "Ionic"
-      ]
-    },
-    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511525136/Portfolio/projects/assis_gofqbg.jpg",
-    "links": [
-      {
-        "title": "ASSIS Android",
-        "link": "https://joaosilva2095.keybase.pub/personal-website/assis.apk",
-        "icon": "fa-android"
-      },
-      {
-        "title": "Promotion video",
-        "link": "https://vimeo.com/198324295",
-        "icon": "fa-vimeo"
-      }
-    ]
-  },
-  {
-    "title": "Android Fighter",
-    "description": {
-      "sentences": [
-        "Android Fighter is the lowest level coding game that I ever done, it is a one vs one player game and the goal is to kill the opponent.",
-        "Without the help of any sort of external APIs or frameworks we had to develop it using direct access to peripherals.",
-        "In order to draw the graphics in the screen (we used the \"Dual Buffering\" technic) we had to copy the content of the RAM directly to the VRAM, to move the mouse we had to collect its accelaration data and calculate its position, keyboard inputs were also subscribed and even the datetime displayed in the screen was fetched from the \"Real Time Clock\"."
-      ],
-      "technologies": [
-        "C",
-        "Minix"
-      ]
-    },
-    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511525135/Portfolio/projects/androidfighter_qeedot.jpg",
-    "links": [
-      {
-        "title": "Source code of Android Fighter",
-        "link": "https://joaosilva2095.keybase.pub/personal-website/androidfighter.zip",
-        "icon": "fa-code-fork"
       }
     ]
   }
