@@ -39,7 +39,7 @@
             "elementType": "geometry",
             "stylers": [
                 {
-                    "color": "#EFF6FA"
+                    "color": "#ABB0B3"
                 }
             ]
         },
@@ -104,20 +104,20 @@
 
     var markerIcon = {
         path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z',
-        fillColor: "#004080",
+        fillColor: "#EFF6FA",
         fillOpacity: 1,
         strokeColor: "#fff",
-        strokeOpacity: 1,
-        scale: 1
+        strokeOpacity: 0,
+        scale: 1.1
     };
 
     var secondaryMarkerIcon = {
         path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z',
-        fillColor: "#F0AD4E",
+        fillColor: "#004080",
         fillOpacity: 1,
         strokeColor: "#fff",
-        strokeOpacity: 1,
-        scale: 1
+        strokeOpacity: 0,
+        scale: 1.3
     };
 
     /**
