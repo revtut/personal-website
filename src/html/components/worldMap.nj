@@ -1,0 +1,155 @@
+<div id="map" class="worldMap"></div>
+<script>
+    var style = [
+        {
+            "featureType": "all",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "hue": "#ff0000"
+                },
+                {
+                    "saturation": -100
+                },
+                {
+                    "lightness": -30
+                }
+            ]
+        },
+        {
+            "featureType": "all",
+            "elementType": "labels.text.fill",
+            "stylers": [
+                {
+                    "color": "#ffffff"
+                }
+            ]
+        },
+        {
+            "featureType": "all",
+            "elementType": "labels.text.stroke",
+            "stylers": [
+                {
+                    "color": "#353535"
+                }
+            ]
+        },
+        {
+            "featureType": "landscape",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "color": "#EFF6FA"
+                }
+            ]
+        },
+        {
+            "featureType": "poi",
+            "elementType": "geometry.fill",
+            "stylers": [
+                {
+                    "color": "#505050"
+                }
+            ]
+        },
+        {
+            "featureType": "poi",
+            "elementType": "geometry.stroke",
+            "stylers": [
+                {
+                    "color": "#808080"
+                }
+            ]
+        },
+        {
+            "featureType": "road",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "color": "#454545"
+                }
+            ]
+        },
+        {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "color": "#303134",
+                }
+            ]
+        },
+        {
+            "featureType": "transit",
+            "elementType": "labels",
+            "stylers": [
+                {
+                    "hue": "#000000"
+                },
+                {
+                    "saturation": 100
+                },
+                {
+                    "lightness": -40
+                },
+                {
+                    "invert_lightness": true
+                },
+                {
+                    "gamma": 1.5
+                }
+            ]
+        }
+    ];
+
+    var markerIcon = {
+        path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z',
+        fillColor: "#004080",
+        fillOpacity: 1,
+        strokeColor: "#fff",
+        strokeOpacity: 1,
+        scale: 1
+    };
+
+    var secondaryMarkerIcon = {
+        path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z',
+        fillColor: "#F0AD4E",
+        fillOpacity: 1,
+        strokeColor: "#fff",
+        strokeOpacity: 1,
+        scale: 1
+    };
+
+    /**
+     * Initializes the Google Maps map.
+     */
+    function initMap() {
+        var mainLocation = {lat: {{ worldMap.main.latitude }}, lng: {{ worldMap.main.longitude }}};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 3,
+            maxZoom: 5,
+            minZoom: 3,
+            scaleControl: false,
+            rotateControl: false,
+            scrollWheel: false,
+            fullscreenControl: false,
+            mapTypeControl: false,
+            streetViewControl: false,
+            disableDoubleClickZoom: true,
+            center: mainLocation,
+            styles: style
+        });
+        new google.maps.Marker({
+            position: mainLocation,
+            map: map,
+            icon: secondaryMarkerIcon
+        });
+        {% for place in worldMap.places %}
+        new google.maps.Marker({
+            position: {lat: {{ place.latitude }}, lng: {{ place.longitude }}},
+            map: map,
+            icon: markerIcon
+        });
+        {% endfor %}
+    }
+</script>

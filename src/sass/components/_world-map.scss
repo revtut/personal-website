@@ -1,0 +1,23 @@
+.worldMap {
+  width: 100%;
+
+  @include phone {
+    // margin-top: $margin-regular;
+    height: $height-xx-large;
+  }
+
+  @include tablet {
+    // margin-top: $margin-regular;
+    height: $height-xx-large;
+  }
+
+  @include desktop {
+    // margin-top: $margin-large;
+    height: $height-xxx-large;
+  }
+
+  @include tv {
+    // margin-top: $margin-x-large;
+    height: $height-xxxx-large;
+  }
+}

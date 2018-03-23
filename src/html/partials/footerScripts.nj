@@ -4,3 +4,7 @@
 <script defer rel="text/javascript" src="../vendor/js/jquery.unveil.js"></script>
 <!-- Local JavaScript -->
 <script defer rel="text/javascript" src="../js/script.js"></script>
+<!-- Google Maps -->
+<script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTuTbv-o8HmxEqnfP4DH1ffMR9fPxriTw&callback=initMap">
+</script>
