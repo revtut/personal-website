@@ -1,0 +1,79 @@
+{
+  "main": {
+    "title": "Porto, Portugal",
+    "latitude": "41.14961",
+    "longitude": "-8.61099"
+  },
+  "places": [
+    {
+      "title": "Azores",
+      "latitude": "37.74124",
+      "longitude": "-25.67559"
+    },
+    {
+      "title": "Madeira",
+      "latitude": "32.76070",
+      "longitude": "-16.95947"
+    },
+    {
+      "title": "Spain",
+      "latitude": "40.46366",
+      "longitude": "-3.74922"
+    },
+    {
+      "title": "France",
+      "latitude": "46.22763",
+      "longitude": "2.21374"
+    },
+    {
+      "title": "Germany",
+      "latitude": "51.16569",
+      "longitude": "10.45152"
+    },
+    {
+      "title": "Belgium",
+      "latitude": "50.50388",
+      "longitude": "4.46993"
+    },
+    {
+      "title": "Netherlands",
+      "latitude": "52.13263",
+      "longitude": "5.29126"
+    },
+    {
+      "title": "Italy",
+      "latitude": "41.87194",
+      "longitude": "12.56737"
+    },
+    {
+      "title": "Luxembourg",
+      "latitude": "49.81527",
+      "longitude": "6.12958"
+    },
+    {
+      "title": "Brazil",
+      "latitude": "-14.23500",
+      "longitude": "-51.92527"
+    },
+    {
+      "title": "Tanzania",
+      "latitude": "-6.36902",
+      "longitude": "34.88882"
+    },
+    {
+      "title": "Kenya",
+      "latitude": "-0.02355",
+      "longitude": "37.90619"
+    },
+    {
+      "title": "Egypt",
+      "latitude": "26.82055",
+      "longitude": "30.80249"
+    },
+    {
+      "title": "Cape Green",
+      "latitude": "16.53880",
+      "longitude": "-23.04179"
+    }
+  ]
+}
