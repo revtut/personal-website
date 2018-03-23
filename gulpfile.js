@@ -137,7 +137,12 @@ gulp.task('html-prod', function () {
             path: ['src/html']
         }))
         .pipe(htmlMin({
-            collapseWhitespace: true
+            collapseWhitespace: true,
+            collapseInlineTagWhitespace: true,
+            minifyJS: true,
+            removeComments: true,
+            sortClassName: true,
+            sortAttributes: true
         }))
         .pipe(gulp.dest(distPath))
 });
