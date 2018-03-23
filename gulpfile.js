@@ -127,7 +127,8 @@ gulp.task('html-prod', function () {
                 about: requireUncached('./src/data/about.json'),
                 timeline: requireUncached('./src/data/timeline.json'),
                 skills: requireUncached('./src/data/skills.json'),
-                portfolio: requireUncached('./src/data/portfolio.json')
+                portfolio: requireUncached('./src/data/portfolio.json'),
+                worldMap: requireUncached('./src/data/worldMap.json')
             };
 
             return result
