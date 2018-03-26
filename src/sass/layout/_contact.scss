@@ -10,8 +10,9 @@
   }
 
   select {
+    height: auto !important;
     background: url("https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1496246202/Portfolio/dropdown_dfeblc.png") right / 30px no-repeat #fff;
-    background-repeat: no-repeat; // TODO: Test and fix me
+    background-repeat: no-repeat;
     -webkit-appearance: listbox;
     -moz-appearance: listbox;
     appearance: listbox;
@@ -61,7 +62,6 @@
 
   button {
     @include phone {
-      display: block;
       line-height: $font-small;
       font-size: $font-small;
       margin: $margin-large auto;
@@ -118,16 +118,6 @@
       line-height: $font-x-large;
     }
   }
-}
-
-#ext {
-  float: left;
-  width: 25%;
-}
-
-#phone {
-  float: right;
-  width: 70%;
 }
 
 #submitResult {
