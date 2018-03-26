@@ -1,5 +1,5 @@
 <form id="contactForm" name="contactForm" netlify-honeypot="bot-field"
-      netlify="" class="col-lg-4 contact-form align-items-center">
+      netlify="" class="col-lg-4 contact-form justify-content-center">
     <div class="d-none form-group">
         <label for="bot-field">Bot Field:</label>
         <input id="bot-field" type="text" name="bot-field" placeholder="Your bot field"
@@ -32,8 +32,10 @@
         <textarea id="message" name="message" required="required"
                   placeholder="Your message" rows="9" class="form-control"></textarea>
     </div>
-    <button type="submit" class="btn-rectangle">Send <i class="fa fa-arrow-right" aria-hidden="true"></i>
-    </button>
+    <div class="row justify-content-center">
+        <button type="submit" class="btn-rectangle">Send <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </button>
+    </div>
 </form>
 <div id="submitResult" class="offset-md-4 col-lg-4 alert alert-dismissable"><a href="#" class="close"
                                                                                data-dismiss="alert" aria-label="close">&#xD7;</a>
