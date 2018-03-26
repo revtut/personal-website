@@ -1,28 +1,19 @@
-<nav class="navbar navbar-default navbar-center">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-content">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-    </div>
+<nav class="navbar navbar-center navbar-expand-lg">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
     <div class="collapse navbar-collapse" id="navbar-content">
-        <ul class="nav navbar-nav">
-            <li>
-                <a class="js-smooth-scroll" href="#about" title="About">About</a>
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="js-smooth-scroll nav-link" href="#about" title="About">About</a>
             </li>
-            <li>
-                <a class="js-smooth-scroll" href="#history" title="History">History</a>
+            <li class="nav-item"><a class="js-smooth-scroll nav-link" href="#history" title="History">History</a>
             </li>
-            <li>
-                <a class="js-smooth-scroll" href="#skills" title="Skills">Skills</a>
+            <li class="nav-item"><a class="js-smooth-scroll nav-link" href="#skills" title="Skills">Skills</a>
             </li>
-            <li>
-                <a class="js-smooth-scroll" href="#portfolio" title="Portfolio">Portfolio</a>
+            <li class="nav-item"><a class="js-smooth-scroll nav-link" href="#portfolio" title="Portfolio">Portfolio</a>
             </li>
-            <li>
-                <a class="js-smooth-scroll" href="#contact" title="Contact">Contact</a>
+            <li class="nav-item"><a class="js-smooth-scroll nav-link" href="#contact" title="Contact">Contact</a>
             </li>
         </ul>
     </div>

@@ -1,27 +1,36 @@
 <header id="top" class="intro">
     <div class="text-center v-align">
-        <img class="img-circle"
-             src="{{ settings.loading_icon }}"
-             data-src="{{ settings.profile_picture }}"
-             width="253"
-             height="253" alt="Profile picture">
-        <noscript>
-            <img class="img-circle"
-                 src="{{ settings.profile_picture }}"
-                 width="253"
-                 height="253" alt="Profile picture">
-        </noscript>
-        <h1><span class="js-type-effect">{{ settings.author }}</span><span class="blink-caret"></span></h1>
-        <hr>
-        <h2>{{ settings.profession }}</h2>
-        <div class="text-center">
-            <button type="button" class="btn-rectangle" onclick="jumpToAnchor('#about')">
-                <i class="fa fa-arrow-down" aria-hidden="true"></i> Know more
-            </button>
-            <button type="button" class="btn-rectangle"
-                    onclick="window.open('https://joaosilva2095.keybase.pub/personal-website/resumejoaosilva.pdf','_blank', 'noopener')">
-                <i class="fa fa-graduation-cap" aria-hidden="true"></i> My Résumé
-            </button>
+        <div class="row">
+            <div class="offset-xl-2 col-xl-4">
+                <img class="rounded-circle"
+                     src="{{ settings.loading_icon }}"
+                     data-src="{{ settings.profile_picture }}"
+                     width="253"
+                     height="253" alt="Profile picture">
+                <noscript>
+                    <img class="rounded-circle"
+                         src="{{ settings.profile_picture }}"
+                         width="253"
+                         height="253" alt="Profile picture">
+                </noscript>
+                <h1><span class="js-type-effect">{{ settings.author }}</span><span class="blink-caret"></span></h1>
+                <hr>
+                <h2>{{ settings.profession }}</h2>
+                <div>
+                    <button type="button" class="btn-rectangle" onclick="jumpToAnchor('#about')">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i> Know more
+                    </button>
+                    <button type="button" class="btn-rectangle"
+                            onclick="window.open('https://joaosilva2095.keybase.pub/personal-website/resumejoaosilva.pdf','_blank', 'noopener')">
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i> My Résumé
+                    </button>
+                </div>
+            </div>
+            <div class="col-offset-md-1 col-xl-4">
+                <p><q>João is great to work with! His work is excellent and of high quality. He takes the time to
+                        explain you each step in the process and reacts fast to feedback. Will definitely work with him
+                        again!</q> - Vasco Meerman</p>
+            </div>
         </div>
     </div>
 </header>

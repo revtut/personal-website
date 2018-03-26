@@ -18,7 +18,7 @@
         content: "";
         display: inline-block;
         position: absolute;
-        top: 5%;
+        top: 25%;
         width: 0;
         height: 0;
         border-top: 1.4rem solid transparent;
@@ -31,7 +31,7 @@
         content: "";
         display: inline-block;
         position: absolute;
-        top: 5%;
+        top: 25%;
         width: 0;
         height: 0;
         border-top: 1.4rem solid transparent;
@@ -44,7 +44,7 @@
         content: "";
         display: inline-block;
         position: absolute;
-        top: 5%;
+        top: 25%;
         width: 0;
         height: 0;
         border-top: 1.4rem solid transparent;
@@ -85,25 +85,12 @@
   .moment-date {
     pointer-events: none;
 
+    @include phone {
+      margin: $margin-regular $margin-x-large;
+    }
+
     time {
-      @include phone {
-        margin: $margin-regular 0rem;
-      }
-
-      @include tablet {
-        margin: $margin-large 0rem;
-      }
-
-      @include desktop {
-        margin: $margin-x-large 0rem;
-      }
-
-      @include tv {
-        margin: $margin-xx-large 0rem;
-      }
-
       color: $color-gray-normal;
-      display: block;
     }
   }
 
@@ -151,20 +138,10 @@
   }
 
   &:nth-of-type(odd) {
-    @include phone {
-      .moment-date time {
-        margin-left: $margin-xxxx-large;
-      }
-    }
-
     @include tablet {
       .moment-description::after {
         right: -2rem;
         border-left: 2rem solid white;
-      }
-
-      .moment-date time {
-        margin-left: $margin-xxx-large;
       }
     }
 
@@ -173,20 +150,12 @@
         right: -2rem;
         border-left: 2rem solid white;
       }
-
-      .moment-date time {
-        margin-left: $margin-xxxx-large;
-      }
     }
 
     @include tv {
       .moment-description::after {
         right: -2rem;
         border-left: 2rem solid white;
-      }
-
-      .moment-date time {
-        margin-left: $margin-xxxx-large;
       }
     }
 
@@ -196,20 +165,10 @@
   }
 
   &:nth-of-type(even) {
-    @include phone {
-      .moment-date time {
-        margin-right: $margin-xxxx-large;
-      }
-    }
-
     @include tablet {
       .moment-description::after {
         left: -2rem;
         border-right: 2rem solid white;
-      }
-
-      .moment-date time {
-        margin-right: $margin-xxx-large;
       }
     }
 
@@ -218,20 +177,12 @@
         left: -2rem;
         border-right: 2rem solid white;
       }
-
-      .moment-date time {
-        margin-right: $margin-xxxx-large;
-      }
     }
 
     @include tv {
       .moment-description::after {
         left: -2rem;
         border-right: 2rem solid white;
-      }
-
-      .moment-date time {
-        margin-right: $margin-xxxx-large;
       }
     }
 

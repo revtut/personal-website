@@ -17,7 +17,7 @@ function scrollEvent() {
     // On resize
     windowElement.resize(function () {
         // Reset navigation bar
-        navigationElement.removeClass("navbar-fixed-top");
+        navigationElement.removeClass("fixed-top");
         bodyElement.css("margin-top", 0);
 
         // Recalculate distance to top
@@ -45,11 +45,11 @@ function scrollEvent() {
  * @param distance distance to the top
  */
 function stickyNavigation(navigationElement, bodyElement, y, distance) {
-    if (y >= distance && !navigationElement.hasClass("navbar-fixed-top")) {
-        navigationElement.addClass("navbar-fixed-top");
+    if (y >= distance && !navigationElement.hasClass("fixed-top")) {
+        navigationElement.addClass("fixed-top");
         bodyElement.css("margin-top", navigationElement.height());
-    } else if (y < distance && navigationElement.hasClass("navbar-fixed-top")) {
-        navigationElement.removeClass("navbar-fixed-top");
+    } else if (y < distance && navigationElement.hasClass("fixed-top")) {
+        navigationElement.removeClass("fixed-top");
         bodyElement.css("margin-top", 0);
     }
 }

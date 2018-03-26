@@ -5,7 +5,7 @@
 
 {% block content %}
     <div class="portfolio-content container">
-        <div class="row text-center portfolio-page">
+        <div class="row justify-content-center portfolio-page">
             {% import "macros/portfolio.nj" as portfolio_macro %}
             {% for item in portfolio %}
                 {{ portfolio_macro.item(item.title, item.description, item.image, settings.loading_icon, item.links) }}

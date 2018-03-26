@@ -1,21 +1,21 @@
 <footer>
-    <div class="row text-center upper-footer">
+    <div class="row justify-content-center align-items-center upper-footer">
         <i class="fa fa-fw fa-heart" aria-hidden="true"></i>
         Handcrafted and designed by myself
     </div>
-    <div class="row text-center lower-footer">
-        <div class="col-md-offset-2 col-md-4 footer-quote col-centered">
-            <div class="col-xs-2 text-right">
+    <div class="row justify-content-center align-items-center lower-footer">
+        <div class="offset-md-2 col-lg-4 footer-quote col-centered">
+            <div class="col-2 justify-content-start">
                 <img src="{{ settings.loading_icon }}"
                      data-src="{{ settings.logo_light }}"
                      width="59" height="74"
                      alt="Logo">
             </div>
-            <div class="col-xs-10 text-left">
+            <div class="col-10 justify-content-end">
                 <p><q>{{ settings.quote.quote }}</q> - {{ settings.quote.author }}</p>
             </div>
         </div>
-        <div class="col-md-offset-1 col-md-4 col-centered">
+        <div class="offset-md-1 col-lg-4 col-centered">
             {% for item in settings.social_media %}
                 <a class="social-icon"
                    href="{{ item.link }}" target="_blank"
