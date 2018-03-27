@@ -3,27 +3,31 @@
         <i class="fa fa-fw fa-heart" aria-hidden="true"></i>
         Handcrafted and designed by myself
     </div>
-    <div class="row justify-content-center align-items-center lower-footer">
-        <div class="offset-md-2 col-lg-4 footer-quote col-centered">
-            <div class="col-2 justify-content-start">
-                <img src="{{ settings.loading_icon }}"
-                     data-src="{{ settings.logo_light }}"
-                     width="59" height="74"
-                     alt="Logo">
-            </div>
-            <div class="col-10 justify-content-end">
-                <p><q>{{ settings.quote.quote }}</q> - {{ settings.quote.author }}</p>
+    <div class="row justify-content-center lower-footer">
+        <div class="col-lg-4 footer-quote">
+            <div class="row no-gutters justify-content-center align-items-center">
+                <div class="col-auto">
+                    <img src="{{ settings.loading_icon }}"
+                         data-src="{{ settings.logo_light }}"
+                         width="59" height="74"
+                         alt="Logo">
+                </div>
+                <div class="col-9 ml-4">
+                    <p><q>{{ settings.quote.quote }}</q> - {{ settings.quote.author }}</p>
+                </div>
             </div>
         </div>
-        <div class="offset-md-1 col-lg-4 col-centered">
-            {% for item in settings.social_media %}
-                <a class="social-icon"
-                   href="{{ item.link }}" target="_blank"
-                   rel="noopener noreferrer"
-                   title="{{ item.title }}" itemprop="url">
-                    <i class="fa fa-fw {{ item.icon }}" aria-hidden="true"></i>
-                </a>
-            {% endfor %}
+        <div class="col-lg-4">
+            <div class="row h-100 justify-content-center align-items-center">
+                {% for item in settings.social_media %}
+                    <a class="social-icon d-flex align-items-center h-100"
+                       href="{{ item.link }}" target="_blank"
+                       rel="noopener noreferrer"
+                       title="{{ item.title }}" itemprop="url">
+                        <i class="fa fa-fw {{ item.icon }}" aria-hidden="true"></i>
+                    </a>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </footer>

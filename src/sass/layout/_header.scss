@@ -8,11 +8,11 @@ header.intro {
 
   @include phone {
     h1 {
-      font-size: $font-x-large;
+      font-size: $font-large;
     }
 
     h2 {
-      font-size: $font-large;
+      font-size: $font-regular;
     }
 
     button {
@@ -26,11 +26,11 @@ header.intro {
 
   @include tablet {
     h1 {
-      font-size: $font-xx-large;
+      font-size: $font-x-large;
     }
 
     h2 {
-      font-size: $font-x-large;
+      font-size: $font-large;
     }
 
     button {
@@ -43,11 +43,11 @@ header.intro {
 
   @include desktop {
     h1 {
-      font-size: $font-xxx-large;
+      font-size: $font-xx-large;
     }
 
     h2 {
-      font-size: $font-xx-large;
+      font-size: $font-x-large;
     }
 
     button {
@@ -60,11 +60,11 @@ header.intro {
 
   @include tv {
     h1 {
-      font-size: $font-xxxx-large;
+      font-size: $font-xxx-large;
     }
 
     h2 {
-      font-size: $font-xxx-large;
+      font-size: $font-xx-large;
     }
 
     button {
