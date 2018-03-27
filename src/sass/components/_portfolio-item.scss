@@ -116,6 +116,7 @@
       margin: 0 auto;
       overflow: hidden;
       position: relative;
+      border-radius: 0;
 
       @include phone {
         height: $height-regular;
