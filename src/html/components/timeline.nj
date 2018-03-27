@@ -4,7 +4,7 @@
 {% extends "partials/section.nj" %}
 
 {% block content %}
-    <div class="timeline-content text-center">
+    <div class="timeline-content justify-content-center">
         {% import "macros/timeline.nj" as timeline_macro %}
         {% for item in timeline %}
             {{ timeline_macro.item(loop.index0 % 2 == 0, item.title, item.description, item.date, item.link, item.link_title, item.image, settings.loading_icon, item.icon) }}

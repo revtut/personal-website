@@ -1,7 +1,7 @@
 {% macro item(even, title, description, date, link, link_title, image, loading_icon, icon) %}
-<div class="row time-moment">
+<div class="row time-moment justify-content-center align-items-center">
     <!-- Image -->
-    <div class="col-md-push-5 col-md-2 moment-image">
+    <div class="order-lg-2 col-lg-2 text-center moment-image">
         <a href="{{ link }}" target="_blank"
            rel="noopener noreferrer"
            title="{{ link_title }}" itemprop="url">
@@ -21,12 +21,12 @@
     </div>
 
     <!-- Date -->
-    <div class="{% if even %}col-md-push-4{% else %}col-md-push-1{% endif %} col-md-3 moment-date">
+    <div class="{% if even %}order-lg-3{% else %}order-lg-1 text-right{% endif %} col-lg-2 moment-date">
         <time datetime="{{ date.date }}">{{ date.text }}</time>
     </div>
 
     <!-- Description -->
-    <div class="{% if even %}col-md-pull-5{% else %}col-md-pull-1{% endif %} col-md-offset-3 col-md-2 moment-description">
+    <div class="{% if even %}order-lg-1{% else %}order-lg-3{% endif %} col-lg-2 moment-description">
         <h3>{{ title }}</h3>
         <p>{{ description | safe }}</p>
     </div>

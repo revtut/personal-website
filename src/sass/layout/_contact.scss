@@ -1,17 +1,8 @@
 .contact-form {
-  label,
-  legend,
-  input,
-  textarea,
   select {
-    font-weight: normal;
-    display: block;
-    height: auto;
-  }
-
-  select {
+    height: auto !important;
     background: url("https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1496246202/Portfolio/dropdown_dfeblc.png") right / 30px no-repeat #fff;
-    background-repeat: no-repeat; // TODO: Test and fix me
+    background-repeat: no-repeat;
     -webkit-appearance: listbox;
     -moz-appearance: listbox;
     appearance: listbox;
@@ -61,31 +52,30 @@
 
   button {
     @include phone {
-      display: block;
       line-height: $font-small;
       font-size: $font-small;
-      margin: $margin-large auto;
+      margin: $margin-large 0 0;
       padding: $padding-small;
     }
 
     @include tablet {
       line-height: $font-regular;
       font-size: $font-regular;
-      margin: $margin-large $margin-regular;
+      margin: $margin-large $margin-regular 0;
       padding: $padding-regular;
     }
 
     @include desktop {
       line-height: $font-large;
       font-size: $font-large;
-      margin: $margin-x-large $margin-large;
+      margin: $margin-x-large $margin-large 0;
       padding: $padding-large;
     }
 
     @include tv {
       line-height: $font-x-large;
       font-size: $font-x-large;
-      margin: $margin-xx-large $margin-x-large;
+      margin: $margin-xx-large $margin-x-large 0;
       padding: $padding-x-large;
     }
   }
@@ -118,16 +108,6 @@
       line-height: $font-x-large;
     }
   }
-}
-
-#ext {
-  float: left;
-  width: 25%;
-}
-
-#phone {
-  float: right;
-  width: 70%;
 }
 
 #submitResult {

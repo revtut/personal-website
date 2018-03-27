@@ -13,6 +13,9 @@ function typeEffect(input, delay) {
             input.text(input.text() + fullText[i++]);
         } else {
             clearInterval(effect);
+            setTimeout(function () {
+                typeEffect(input, delay);
+            }, 5000);
         }
     }, delay);
 }

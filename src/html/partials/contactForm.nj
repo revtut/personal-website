@@ -1,39 +1,42 @@
-<form id="contactForm" name="contactForm" netlify-honeypot="bot-field" netlify
-      class="col-md-offset-4 col-md-4 contact-form">
-    <div class="hidden form-group">
+<form id="contactForm" name="contactForm" netlify-honeypot="bot-field"
+      netlify="" class="col-lg-4 contact-form justify-content-center">
+    <div class="d-none form-group">
         <label for="bot-field">Bot Field:</label>
         <input id="bot-field" type="text" name="bot-field" placeholder="Your bot field"
                class="form-control">
     </div>
     <div class="form-group">
         <label for="name">Name:</label>
-        <input id="name" type="text" name="name" required="required" placeholder="Your name"
-               class="form-control">
+        <input id="name" type="text" name="name" required="required"
+               placeholder="Your name" class="form-control">
     </div>
     <div class="form-group">
         <label for="email">Email:</label>
-        <input id="email" type="email" name="email" required="required" placeholder="Your email"
-               class="form-control">
+        <input id="email" type="email" name="email" required="required"
+               placeholder="Your email" class="form-control">
     </div>
     <div class="form-group">
         <fieldset>
             <legend>Phone:</legend>
-            <select id="ext" name="ext" required="required" class="form-control">
-                {% include 'partials/countryCodes.nj' %}
-            </select>
-            <input id="phone" type="tel" name="phone" required="required" placeholder="Your phone number"
-                   class="form-control">
+            <div class="row">
+                <select id="ext" name="ext" required="required"
+                        class="form-control col-3">{% include 'partials/countryCodes.nj' %}</select>
+                <input id="phone"
+                       type="tel" name="phone" required="required" placeholder="Your phone number"
+                       class="form-control col">
+            </div>
         </fieldset>
     </div>
     <div class="form-group">
         <label for="message">Message:</label>
-        <textarea id="message" name="message" required="required" placeholder="Your message" rows="9"
-                  class="form-control"></textarea>
+        <textarea id="message" name="message" required="required"
+                  placeholder="Your message" rows="9" class="form-control"></textarea>
     </div>
-    <button type="submit" class="btn-rectangle">
-        Send <i class="fa fa-arrow-right" aria-hidden="true"></i>
-    </button>
+    <div class="row justify-content-center">
+        <button type="submit" class="btn-rectangle">Send <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </button>
+    </div>
 </form>
-<div id="submitResult" class="col-md-offset-4 col-md-4 alert alert-dismissable">
-    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+<div id="submitResult" class="offset-md-4 col-lg-4 alert alert-dismissable"><a href="#" class="close"
+                                                                               data-dismiss="alert" aria-label="close">&#xD7;</a>
 </div>

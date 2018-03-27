@@ -41,7 +41,7 @@
   },
   {
     "title": "Favorite OS",
-    "value": "Windows",
+    "value": "Mac OSX",
     "icon": "fa-laptop"
   },
   {
@@ -51,12 +51,12 @@
   },
   {
     "title": "Favorite coding language",
-    "value": "Java",
+    "value": "Go",
     "icon": "fa-code"
   },
   {
-    "title": "Favorite IDE",
-    "value": "IntelliJ IDEA",
+    "title": "Favorite IDEs",
+    "value": "JetBrains",
     "icon": "fa-terminal"
   }
 ]
