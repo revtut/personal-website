@@ -3,6 +3,7 @@
     color: $color-primary;
 
     @include phone {
+      margin-top: $margin-regular;
       font-size: $font-regular;
     }
 

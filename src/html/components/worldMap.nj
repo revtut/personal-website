@@ -106,18 +106,18 @@
         path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z',
         fillColor: "#004080",
         fillOpacity: 1,
-        strokeColor: "#fff",
+        strokeColor: "#EFF6FA",
         strokeOpacity: 0,
-        scale: 1.1
+        scale: 1
     };
 
     var secondaryMarkerIcon = {
         path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z',
         fillColor: "#F0AD4E",
         fillOpacity: 1,
-        strokeColor: "#fff",
+        strokeColor: "#EFF6FA",
         strokeOpacity: 0,
-        scale: 1.3
+        scale: 1.2
     };
 
     /**
