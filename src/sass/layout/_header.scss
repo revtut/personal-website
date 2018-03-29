@@ -4,14 +4,13 @@ header.intro {
   background: linear-gradient(to bottom, $color-primary, $color-primary-dark);
   background-position: center center;
   background-size: cover;
-  height: 100%;
 
   @include phone {
     h1 {
       font-size: $font-large;
     }
 
-    h2 {
+    h2, p {
       font-size: $font-regular;
     }
 
@@ -29,7 +28,7 @@ header.intro {
       font-size: $font-x-large;
     }
 
-    h2 {
+    h2, p {
       font-size: $font-large;
     }
 
@@ -46,7 +45,7 @@ header.intro {
       font-size: $font-xx-large;
     }
 
-    h2 {
+    h2, p {
       font-size: $font-x-large;
     }
 
@@ -63,7 +62,7 @@ header.intro {
       font-size: $font-xxx-large;
     }
 
-    h2 {
+    h2, p {
       font-size: $font-xx-large;
     }
 
@@ -101,12 +100,17 @@ header.intro {
   }
 
   h1 {
-    font-family: $font-monospaced;
+    font-family: $font-secondary;
   }
 
-  h1, h2 {
+  h1, h2, p {
     margin: 0;
     color: white;
+  }
+
+  q {
+    font-family: $font-secondary;
+    font-style: italic;
   }
 
   hr {
