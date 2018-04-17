@@ -109,7 +109,7 @@
   },
   {
     "title": "Make or Break",
-    "description": "Won the <b>1st</b> place in the hardcore category in a 3 day hackathon.",
+    "description": "Won the <b>1st</b> place in the \"Hardcore\" category in a 48 hours hackathon.",
     "date": {
       "text": "Sep 10, 2017",
       "date": "2017/09/10"
@@ -142,5 +142,17 @@
     "link_title": "Exchange Grades",
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1519038115/Portfolio/timeline/ugent_bnvybx.png",
     "icon": "fa-file-pdf-o"
+  },
+  {
+    "title": "Make or Break",
+    "description": "Won the <b>1st</b> place in the \"Fun\" category in a 3 day hackathon.",
+    "date": {
+      "text": "Apr 15, 2018",
+      "date": "2018/04/15"
+    },
+    "link": "https://makeorbreak.io/",
+    "link_title": "Make or Break",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1513101728/Portfolio/timeline/25151941_2057556831155909_2226757228638656011_n_u4xgkb.png",
+    "icon": "fa-globe"
   }
 ]
