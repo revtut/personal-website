@@ -97,7 +97,7 @@
   },
   {
     "title": "UPTEC",
-    "description": "Developed a management platform for the <b>200+</b> start-ups here incubated.",
+    "description": "Started the development of the management platform for the <b>200+</b> start-ups here incubated.",
     "date": {
       "text": "Jul 1, 2017",
       "date": "2017/07/01"
@@ -109,19 +109,19 @@
   },
   {
     "title": "Make or Break",
-    "description": "Won the <b>1st</b> place in the \"Hardcore\" category in a 48 hours hackathon.",
+    "description": "Won the <b>1st</b> place in the <b>\"Hardcore\"</b> category in a 48 hours hackathon.",
     "date": {
       "text": "Sep 10, 2017",
       "date": "2017/09/10"
     },
     "link": "https://makeorbreak.io/",
     "link_title": "Make or Break",
-    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1513101728/Portfolio/timeline/25151941_2057556831155909_2226757228638656011_n_u4xgkb.png",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1527276381/Portfolio/timeline/make_or_break_hznpgr.png",
     "icon": "fa-globe"
   },
   {
     "title": "Upwork",
-    "description": "Started working as freelancer software developer",
+    "description": "Started working as freelancer software developer, mainly as a full-stack web developer",
     "date": {
       "text": "Dec 25, 2017",
       "date": "2017/12/25"
@@ -145,14 +145,26 @@
   },
   {
     "title": "Make or Break",
-    "description": "Won the <b>1st</b> place in the \"Fun\" category in a 3 day hackathon.",
+    "description": "Won the <b>1st</b> place in the <b>\"Fun\"</b> category in a 3 day hackathon.",
     "date": {
       "text": "Apr 15, 2018",
       "date": "2018/04/15"
     },
     "link": "https://makeorbreak.io/",
     "link_title": "Make or Break",
-    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1513101728/Portfolio/timeline/25151941_2057556831155909_2226757228638656011_n_u4xgkb.png",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1527276381/Portfolio/timeline/make_or_break_hznpgr.png",
+    "icon": "fa-globe"
+  },
+  {
+    "title": "Critical Software",
+    "description": "Joined the rated at CMMI Maturity Level 5 in both Waterfall and Agile software development company.",
+    "date": {
+      "text": "Apr 24, 2018",
+      "date": "2018/04/24"
+    },
+    "link": "https://www.criticalsoftware.com/",
+    "link_title": "Critical Software",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1527276519/Portfolio/timeline/critical_software_ghthsy.png",
     "icon": "fa-globe"
   }
 ]
