@@ -137,7 +137,7 @@ gulp.task('html-prod', function () {
             path: ['src/html']
         }))
         .pipe(htmlMin({
-            collapseWhitespace: true,
+            collapseWhitespace: false,
             collapseInlineTagWhitespace: true,
             minifyJS: true,
             removeComments: true,
