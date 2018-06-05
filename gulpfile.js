@@ -25,6 +25,7 @@ gulp.task('other-files', function () {
     return gulp.src([
             'src/robots.txt',
             'src/sitemap.xml',
+            'src/_redirects',
             'src/vendor/**'],
         {
             base: 'src'
