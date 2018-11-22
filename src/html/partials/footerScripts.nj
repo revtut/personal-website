@@ -13,5 +13,5 @@
 <script defer rel="text/javascript" src="../js/script.js"></script>
 <!-- Google Maps -->
 <script defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTuTbv-o8HmxEqnfP4DH1ffMR9fPxriTw&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbGfXsjA3AaHmKvloMoSxQiw2w6fZ6des&callback=initMap">
 </script>
