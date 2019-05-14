@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://www.joaosilva.co/sitemap.xml
+Sitemap: https://www.joaosilva.io/sitemap.xml

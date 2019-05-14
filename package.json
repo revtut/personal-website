@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/joaosilva2095/personal-website/issues"
   },
-  "homepage": "https://www.joaosilva.co",
+  "homepage": "https://www.joaosilva.io",
   "devDependencies": {
     "browser-sync": "^2.18.12",
     "del": "^2.2.2",
