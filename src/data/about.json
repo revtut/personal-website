@@ -1,7 +1,7 @@
 [
   {
     "title": "Name",
-    "value": "João Fernando Oliveira e Silva",
+    "value": "João Oliveira e Silva",
     "icon": "fa-user"
   },
   {
@@ -36,17 +36,17 @@
   },
   {
     "title": "Sports",
-    "value": "Scuba-diving and dance",
-    "icon": "fa-soccer-ball-o"
+    "value": "Surf, Dance and Yoga",
+    "icon": "fa-bolt"
   },
   {
     "title": "Favorite OS",
-    "value": "Mac OS X",
+    "value": "OS X",
     "icon": "fa-laptop"
   },
   {
     "title": "Favorite mobile OS",
-    "value": "Android",
+    "value": "iOS",
     "icon": "fa-mobile"
   },
   {

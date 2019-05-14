@@ -84,18 +84,6 @@
     "icon": "fa-globe"
   },
   {
-    "title": "Faculdade de Engenharia da Universidade do Porto (FEUP)",
-    "description": "Bachelor's in Informatics and Computing Engineering with an average of <b>16</b> out of 20.",
-    "date": {
-      "text": "Jul 1, 2016",
-      "date": "2016/07/01"
-    },
-    "link": "https://joaosilva2095.keybase.pub/personal-website/feupbachelors.pdf",
-    "link_title": "Bachelor's grades",
-    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524360/Portfolio/timeline/feup_njzijw.png",
-    "icon": "fa-file-pdf-o"
-  },
-  {
     "title": "UPTEC",
     "description": "Started the development of the management platform for the <b>200+</b> start-ups here incubated.",
     "date": {
@@ -166,5 +154,17 @@
     "link_title": "Critical Software",
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1527276519/Portfolio/timeline/critical_software_ghthsy.png",
     "icon": "fa-globe"
+  },
+  {
+    "title": "Faculdade de Engenharia da Universidade do Porto (FEUP)",
+    "description": "Master's in Informatics and Computing Engineering with an average of <b>16</b> out of 20.",
+    "date": {
+      "text": "Jul 9, 2018",
+      "date": "2018/07/09"
+    },
+    "link": "https://joaosilva2095.keybase.pub/personal-website/feupbachelors.pdf",
+    "link_title": "Master's grades",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524360/Portfolio/timeline/feup_njzijw.png",
+    "icon": "fa-file-pdf-o"
   }
 ]
