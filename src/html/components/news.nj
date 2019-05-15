@@ -1,4 +1,4 @@
-<div class="w-100 alert-banner">
+<div id="alert" data-id="ce092adb-e9c0-437c-9696-731e640799c8" class="w-100 alert-banner d-none">
     <p>Yay a new domain! Try <a class="highlight" href="https://www.⌨🖱.ws">www.<i class="em em-keyboard"></i><i class="em em-three_button_mouse"></i>.ws</a> my emoji domain.</p>
-    <span class="dismiss">&times</span>
+    <span class="dismiss" onclick="closeAlert()">&times</span>
 </div>

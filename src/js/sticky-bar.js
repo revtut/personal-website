@@ -36,7 +36,6 @@ function scrollEvent() {
     });
 }
 
-
 /**
  * Make the navigation bar sticky or not
  * @param navigationElement navigation bar element
@@ -45,10 +44,19 @@ function scrollEvent() {
  * @param distance distance to the top
  */
 function stickyNavigation(navigationElement, bodyElement, y, distance) {
+    let alertMarginTop = 0;
+    let alert = $('#alert');
+    if (alert.is(":visible")) {
+        alertMarginTop = alert.outerHeight();
+        distance -= alertMarginTop;
+    }
+
     if (y >= distance && !navigationElement.hasClass("fixed-top")) {
+        navigationElement.css("margin-top", alertMarginTop);
         navigationElement.addClass("fixed-top");
-        bodyElement.css("margin-top", navigationElement.height());
+        bodyElement.css("margin-top", navigationElement.outerHeight());
     } else if (y < distance && navigationElement.hasClass("fixed-top")) {
+        navigationElement.css("margin-top", 0);
         navigationElement.removeClass("fixed-top");
         bodyElement.css("margin-top", 0);
     }

@@ -19,8 +19,14 @@ function smoothAnchor() {
  * @param {string} anchor anchor to jump to
  */
 function jumpToAnchor(anchor) {
+    let height = $("nav").outerHeight();
+    let alert = $('#alert');
+    if (alert.is(":visible")) {
+        height += alert.outerHeight();
+    }
+
     root.animate({
-        scrollTop: $(anchor).offset().top - $("nav").height() + 1
+        scrollTop: $(anchor).offset().top - height + 1
     }, 500);
 }
 
@@ -71,9 +77,74 @@ function submitContact(event) {
 function lazyImageLoading() {
     $('img').unveil(200);
 
-    $(window).on('shown.bs.modal', function() {
+    $(window).on('shown.bs.modal', function () {
         $('img').trigger("lookup");
     });
+}
+
+/**
+ * Show alert if it has never been displayed
+ */
+function showAlert() {
+    let alertCookieName = 'last_alert_id';
+    let alert = $('#alert');
+    let currentAlertID = alert.data('id');
+
+    let lastAlertID = getCookie(alertCookieName);
+    if (lastAlertID) {
+        if (lastAlertID === currentAlertID) {
+            return;
+        }
+    }
+
+    setCookie(alertCookieName, "", -1);
+    alert.removeClass('d-none');
+}
+
+/**
+ * Closes the alert
+ */
+function closeAlert() {
+    let alertCookieName = 'last_alert_id';
+    let alert = $('#alert');
+    let currentAlertID = alert.data('id');
+
+    setCookie(alertCookieName, currentAlertID, 365);
+    alert.addClass('d-none');
+    $("nav").css("margin-top", 0);
+}
+
+/**
+ * Get the value of a cookie
+ * @param {String} name name of the cookie to get
+ */
+function getCookie(name) {
+    var name = name + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+/**
+ * Set a cookie
+ * @param {String} name name of the cookie to set
+ * @param {String} value value of the cookie
+ * @param {Number} expireDays number of days to expire the cookie
+ */
+function setCookie(name, value, expireDays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (expireDays * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
 }
 
 /**
@@ -84,11 +155,12 @@ function setup() {
     scrollEvent();
     smoothAnchor();
     changeExtensionDisplay();
-    $(".js-type-effect").each(function() {
+    $(".js-type-effect").each(function () {
         typeEffect($(this), 100);
     });
     $("[data-toggle='tooltip']").tooltip();
     $("#contactForm").submit(submitContact);
+    showAlert();
 }
 
 $(document).ready(setup);

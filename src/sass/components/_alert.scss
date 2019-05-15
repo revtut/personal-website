@@ -11,7 +11,7 @@
     justify-content: center;
     background-color:$color-gray-dark;
     margin: 0;
-    padding: $padding-small;
+    padding: $padding-tiny;
 
     p {
         @include phone {
@@ -19,7 +19,7 @@
         }
       
         @include tablet {
-            padding: $padding-regular;
+            padding: $padding-tiny;
         }
       
         @include desktop {
@@ -44,6 +44,7 @@
         font-size: $font-x-large;
         position: absolute;
         right: 5%;
+        cursor: pointer;
     }
 
     .em {
