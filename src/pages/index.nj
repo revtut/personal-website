@@ -6,6 +6,10 @@
 </head>
 
 <body>
+{% block news %}
+    {% include 'components/news.nj' %}
+{% endblock %}
+
 {% block header %}
     {% include 'components/header.nj' %}
 {% endblock %}

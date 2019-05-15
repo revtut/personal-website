@@ -6,6 +6,10 @@ header.intro {
   background-size: cover;
   height: 100%;
 
+  button {
+    cursor: pointer;
+  }
+
   @include phone {
     h1 {
       font-size: $font-large;
