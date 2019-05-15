@@ -15,18 +15,26 @@
 
     p {
         @include phone {
+            font-size: $font-small;
+            line-height: $font-x-large;
             padding: $padding-regular;
         }
       
         @include tablet {
+            font-size: $font-regular;
+            line-height: $font-xx-large;
             padding: $padding-tiny;
         }
       
         @include desktop {
+            font-size: $font-large;
+            line-height: $font-xxx-large;
             padding: 0;
         }
       
         @include tv {
+            font-size: $font-x-large;
+            line-height: $font-xxxx-large;
             padding: 0;
         }
     }
@@ -35,9 +43,7 @@
     .dismiss {
         margin: 0;
         color:  white;
-        font-size: $font-large;
         text-align: center;
-        line-height: $font-xxx-large;
     }
 
     .dismiss {
