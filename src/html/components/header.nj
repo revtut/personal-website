@@ -21,7 +21,7 @@
                 </button>
                 <button type="button" class="btn-rectangle"
                         onclick="window.open('https://joaosilva2095.keybase.pub/personal-website/resumejoaosilva.pdf','_blank', 'noopener')">
-                    <i class="fa fa-graduation-cap" aria-hidden="true"></i> My Résumé
+                    <i class="fa fa-graduation-cap" aria-hidden="true"></i> My Resume
                 </button>
             </div>
         </div>
