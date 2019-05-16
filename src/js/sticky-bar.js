@@ -71,6 +71,11 @@ function stickyNavigation(navigationElement, bodyElement, y, distance) {
  * @return current anchor
  */
 function highlightCurrentAnchor(navigationAnchorsElement, y, height, lastAnchor) {
+    let alert = $('#alert');
+    if (alert.is(":visible")) {
+        height += alert.outerHeight();
+    }
+
     var navActiveElement = null, currentAnchor = null;
     navigationAnchorsElement.each(function () {
         var anchorId = $(this).children().attr("href"),
