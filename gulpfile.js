@@ -1,15 +1,15 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync');
-var htmlMin = require('gulp-htmlmin');
-var minify = require('gulp-minify');
-var sass = require('gulp-sass');
-var prefix = require('gulp-autoprefixer');
-var del = require('del');
-var concat = require('gulp-concat');
-var data = require('gulp-data');
-var nunjucks = require('gulp-nunjucks-render');
+const gulp = require('gulp');
+const browserSync = require('browser-sync');
+const htmlMin = require('gulp-htmlmin');
+const minify = require('gulp-minify');
+const sass = require('gulp-sass');
+const prefix = require('gulp-autoprefixer');
+const del = require('del');
+const concat = require('gulp-concat');
+const data = require('gulp-data');
+const nunjucks = require('gulp-nunjucks-render');
 
-var distPath = "dist/";
+const distPath = "dist/";
 
 // De-caching for Data files
 function requireUncached($module) {
@@ -17,46 +17,45 @@ function requireUncached($module) {
     return require($module);
 }
 
-gulp.task('clean', function () {
-    return del.sync(distPath + '**/*')
-});
+function clean() {
+    return del([distPath + '**/*'])
+}
 
-gulp.task('other-files', function () {
+function copyStaticFiles() {
     return gulp.src([
-            'src/robots.txt',
-            'src/sitemap.xml',
-            'src/_redirects',
-            'src/vendor/**'],
+        'src/robots.txt',
+        'src/sitemap.xml',
+        'src/_redirects',
+        'src/vendor/**'],
         {
             base: 'src'
-        }).pipe(gulp.dest(distPath));
-});
-
-gulp.task('default', ['start']);
+        })
+        .pipe(gulp.dest(distPath))
+}
 
 /**
  * Development
  */
-gulp.task('sass', function () {
-    return gulp.src('src/sass/*', {base: 'src/sass'})
+function compileSass() {
+    return gulp.src('src/sass/*', { base: 'src/sass' })
         .pipe(sass({
             includePaths: ['css'],
             onError: browserSync.notify
         }))
-        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
+        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest(distPath + 'css'))
-        .pipe(browserSync.reload({stream: true}))
-});
+        .pipe(browserSync.reload({ stream: true }))
+}
 
-gulp.task('js', function () {
-    return gulp.src('src/js/**/*.js', {base: 'src'})
+function compileJS() {
+    return gulp.src('src/js/**/*.js', { base: 'src' })
         .pipe(concat('script.js'))
         .pipe(gulp.dest(distPath + 'js'))
-        .pipe(browserSync.reload({stream: true}))
-});
+        .pipe(browserSync.reload({ stream: true }))
+}
 
-gulp.task('html', function () {
-    return gulp.src('src/pages/**/*.nj', {base: 'src/pages'})
+function compileHTML() {
+    return gulp.src('src/pages/**/*.nj', { base: 'src/pages' })
         .pipe(data(function () {
             const result = {
                 settings: requireUncached('./src/settings.json'),
@@ -73,43 +72,41 @@ gulp.task('html', function () {
             path: ['src/html']
         }))
         .pipe(gulp.dest(distPath))
-        .pipe(browserSync.reload({stream: true}))
-});
+        .pipe(browserSync.reload({ stream: true }))
+}
 
-gulp.task('browser-sync', function () {
+function liveReload(done) {
     browserSync({
         server: {
             baseDir: distPath
         },
         notify: false
     });
-});
+    done()
+}
 
-gulp.task('watch', function () {
-    gulp.watch(['src/**/*.html', 'src/**/*.nj', 'src/**/*.json'], ['html']);
-    gulp.watch('src/**/*.scss', ['sass']);
-    gulp.watch('src/**/*.js', ['js']);
-});
-
-gulp.task('build', ['clean', 'sass', 'js', 'html', 'other-files']);
-gulp.task('start', ['build', 'browser-sync', 'watch']);
+function watchChanges() {
+    gulp.watch(['src/**/*.html', 'src/**/*.nj', 'src/**/*.json'], gulp.series(compileHTML));
+    gulp.watch('src/**/*.scss', gulp.series(compileSass));
+    gulp.watch('src/**/*.js', gulp.series(compileJS));
+}
 
 /**
  * Production
  */
-gulp.task('sass-prod', function () {
-    return gulp.src('src/sass/*', {base: 'src/sass'})
+function compileSassProd() {
+    return gulp.src('src/sass/*', { base: 'src/sass' })
         .pipe(sass({
             outputStyle: 'compressed',
             includePaths: ['css'],
             onError: browserSync.notify
         }))
-        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
+        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest(distPath + 'css'))
-});
+}
 
-gulp.task('js-prod', function () {
-    return gulp.src('src/js/**/*.js', {base: 'src'})
+function compileJSProd() {    
+    return gulp.src('src/js/**/*.js', { base: 'src' })
         .pipe(concat('script.js'))
         .pipe(minify({
             ext: {
@@ -118,10 +115,10 @@ gulp.task('js-prod', function () {
             noSource: ['script.js']
         }))
         .pipe(gulp.dest(distPath + 'js'))
-});
+}
 
-gulp.task('html-prod', function () {
-    return gulp.src('src/pages/**/*.nj', {base: 'src/pages'})
+function compileHTMLProd() {
+    return gulp.src('src/pages/**/*.nj', { base: 'src/pages' })
         .pipe(data(function () {
             const result = {
                 settings: requireUncached('./src/settings.json'),
@@ -138,7 +135,7 @@ gulp.task('html-prod', function () {
             path: ['src/html']
         }))
         .pipe(htmlMin({
-            collapseWhitespace: false,
+            collapseWhitespace: true,
             collapseInlineTagWhitespace: true,
             minifyJS: true,
             removeComments: true,
@@ -146,6 +143,14 @@ gulp.task('html-prod', function () {
             sortAttributes: true
         }))
         .pipe(gulp.dest(distPath))
-});
+}
 
-gulp.task('build-prod', ['clean', 'sass-prod', 'js-prod', 'html-prod', 'other-files']);
+const build = gulp.series(clean, gulp.parallel(compileSass, compileJS, compileHTML, copyStaticFiles))
+const buildProd = gulp.series(clean, gulp.parallel(compileSassProd, compileJSProd, compileHTMLProd, copyStaticFiles))
+const start = gulp.series(build, liveReload, watchChanges)
+
+exports.clean = clean
+exports.build = build
+exports.buildProd = buildProd
+exports.start = start
+exports.default = start;
