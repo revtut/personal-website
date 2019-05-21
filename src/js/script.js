@@ -1,6 +1,22 @@
 var root = $("html, body");
 
 /**
+ * Jump to an anchor
+ * @param {string} anchor anchor to jump to
+ */
+function jumpToAnchor(anchor) {
+    let height = $("nav").outerHeight();
+    let alert = $("#alert");
+    if (alert.is(":visible")) {
+        height += alert.outerHeight();
+    }
+
+    root.animate({
+        scrollTop: $(anchor).offset().top - height + 1
+    }, 500);
+}
+
+/**
  * Enable smooth anchor scroll
  */
 function smoothAnchor() {
@@ -12,22 +28,6 @@ function smoothAnchor() {
         jumpToAnchor(href);
         return false;
     });
-}
-
-/**
- * Jump to an anchor
- * @param {string} anchor anchor to jump to
- */
-function jumpToAnchor(anchor) {
-    let height = $("nav").outerHeight();
-    let alert = $('#alert');
-    if (alert.is(":visible")) {
-        height += alert.outerHeight();
-    }
-
-    root.animate({
-        scrollTop: $(anchor).offset().top - height + 1
-    }, 500);
 }
 
 /**
@@ -75,10 +75,10 @@ function submitContact(event) {
  * Lazy image loading
  */
 function lazyImageLoading() {
-    $('img').unveil(200);
+    $("img").unveil(200);
 
-    $(window).on('shown.bs.modal', function () {
-        $('img').trigger("lookup");
+    $(window).on("shown.bs.modal", function () {
+        $("img").trigger("lookup");
     });
 }
 
@@ -86,9 +86,9 @@ function lazyImageLoading() {
  * Show alert if it has never been displayed
  */
 function showAlert() {
-    let alertCookieName = 'last_alert_id';
-    let alert = $('#alert');
-    let currentAlertID = alert.data('id');
+    let alertCookieName = "last_alert_id";
+    let alert = $("#alert");
+    let currentAlertID = alert.data("id");
 
     let lastAlertID = getCookie(alertCookieName);
     if (lastAlertID) {
@@ -98,19 +98,19 @@ function showAlert() {
     }
 
     setCookie(alertCookieName, "", -1);
-    alert.removeClass('d-none');
+    alert.removeClass("d-none");
 }
 
 /**
  * Closes the alert
  */
 function closeAlert() {
-    let alertCookieName = 'last_alert_id';
-    let alert = $('#alert');
-    let currentAlertID = alert.data('id');
+    let alertCookieName = "last_alert_id";
+    let alert = $("#alert");
+    let currentAlertID = alert.data("id");
 
     setCookie(alertCookieName, currentAlertID, 365);
-    alert.addClass('d-none');
+    alert.addClass("d-none");
     $("nav").css("margin-top", 0);
 }
 
@@ -121,10 +121,10 @@ function closeAlert() {
 function getCookie(name) {
     var name = name + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
-    var ca = decodedCookie.split(';');
+    var ca = decodedCookie.split(";");
     for (var i = 0; i < ca.length; i++) {
         var c = ca[i];
-        while (c.charAt(0) == ' ') {
+        while (c.charAt(0) == " ") {
             c = c.substring(1);
         }
         if (c.indexOf(name) == 0) {
@@ -150,17 +150,11 @@ function setCookie(name, value, expireDays) {
 /**
  * Setup the javascript
  */
-function setup() {
+$(document).ready(() => {
     lazyImageLoading();
-    scrollEvent();
     smoothAnchor();
     changeExtensionDisplay();
-    $(".js-type-effect").each(function () {
-        typeEffect($(this), 100);
-    });
     $("[data-toggle='tooltip']").tooltip();
     $("#contactForm").submit(submitContact);
     showAlert();
-}
-
-$(document).ready(setup);
+});

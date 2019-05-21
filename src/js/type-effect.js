@@ -19,3 +19,12 @@ function typeEffect(input, delay) {
         }
     }, delay);
 }
+
+/**
+ * Setup the javascript
+ */
+$(document).ready(() => {
+    $(".js-type-effect").each(function () {
+        typeEffect($(this), 100);
+    });
+});
