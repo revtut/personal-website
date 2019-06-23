@@ -23,7 +23,7 @@
         {% include 'components/about.nj' %}
     {% endblock %}
     <!-- Timeline section -->
-    {% block history %}
+    {% block timeline %}
         {% include 'components/timeline.nj' %}
     {% endblock %}
     <!-- Skills section -->

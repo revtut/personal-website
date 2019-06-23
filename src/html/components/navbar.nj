@@ -6,7 +6,7 @@
         <ul class="navbar-nav mx-auto">
             <li class="nav-item"><a class="js-smooth-scroll nav-link" href="#about" title="About">About</a>
             </li>
-            <li class="nav-item"><a class="js-smooth-scroll nav-link" href="#history" title="History">History</a>
+            <li class="nav-item"><a class="js-smooth-scroll nav-link" href="#timeline" title="Timeline">Timeline</a>
             </li>
             <li class="nav-item"><a class="js-smooth-scroll nav-link" href="#skills" title="Skills">Skills</a>
             </li>

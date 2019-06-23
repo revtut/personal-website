@@ -1,5 +1,5 @@
-{% set id = 'history' %}
-{% set title = 'History' %}
+{% set id = 'timeline' %}
+{% set title = 'Timeline' %}
 
 {% extends "partials/section.nj" %}
 

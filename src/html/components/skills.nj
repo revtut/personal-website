@@ -15,7 +15,7 @@
             {% endfor %}
         </div>
         <!-- Right column -->
-        <div class="mt-2 mt-lg-0 col-lg-4 col-12">
+        <div class="mt-4 mt-lg-0 col-lg-4 col-12">
             <h3>Soft Skills</h3>
             <hr>
             {% import "macros/skill.nj" as skill_macro %}

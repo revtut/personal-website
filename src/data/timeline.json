@@ -1,7 +1,7 @@
 [
   {
     "title": "RevTut",
-    "description": "Started a YouTube channel that got <b>17K+</b> subscribers with <b>3M+</b> views.",
+    "description": "Created a YouTube channel that reached <b>17k+</b> subscribers with <b>3M+</b> views.",
     "date": {
       "text": "Oct 04, 2011",
       "date": "2011/10/04"
@@ -13,7 +13,7 @@
   },
   {
     "title": "Minecraft",
-    "description": "Developed a custom server with more than <b>700</b> players online, #1 in Portugal.",
+    "description": "Developed a custom server with more than <b>700</b> players online, <b>#1</b> in Portugal.",
     "date": {
       "text": "Jun 13, 2012",
       "date": "2012/06/13"
@@ -85,7 +85,7 @@
   },
   {
     "title": "UPTEC",
-    "description": "Started the development of the management platform for the <b>200+</b> start-ups here incubated.",
+    "description": "Lead the development of the management platform for the <b>200+</b> start-ups here incubated.",
     "date": {
       "text": "Jul 1, 2017",
       "date": "2017/07/01"
@@ -144,15 +144,15 @@
     "icon": "fa-globe"
   },
   {
-    "title": "Critical Software",
-    "description": "Joined the rated at CMMI Maturity Level 5 in both Waterfall and Agile software development company.",
+    "title": "motel.io",
+    "description": "Joined motel.io a company that developed a product to test apps and websites on real mobile devices.",
     "date": {
       "text": "Apr 24, 2018",
       "date": "2018/04/24"
     },
-    "link": "https://www.criticalsoftware.com/",
-    "link_title": "Critical Software",
-    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1527276519/Portfolio/timeline/critical_software_ghthsy.png",
+    "link": "https://www.motel.io/",
+    "link_title": "motel.io",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1561294232/Portfolio/timeline/motel_icon_blue_1024x1024.png",
     "icon": "fa-globe"
   },
   {
@@ -166,5 +166,17 @@
     "link_title": "Master's grades",
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524360/Portfolio/timeline/feup_njzijw.png",
     "icon": "fa-file-pdf-o"
+  },
+  {
+    "title": "Portugate",
+    "description": "Joined Portugate, a pioneer company in free-to-play whales acquisition.",
+    "date": {
+      "text": "Jun 1, 2019",
+      "date": "2019/06/01"
+    },
+    "link": "https://www.portugate.com/",
+    "link_title": "Portugate",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1561294591/Portfolio/timeline/portugate.png",
+    "icon": "fa-globe"
   }
 ]
