@@ -1,5 +1,7 @@
 <header id="top" class="intro">
     <div class="h-100 row justify-content-center align-items-center">
+        <div id="magic" class="w-100 h-100"></div>
+
         <div class="w-100 text-center">
             <img class="rounded-circle"
                  src="{{ settings.loading_icon }}"

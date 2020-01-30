@@ -36,6 +36,5 @@
     "gulp-minify": "^3.1.0",
     "gulp-nunjucks-render": "^2.2.3",
     "gulp-sass": "^4.0.2",
-    "three": "^0.112.1"
   }
 }
