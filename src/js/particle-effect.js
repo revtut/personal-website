@@ -1,161 +1,131 @@
-let material;
-let camera, container, renderer, scene, plane, imgOne, imgTwo, texts, geometry, geometryCopy;
-let raycaster = new THREE.Raycaster();
-let mouse = new THREE.Vector2(1, 1);
-let cont = 0;
+'use strict';
 
-let myParticles = [];
+var scene, camera, renderer;
+var container, aspectRatio,
+    HEIGHT, WIDTH, fieldOfView,
+    nearPlane, farPlane, stats, geometry,
+    starStuff, starTexture, materialOptions, stars;
+var mouseX, mouseY, windowHalfX, windowHalfY;
 
-function initParticleEffect(input, texture) {
-    container = document.querySelector(input);
+/**
+ * Initialize the sky scene
+ */
+function initScene() {
+    container = document.querySelector('#header-background');
 
-    scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xff0000);
+    HEIGHT = window.innerHeight;
+    WIDTH = window.innerWidth;
+    aspectRatio = WIDTH / HEIGHT;
+    fieldOfView = 75;
+    nearPlane = 1;
+    farPlane = 1000;
 
-    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.z = 150;
+    mouseX = 0;
+    mouseY = 0;
+    windowHalfX = WIDTH / 2;
+    windowHalfY = HEIGHT / 2;
 
-    geometryCopy = new THREE.BufferGeometry();
+    camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
+    camera.position.z = farPlane / 2;
 
-    geometry = new THREE.PlaneGeometry(300, 500);
-    material = new THREE.MeshBasicMaterial({ color: 0xffff00, transparent: true, opacity: 0 });
+    scene = new THREE.Scene({ antialias: true });
+    scene.fog = new THREE.FogExp2(0x000000, 0.0003);
 
-    plane = new THREE.Mesh(geometry, material);
-    plane.receiveShadow = true;
-    plane.position.z = -.7;
-    scene.add(plane);
+    generateStars();
 
-
-    for (var j = 0; j < 3; j++) {
-        const material = new THREE.PointsMaterial({ size: 0.3, color: 0xffffff, map: texture, sizeAttenuation: true });
-        const geometry = new THREE.BufferGeometry();
-
-        let positions = [];
-
-        for (var i = 0; i < 700; i++) {
-            positions.push((Math.random() * 200 - 100));
-            positions.push((Math.random() * 200 - 100));
-            positions.push((Math.random() * 200 - 100));
-        }
-        geometry.addAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
-        particleSystem = new THREE.Points(geometry, material);
-        scene.add(particleSystem);
-        myParticles.push(particleSystem);
+    if (webGLSupport()) {
+        renderer = new THREE.WebGLRenderer({ alpha: true });
+    } else {
+        renderer = new THREE.CanvasRenderer();
     }
 
-    renderer = createRenderer(container);
-
-    renderer.setAnimationLoop(() => {
-        update();
-        render();
-    });
-
-    window.addEventListener('resize', onWindowResize);
-}
-
-function explode() {
-    const pos = myParticles[0].geometry.attributes.position;
-    for (var i = 0, l = pos.count; i < l; i++) {
-        pos.setXYZ(i, Math.random() * 200 - 100, Math.random() * 200 - 100, Math.random() * 90 - 45);
-        pos.needsUpdate = true;
-    }
-}
-
-var rotation1 = Math.random() * (0.002 - 0.0005) + 0.0005;
-var rotation2 = Math.random() * (0.002 - 0.0005) + 0.0005;
-var rotation3 = Math.random() * (0.002 - 0.0005) + 0.0005;
-function update() {
-    myParticles[0].rotation.y += rotation1;
-    myParticles[1].rotation.y -= rotation2;
-    myParticles[2].rotation.y += rotation3;
-}
-
-function createRenderer(container) {
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setSize(container.clientWidth, container.clientHeight);
-    renderer.shadowMap.enabled = true;
-    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.gammaFactor = 2.2;
-    renderer.gammaOutput = true;
-    renderer.physicallyCorrectLights = true;
-    renderer.autoClearColor = false;
+    renderer.setSize(WIDTH, HEIGHT);
     container.appendChild(renderer.domElement);
-    return renderer;
+
+    window.addEventListener('resize', onWindowResize, false);
+    document.addEventListener('mousemove', onMouseMove, false);
 }
 
+/**
+ * Invoked to render the scene
+ */
 function render() {
+    camera.position.x += ((mouseX * 0.25) - camera.position.x) * 0.005;
+    camera.position.y += (- (mouseY * 0.25) - camera.position.y) * 0.005;
+    camera.lookAt(scene.position);
     renderer.render(scene, camera);
 }
 
-function createParticlesLineText(scene, contentText, font) {
-    var xMid;
-    let thePoints = [];
-    let shapes = font.generateShapes(contentText, 14);
-    let geometry = new THREE.ShapeGeometry(shapes);
-    geometry.computeBoundingBox();
-    xMid = - 0.5 * (geometry.boundingBox.max.x - geometry.boundingBox.min.x);
-    geometry.translate(xMid, 0, 0);
-    geometry.center();
-    let holeShapes = [];
-    for (let q = 0; q < shapes.length; q++) {
-        let shape = shapes[q];
-        if (shape.holes && shape.holes.length > 0) {
-            for (let j = 0; j < shape.holes.length; j++) {
-                let hole = shape.holes[j];
-                holeShapes.push(hole);
-            }
-        }
-    }
-    shapes.push.apply(shapes, holeShapes);
-    for (let x = 0; x < shapes.length; x++) {
-        let shape = shapes[x];
-        let points = shape.getSpacedPoints(250);
-        points.forEach((element) => {
-            thePoints.push(element)
-        });
-    }
-    let geoParticles = new THREE.BufferGeometry().setFromPoints(thePoints);
-    geoParticles.translate(xMid, 0, 0);
-    let particles = new THREE.Points(geoParticles, PointMaterial);
-    scene.add(particles);
-
-    return particles;
+/**
+ * Animate the scene
+ */
+function animateScene() {
+    requestAnimationFrame(animateScene);
+    render();
 }
 
-function createNewText() {
-    if (texts) {
-        scene.remove(texts);
-        texts.geometry.dispose();
-        texts.material.dispose();
-        texts = undefined;
+/**
+ * Generate the stars of the scene
+ */
+function generateStars() {
+    var starQty = 30000;
+    geometry = new THREE.SphereGeometry(1000, 100, 50);
+
+    materialOptions = {
+        size: 1.0,
+        transparency: true,
+        opacity: 0.7,
+        map: starTexture
+    };
+
+    starStuff = new THREE.PointCloudMaterial(materialOptions);
+
+    for (var i = 0; i < starQty; i++) {
+        var starVertex = new THREE.Vector3();
+        starVertex.x = Math.random() * 2000 - 1000;
+        starVertex.y = Math.random() * 2000 - 1000;
+        starVertex.z = Math.random() * 2000 - 1000;
+        geometry.vertices.push(starVertex);
     }
 
-    if (cont == 0) {
-        texts = createParticlesLineText(scene, 'JOAO OLIVEIRA E SILVA', font);
-        geometryCopy.copy(texts.geometry);
-        const pos = texts.geometry.attributes.position;
-        for (var i = 0, l = pos.count; i < l; i++) {
-            pos.setXYZ(i, Math.random() * 2000 - 1000, Math.random() * 2000 - 1000, Math.random() * 2000 - 1000);
-            pos.needsUpdate = true;
-        }
-        cont++;
-    } else {
-        texts = createParticlesLineText(scene, 'JOAO OLIVEIRA E SILVA', font);
-        geometryCopy.copy(texts.geometry);
-        const pos = texts.geometry.attributes.position;
-        for (var i = 0, l = pos.count; i < l; i++) {
-            pos.setXYZ(i, Math.random() * 30 - 15, Math.random() * 30 - 15, Math.random() * 30 - 15);
-            pos.needsUpdate = true;
-        }
-        cont = 0;
+    stars = new THREE.PointCloud(geometry, starStuff);
+    scene.add(stars);
+}
+
+/**
+ * Check if WebGL is supported by the browser
+ */
+function webGLSupport() {
+    try {
+        var canvas = document.createElement('canvas');
+        return !!(window.WebGLRenderingContext && (
+            canvas.getContext('webgl') || canvas.getContext('experimental-webgl'))
+        );
+    } catch (e) {
+        return false;
     }
 }
 
+/**
+ * Invoked when the window has been resized
+ */
 function onWindowResize() {
-    camera.aspect = container.clientWidth / container.clientHeight;
+    var WIDTH = window.innerWidth,
+        HEIGHT = window.innerHeight;
+
+    camera.aspect = aspectRatio;
     camera.updateProjectionMatrix();
-    renderer.setSize(container.clientWidth, container.clientHeight);
+    renderer.setSize(WIDTH, HEIGHT);
+}
+
+/**
+ * Invoked when the mouse moves
+ * @param {MouseEvent} event mouse move event
+ */
+function onMouseMove(e) {
+    mouseX = event.clientX - windowHalfX;
+    mouseY = event.clientY - windowHalfY;
 }
 
 /**
@@ -163,6 +133,8 @@ function onWindowResize() {
  */
 $(document).ready(() => {
     new THREE.TextureLoader().load("vendor/disc.png", function (texture) {
-        initParticleEffect('#header-background', texture);
+        starTexture = texture
+        initScene();
+        animateScene();
     });
 });
