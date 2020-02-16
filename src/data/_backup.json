@@ -19,4 +19,32 @@
       "icon": "fa-code-fork"
     }
   ]
+},
+{
+  "title": "Portable Controller",
+  "description": {
+    "sentences": [
+      "We all love gaming controllers such as those from XBox or PlayStation so we thought, why not have one of those in our pocket?",
+      "That is the reason why we have created a portable controller that allows a player to play his favourite games using a smartphone.",
+      "The controller receptor must be running in the target computer and it allows up to four concurrent connections, that is, four players at the same time.",
+      "All a player needs is to connect to the computer using the IP address displayed in the controller receptor."
+    ],
+    "technologies": [
+      "Java",
+      "Android"
+    ]
+  },
+  "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511525135/Portfolio/projects/portablecontroller_eqlzpb.jpg",
+  "links": [
+    {
+      "title": "Portable controller Android",
+      "link": "https://joaosilva2095.keybase.pub/personal-website/portablecontroller.apk",
+      "icon": "fa-android"
+    },
+    {
+      "title": "Portable controller receptor",
+      "link": "https://joaosilva2095.keybase.pub/personal-website/portablecontroller.jar",
+      "icon": "fa-download"
+    }
+  ]
 }
