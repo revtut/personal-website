@@ -10,6 +10,12 @@ header.intro {
     cursor: pointer;
   }
 
+  .header-content {
+    position: absolute;
+    top: 25%;
+    left: 0;
+  }
+
   @include phone {
     h1 {
       font-size: $font-large;

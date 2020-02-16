@@ -178,5 +178,17 @@
     "link_title": "Portugate",
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1561294591/Portfolio/timeline/portugate.png",
     "icon": "fa-globe"
+  },
+  {
+    "title": "Replay",
+    "description": "Started working on a social network for fast highlights generation.",
+    "date": {
+      "text": "Nov 10, 2019",
+      "date": "2019/11/10"
+    },
+    "link": "https://www.portugate.com/",
+    "link_title": "Replay",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1581879442/Portfolio/timeline/replay_logo_ijfd.png",
+    "icon": "fa-globe"
   }
 ]

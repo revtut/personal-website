@@ -1,5 +1,54 @@
 [
   {
+    "title": "motel.io Community",
+    "description": {
+      "sentences": [
+        "Do you use your mobile phone while asleep? Or have spare phones?",
+        "Great! Why not rent those mobile phones CPU power.",
+        "You define the time and conditions when mobile tests can be run on the device and that is it."
+      ],
+      "technologies": [
+        "Go",
+        "Java",
+        "Android",
+        "Accessibility Services"
+      ]
+    },
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1581881816/Portfolio/projects/motel_app_ghjk.png",
+    "links": [
+      {
+        "title": "motel.io Community",
+        "link": "https://apkpure.com/motel-io-community/io.motel.community",
+        "icon": "fa-android"
+      }
+    ]
+  },
+  {
+    "title": "The Next School",
+    "description": {
+      "sentences": [
+        "Every educational institution has mountains of data but only few of it is used.",
+        "The Next School has the mission to help education use its full potential by providing meaningful reports.",
+        "It can help uncover problems that were not previously visible, predict the future or better understand why certain problems occur.",
+        "Also, it can help to solve financial problems or relieve work pressure."
+      ],
+      "technologies": [
+        "Go",
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ]
+    },
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1581882994/Portfolio/projects/the_next_school_uugfs.png",
+    "links": [
+      {
+        "title": "Website",
+        "link": "https://thenextschool.nl/",
+        "icon": "fa-external-link"
+      }
+    ]
+  },
+  {
     "title": "UPTEConnect",
     "description": {
       "sentences": [
@@ -195,6 +244,28 @@
         "title": "The Maze game",
         "link": "https://joaosilva2095.keybase.pub/personal-website/themaze.jar",
         "icon": "fa-download"
+      }
+    ]
+  },
+  {
+    "title": "Android Fighter",
+    "description": {
+      "sentences": [
+        "Android Fighter is the lowest level coding game that I ever done, it is a one vs one player game and the goal is to kill the opponent.",
+        "Without the help of any sort of external APIs or frameworks we had to develop it using direct access to peripherals.",
+        "In order to draw the graphics in the screen (we used the \"Dual Buffering\" technic) we had to copy the content of the RAM directly to the VRAM, to move the mouse we had to collect its accelaration data and calculate its position, keyboard inputs were also subscribed and even the datetime displayed in the screen was fetched from the \"Real Time Clock\"."
+      ],
+      "technologies": [
+        "C",
+        "Minix"
+      ]
+    },
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511525135/Portfolio/projects/androidfighter_qeedot.jpg",
+    "links": [
+      {
+        "title": "Source code of Android Fighter",
+        "link": "https://joaosilva2095.keybase.pub/personal-website/androidfighter.zip",
+        "icon": "fa-code-fork"
       }
     ]
   },

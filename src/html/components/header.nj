@@ -1,6 +1,8 @@
 <header id="top" class="intro">
     <div class="h-100 row justify-content-center align-items-center">
-        <div class="w-100 text-center">
+        <div id="header-background" class="w-100 h-100"></div>
+
+        <div class="header-content w-100 text-center">
             <img class="rounded-circle"
                  src="{{ settings.loading_icon }}"
                  data-src="{{ settings.profile_picture }}"
@@ -20,7 +22,7 @@
                     <i class="fa fa-arrow-down" aria-hidden="true"></i> Know more
                 </button>
                 <button type="button" class="btn-rectangle"
-                        onclick="window.open('https://res.cloudinary.com/joaosilva2095/image/upload/v1562854577/resumejoaosilva.pdf','_blank', 'noopener')">
+                        onclick="window.open('https://res.cloudinary.com/joaosilva2095/image/upload/v1581884848/resumejoaosilva_netm8u.pdf','_blank', 'noopener')">
                     <i class="fa fa-graduation-cap" aria-hidden="true"></i> My Resume
                 </button>
             </div>
