@@ -1,6 +1,10 @@
 {
   "hard": [
     {
+      "title": "Flutter",
+      "value": 90
+    },
+    {
       "title": "Java",
       "value": 95
     },
@@ -9,8 +13,20 @@
       "value": 80
     },
     {
-      "title": "SQL",
+      "title": "Swift",
+      "value": 70
+    },
+    {
+      "title": "Dart",
       "value": 85
+    },
+    {
+      "title": "Kotlin",
+      "value": 70
+    },
+    {
+      "title": "SQL",
+      "value": 80
     },
     {
       "title": "JavaScript",
@@ -21,28 +37,12 @@
       "value": 90
     },
     {
-      "title": "Python",
-      "value": 30
-    },
-    {
       "title": "C",
       "value": 70
     },
     {
       "title": "TypeScript",
       "value": 80
-    },
-    {
-      "title": "PHP",
-      "value": 70
-    },
-    {
-      "title": "C++",
-      "value": 60
-    },
-    {
-      "title": "C#",
-      "value": 50
     }
   ],
   "soft": [
@@ -56,7 +56,7 @@
     },
     {
       "title": "Soft. Architecture",
-      "value": 70
+      "value": 90
     },
     {
       "title": "Linux",
@@ -67,20 +67,20 @@
       "value": 95
     },
     {
-      "title": "Cont. Integration",
+      "title": "DevOps",
       "value": 80
     },
     {
-      "title": "Design",
-      "value": 70
+      "title": "UI Design",
+      "value": 65
     },
     {
       "title": "Video Edition",
-      "value": 70
+      "value": 60
     },
     {
       "title": "Image Edition",
-      "value": 80
+      "value": 70
     }
   ]
 }

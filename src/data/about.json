@@ -30,33 +30,33 @@
     "icon": "fa-arrow-up"
   },
   {
-    "title": "Languages",
-    "value": "Portuguese and English",
+    "title": "Spoken Languages",
+    "value": "Portuguese, English & Spanish",
     "icon": "fa-flag"
   },
   {
     "title": "Sports",
-    "value": "Surf, Dance and Yoga",
+    "value": "Surf, Dance & Yoga",
     "icon": "fa-bolt"
   },
   {
-    "title": "Favorite OS",
-    "value": "OS X",
+    "title": "Operative System",
+    "value": "MacOS",
     "icon": "fa-laptop"
   },
   {
-    "title": "Favorite mobile OS",
+    "title": "Mobile Operative System",
     "value": "iOS",
     "icon": "fa-mobile"
   },
   {
     "title": "Favorite coding language",
-    "value": "Go",
+    "value": "Go and Dart",
     "icon": "fa-code"
   },
   {
-    "title": "Favorite IDEs",
-    "value": "JetBrains",
+    "title": "Favorite IDE",
+    "value": "Visual Studio Code",
     "icon": "fa-terminal"
   }
 ]
