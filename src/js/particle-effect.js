@@ -1,17 +1,19 @@
-let PointMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: .5 });
-let camera, container, renderer, scene, plane, cube, imgOne, imgTwo, texts, geometry, geometryCopy;
+let material;
+let camera, container, renderer, scene, plane, imgOne, imgTwo, texts, geometry, geometryCopy;
 let raycaster = new THREE.Raycaster();
 let mouse = new THREE.Vector2(1, 1);
 let cont = 0;
 
-function initParticleEffect(typeface, input) {
+let myParticles = [];
+
+function initParticleEffect(input, texture) {
     container = document.querySelector(input);
 
     scene = new THREE.Scene();
     scene.background = new THREE.Color(0xff0000);
 
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.z = 100;
+    camera.position.z = 150;
 
     geometryCopy = new THREE.BufferGeometry();
 
@@ -23,6 +25,24 @@ function initParticleEffect(typeface, input) {
     plane.position.z = -.7;
     scene.add(plane);
 
+
+    for (var j = 0; j < 3; j++) {
+        const material = new THREE.PointsMaterial({ size: 0.3, color: 0xffffff, map: texture, sizeAttenuation: true });
+        const geometry = new THREE.BufferGeometry();
+
+        let positions = [];
+
+        for (var i = 0; i < 700; i++) {
+            positions.push((Math.random() * 200 - 100));
+            positions.push((Math.random() * 200 - 100));
+            positions.push((Math.random() * 200 - 100));
+        }
+        geometry.addAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+        particleSystem = new THREE.Points(geometry, material);
+        scene.add(particleSystem);
+        myParticles.push(particleSystem);
+    }
+
     renderer = createRenderer(container);
 
     renderer.setAnimationLoop(() => {
@@ -30,57 +50,24 @@ function initParticleEffect(typeface, input) {
         render();
     });
 
-    document.addEventListener('mousemove', onDocumentMouseMove);
-
     window.addEventListener('resize', onWindowResize);
-    document.getElementById("magic").addEventListener("click", createNewText, true);
-    window.addEventListener('touchstart', onDocumentTouchStart);
-    window.addEventListener('touchmove', onDocumentTouchMove);
-    onWindowResize()
-    createNewText();
 }
 
-function update() {
-    raycaster.setFromCamera(mouse, camera);
-    const intersects = raycaster.intersectObject(plane);
-    if (intersects.length > 0) {
-        const mx = intersects[0].point.x;
-        const my = intersects[0].point.y;
-        const mz = intersects[0].point.z;
-        const pos = texts.geometry.attributes.position;
-        const copy = geometryCopy.attributes.position;
-        for (var i = 0, l = pos.count; i < l; i++) {
-            const initX = copy.getX(i);
-            const initY = copy.getY(i);
-            const initZ = copy.getZ(i);
-            let px = pos.getX(i);
-            let py = pos.getY(i);
-            let pz = pos.getZ(i);
-            const dx = mx - px;
-            const dy = my - py;
-            const dz = mz - pz;
-            const mouseDistance = distance(mx, my, px, py)
-            if (mouseDistance < 25) {
-                const ax = dx;
-                const ay = dy;
-                const az = dz;
-                px -= ax / 20;
-                py -= ay / 20;
-                //pz -= az / 20;
-                pz -= Math.sin(i);
-                pos.setXYZ(i, px, py, pz);
-                pos.needsUpdate = true;
-            }
-            const dxo = px - initX;
-            const dyo = py - initY;
-            const dzo = pz - initZ;
-            px -= dxo / 25;
-            py -= dyo / 25;
-            pz -= dzo / 25;
-            pos.setXYZ(i, px, py, pz);
-            pos.needsUpdate = true;
-        }
+function explode() {
+    const pos = myParticles[0].geometry.attributes.position;
+    for (var i = 0, l = pos.count; i < l; i++) {
+        pos.setXYZ(i, Math.random() * 200 - 100, Math.random() * 200 - 100, Math.random() * 90 - 45);
+        pos.needsUpdate = true;
     }
+}
+
+var rotation1 = Math.random() * (0.002 - 0.0005) + 0.0005;
+var rotation2 = Math.random() * (0.002 - 0.0005) + 0.0005;
+var rotation3 = Math.random() * (0.002 - 0.0005) + 0.0005;
+function update() {
+    myParticles[0].rotation.y += rotation1;
+    myParticles[1].rotation.y -= rotation2;
+    myParticles[2].rotation.y += rotation3;
 }
 
 function createRenderer(container) {
@@ -165,55 +152,17 @@ function createNewText() {
     }
 }
 
-function onDocumentTouchStart(event) {
-    if (event.touches.length === 1) {
-        //event.preventDefault();
-        mouseX = +(event.targetTouches[0].pageX / window.innerWidth) * 2 + -1;
-        mouseY = -(event.targetTouches[0].pageY / window.innerHeight) * 2 + 1;
-    }
-}
-function onDocumentTouchMove(event) {
-    if (event.touches.length === 1) {
-        //event.preventDefault();
-        mouseX = +(event.targetTouches[0].pageX / window.innerWidth) * 2 + -1;
-        mouseY = -(event.targetTouches[0].pageY / window.innerHeight) * 2 + 1;
-    }
-    let vector = new THREE.Vector3(mouseX, mouseY, 0.5);
-    vector.unproject(camera);
-    let dir = vector.sub(camera.position).normalize();
-    let distance = - camera.position.z / dir.z;
-    pos = camera.position.clone().add(dir.multiplyScalar(distance));
-    particles[7].position.copy(pos);
-}
-
 function onWindowResize() {
-    console.log(container);
-    if (container.clientWidth < 600) {
-        camera.position.z = 300;
-    }
-
     camera.aspect = container.clientWidth / container.clientHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(container.clientWidth, container.clientHeight);
-}
-
-const distance = (x1, y1, x2, y2) => {
-    return Math.sqrt(Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2));
-}
-function onDocumentMouseMove(event) {
-    event.preventDefault();
-    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-    mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
 }
 
 /**
  * Setup the javascript
  */
 $(document).ready(() => {
-    var loader = new THREE.FontLoader();
-    loader.load('https://unpkg.com/three@0.112.1/examples/fonts/helvetiker_bold.typeface.json', function (response) {
-        font = response;
-
-        initParticleEffect(font, '#magic');
+    new THREE.TextureLoader().load("vendor/disc.png", function (texture) {
+        initParticleEffect('#header-background', texture);
     });
 });
