@@ -22,7 +22,7 @@
                     <i class="fa fa-arrow-down" aria-hidden="true"></i> Know more
                 </button>
                 <button type="button" class="btn-rectangle"
-                        onclick="window.open('https://res.cloudinary.com/joaosilva2095/image/upload/v1562854577/resumejoaosilva.pdf','_blank', 'noopener')">
+                        onclick="window.open('https://res.cloudinary.com/joaosilva2095/image/upload/v1581884848/resumejoaosilva_netm8u.pdf','_blank', 'noopener')">
                     <i class="fa fa-graduation-cap" aria-hidden="true"></i> My Resume
                 </button>
             </div>
