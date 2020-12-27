@@ -2,11 +2,11 @@
   "hard": [
     {
       "title": "Flutter",
-      "value": 90
+      "value": 95
     },
     {
       "title": "Java",
-      "value": 95
+      "value": 85
     },
     {
       "title": "Go",
@@ -18,7 +18,7 @@
     },
     {
       "title": "Dart",
-      "value": 85
+      "value": 95
     },
     {
       "title": "Kotlin",
@@ -39,31 +39,23 @@
     {
       "title": "C",
       "value": 70
-    },
-    {
-      "title": "TypeScript",
-      "value": 80
     }
   ],
   "soft": [
     {
+      "title": "Management",
+      "value": 85
+    },
+    {
       "title": "Leadership",
-      "value": 95
-    },
-    {
-      "title": "Teamwork",
-      "value": 99
-    },
-    {
-      "title": "Soft. Architecture",
       "value": 90
     },
     {
-      "title": "Linux",
-      "value": 70
+      "title": "Architecture",
+      "value": 90
     },
     {
-      "title": "Git",
+      "title": "Version Control",
       "value": 95
     },
     {
@@ -71,8 +63,8 @@
       "value": 80
     },
     {
-      "title": "UI Design",
-      "value": 65
+      "title": "UI / UX",
+      "value": 60
     },
     {
       "title": "Video Edition",

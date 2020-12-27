@@ -17,42 +17,22 @@
   {
     "title": "Gender",
     "value": "Male",
-    "icon": "fa-intersex"
-  },
-  {
-    "title": "Marital Status",
-    "value": "Single",
-    "icon": "fa-female"
-  },
-  {
-    "title": "Height",
-    "value": "1.85m",
-    "icon": "fa-arrow-up"
+    "icon": "fa-mars"
   },
   {
     "title": "Spoken Languages",
     "value": "Portuguese, English & Spanish",
-    "icon": "fa-flag"
+    "icon": "fa-language"
   },
   {
     "title": "Sports",
     "value": "Surf, Dance & Yoga",
-    "icon": "fa-bolt"
+    "icon": "fa-snowboarding"
   },
   {
     "title": "Operative System",
-    "value": "MacOS",
-    "icon": "fa-laptop"
-  },
-  {
-    "title": "Mobile Operative System",
-    "value": "iOS",
-    "icon": "fa-mobile"
-  },
-  {
-    "title": "Favorite coding language",
-    "value": "Go and Dart",
-    "icon": "fa-code"
+    "value": "MacOS / iOS",
+    "icon": "fa-microchip"
   },
   {
     "title": "Favorite IDE",

@@ -145,7 +145,7 @@
   },
   {
     "title": "motel.io",
-    "description": "Joined motel.io a company that developed a product to test apps and websites on real mobile devices.",
+    "description": "Joined motel.io on the development of a product to test apps and websites on physical mobile devices.",
     "date": {
       "text": "Apr 24, 2018",
       "date": "2018/04/24"
@@ -180,15 +180,15 @@
     "icon": "fa-globe"
   },
   {
-    "title": "Replay",
-    "description": "Started working on a social network for fast highlights generation.",
+    "title": "Replai",
+    "description": "Started developing a platform for short-video generation with AI.",
     "date": {
       "text": "Nov 10, 2019",
       "date": "2019/11/10"
     },
-    "link": "https://www.portugate.com/",
-    "link_title": "Replay",
-    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1581879442/Portfolio/timeline/replay_logo_ijfd.png",
+    "link": "https://www.replai.io/",
+    "link_title": "Replai",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1609097284/Portfolio/timeline/replai.png",
     "icon": "fa-globe"
   }
 ]
