@@ -8,3 +8,4 @@ node_modules
 # Build
 build
 dist
+.DS_STORE

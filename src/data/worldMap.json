@@ -79,6 +79,11 @@
       "title": "Switzerland",
       "latitude": "46.895631",
       "longitude": "8.195359"
+    },
+    {
+      "title": "Turkey",
+      "latitude": "39.9334",
+      "longitude": "32.8597"
     }
   ]
 }

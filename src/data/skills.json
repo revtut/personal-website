@@ -5,6 +5,10 @@
       "value": 95
     },
     {
+      "title": "TypeScript",
+      "value": 85
+    },
+    {
       "title": "Java",
       "value": 85
     },
@@ -30,29 +34,29 @@
     },
     {
       "title": "JavaScript",
-      "value": 75
+      "value": 90
     },
     {
       "title": "HTML / CSS",
       "value": 90
-    },
-    {
-      "title": "C",
-      "value": 70
     }
   ],
   "soft": [
     {
       "title": "Management",
-      "value": 85
+      "value": 90
     },
     {
       "title": "Leadership",
-      "value": 90
+      "value": 93
     },
     {
       "title": "Architecture",
       "value": 90
+    },
+    {
+      "title": "Hiring",
+      "value": 95
     },
     {
       "title": "Version Control",
