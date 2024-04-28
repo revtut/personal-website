@@ -102,13 +102,18 @@ function watchChanges() {
  * Production
  */
 function compileSassProd() {
+    const processors = [
+        autoprefixer(["last 15 versions", "> 1%", "ie 8", "ie 7"]),
+        cssnano(),
+    ];
+
     return gulp.src("src/sass/*", { base: "src/sass" })
         .pipe(sass({
             outputStyle: "compressed",
             includePaths: ["css"],
             onError: browserSync.notify
         }))
-        .pipe(prefix(["last 15 versions", "> 1%", "ie 8", "ie 7"], { cascade: true }))
+        .pipe(postcss(processors))
         .pipe(gulp.dest(distPath + "css"))
 }
 
