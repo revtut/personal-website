@@ -84,6 +84,16 @@
       "title": "Turkey",
       "latitude": "39.9334",
       "longitude": "32.8597"
+    },
+    {
+      "title": "Canary Islands",
+      "latitude": "28.278993",
+      "longitude": "-16.592802"
+    },
+    {
+      "title": "Norway",
+      "latitude": "60.817699",
+      "longitude": "9.042704"
     }
   ]
 }

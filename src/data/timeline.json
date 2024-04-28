@@ -1,7 +1,7 @@
 [
   {
     "title": "RevTut",
-    "description": "Created a YouTube channel that reached 17k+ subscribers with 3M+ views.",
+    "description": "Grown a YouTube channel to +17k subscribers with +3M views.",
     "date": {
       "text": "Oct 04, 2011",
       "date": "2011/10/04"
@@ -9,11 +9,11 @@
     "link": "https://www.youtube.com/RevTut",
     "link_title": "YouTube Channel",
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524362/Portfolio/timeline/revtut_mke5uk.png",
-    "icon": "fa-youtube"
+    "icon": "fa-play"
   },
   {
     "title": "Minecraft",
-    "description": "Developed a custom server with more than 700 players online, #1 in Portugal.",
+    "description": "Launched the #1 Minecraft server in Portugal with more than 15k MAU.",
     "date": {
       "text": "Jun 13, 2012",
       "date": "2012/06/13"
@@ -30,10 +30,10 @@
       "text": "Apr 24, 2013",
       "date": "2013/04/24"
     },
-    "link": "https://joaosilva2095.keybase.pub/personal-website/fis12.jpg",
+    "link": "https://pmate.ua.pt/",
     "link_title": "FIS12",
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524360/Portfolio/timeline/pmate_pkxynj.png",
-    "icon": "fa-file-image-o"
+    "icon": "fa-globe"
   },
   {
     "title": "Colégio Internato dos Carvalhos (CIC)",
@@ -42,14 +42,14 @@
       "text": "Jul 01, 2013",
       "date": "2013/07/01"
     },
-    "link": "https://joaosilva2095.keybase.pub/personal-website/cichighschool.pdf",
+    "link": "https://cic.pt",
     "link_title": "High-school certificate",
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524360/Portfolio/timeline/cic_d6zxhz.png",
-    "icon": "fa-file-image-o"
+    "icon": "fa-globe"
   },
   {
     "title": "Ubisoft",
-    "description": "Partnered with Ubisoft in a video project.",
+    "description": "Partnered with Ubisoft for sponsored videos.",
     "date": {
       "text": "Jul 11, 2013",
       "date": "2013/07/11"
@@ -61,43 +61,31 @@
   },
   {
     "title": "Turkish Airlines",
-    "description": "Worked with Turkish Airlines in the advertisement of a campaign.",
+    "description": "Worked with Turkish Airlines in an advertisement campaign.",
     "date": {
       "text": "Dec 03, 2013",
       "date": "2013/12/03"
     },
-    "link": "https://www.youtube.com/watch?v=jhFqSlvbKAM",
+    "link": "https://www.youtube.com/watch?v=ApPkdTNbcY8",
     "link_title": "Turkish airlines project",
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524361/Portfolio/timeline/turkish_airlines_vsgftq.png",
     "icon": "fa-play"
   },
   {
-    "title": "F.J.Seguros",
-    "description": "Configured a private cloud and a remote desktop system so all employees could work remotely.",
-    "date": {
-      "text": "Oct 1, 2015",
-      "date": "2015/10/01"
-    },
-    "link": "http://fjseguros.pt/",
-    "link_title": "FJSeguros",
-    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524360/Portfolio/timeline/fjseguros_s779hp.png",
-    "icon": "fa-globe"
-  },
-  {
     "title": "UPTEC",
-    "description": "Led the development of the management platform for the 200+ start-ups here incubated.",
+    "description": "Led the development of the management platform for the +200 startups here incubated.",
     "date": {
       "text": "Jul 1, 2017",
       "date": "2017/07/01"
     },
-    "link": "http://uptec.up.pt/en",
+    "link": "https://uptec.up.pt/",
     "link_title": "UPTEC",
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524362/Portfolio/timeline/uptec_rsvqxm.png",
     "icon": "fa-globe"
   },
   {
     "title": "Make or Break",
-    "description": "Won the 1st place in the \"Hardcore\" category in a 48 hours hackathon.",
+    "description": "1st place in the \"Hardcore\" category in a 48 hours hackathon.",
     "date": {
       "text": "Sep 10, 2017",
       "date": "2017/09/10"
@@ -109,7 +97,7 @@
   },
   {
     "title": "Upwork",
-    "description": "Started working as freelancer software developer, mainly as a full-stack web developer",
+    "description": "Started my freelancing journey as a full-stack developer",
     "date": {
       "text": "Dec 25, 2017",
       "date": "2017/12/25"
@@ -126,14 +114,14 @@
       "text": "Feb 01, 2018",
       "date": "2018/02/01"
     },
-    "link": "https://joaosilva2095.keybase.pub/personal-website/feaugentexchange.pdf",
+    "link": "https://www.ugent.be/",
     "link_title": "Exchange Grades",
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1519038115/Portfolio/timeline/ugent_bnvybx.png",
-    "icon": "fa-file-pdf-o"
+    "icon": "fa-globe"
   },
   {
     "title": "Make or Break",
-    "description": "Won the 1st place in the \"Fun\" category in a 3 day hackathon.",
+    "description": "1st place in the \"Fun\" category in a 3-day hackathon.",
     "date": {
       "text": "Apr 15, 2018",
       "date": "2018/04/15"
@@ -145,12 +133,12 @@
   },
   {
     "title": "motel.io",
-    "description": "Joined motel.io on the development of a product to test apps and websites on physical mobile devices.",
+    "description": "Joined motel.io on the development of a platform that enables manual and automatic testing of apps and websites on real mobile devices.",
     "date": {
       "text": "Apr 24, 2018",
       "date": "2018/04/24"
     },
-    "link": "https://www.motel.io/",
+    "link": "https://www.crunchbase.com/organization/motelio",
     "link_title": "motel.io",
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1561294232/Portfolio/timeline/motel_icon_blue_1024x1024.png",
     "icon": "fa-globe"
@@ -162,26 +150,14 @@
       "text": "Jul 9, 2018",
       "date": "2018/07/09"
     },
-    "link": "https://joaosilva2095.keybase.pub/personal-website/feupbachelors.pdf",
+    "link": "https://fe.up.pt/",
     "link_title": "Master's grades",
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1511524360/Portfolio/timeline/feup_njzijw.png",
-    "icon": "fa-file-pdf-o"
-  },
-  {
-    "title": "Portugate",
-    "description": "Joined Portugate, a pioneer company in free-to-play whales acquisition.",
-    "date": {
-      "text": "Jun 1, 2019",
-      "date": "2019/06/01"
-    },
-    "link": "https://www.portugate.com/",
-    "link_title": "Portugate",
-    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1561294591/Portfolio/timeline/portugate.png",
     "icon": "fa-globe"
   },
   {
     "title": "Replai",
-    "description": "Founding member of a video intelligence platform.",
+    "description": "Founding team member of an AI video intelligence platform to decode the secrets of successful video marketing videos.",
     "date": {
       "text": "Nov 10, 2019",
       "date": "2019/11/10"
@@ -189,6 +165,18 @@
     "link": "https://www.replai.io/",
     "link_title": "Replai",
     "image": "https://res.cloudinary.com/joaosilva2095/image/upload/f_auto,q_auto/v1609097284/Portfolio/timeline/replai.png",
+    "icon": "fa-globe"
+  },
+  {
+    "title": "Propel",
+    "description": "Building a serious mini-games platform to improve executive functions of adults with ADHD.",
+    "date": {
+      "text": "Jan 02, 2024",
+      "date": "2024/01/02"
+    },
+    "link": "https://apps.apple.com/app/id6472498233",
+    "link_title": "Propel",
+    "image": "https://res.cloudinary.com/joaosilva2095/image/upload/v1714327459/Portfolio/timeline/propel.jpg",
     "icon": "fa-globe"
   }
 ]
