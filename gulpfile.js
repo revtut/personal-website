@@ -2,8 +2,10 @@ const gulp = require("gulp");
 const browserSync = require("browser-sync");
 const htmlMin = require("gulp-htmlmin");
 const minify = require("gulp-minify");
-const sass = require("gulp-sass");
-const prefix = require("gulp-autoprefixer");
+const sass = require("gulp-sass")(require("sass"));
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
 const del = require("del");
 const concat = require("gulp-concat");
 const data = require("gulp-data");
@@ -37,14 +39,19 @@ function copyStaticFiles() {
  * Development
  */
 function compileSass() {
+    const processors = [
+        autoprefixer(["last 15 versions", "> 1%", "ie 8", "ie 7"]),
+        cssnano(),
+    ];
+
     return gulp.src("src/sass/*", { base: "src/sass" })
         .pipe(sass({
             includePaths: ["css"],
             onError: browserSync.notify
         }))
-        .pipe(prefix(["last 15 versions", "> 1%", "ie 8", "ie 7"], { cascade: true }))
+        .pipe(postcss(processors))
         .pipe(gulp.dest(distPath + "css"))
-        .pipe(browserSync.reload({ stream: true }))
+        .pipe(browserSync.reload({ stream: true }));
 }
 
 function compileJS() {
@@ -105,7 +112,7 @@ function compileSassProd() {
         .pipe(gulp.dest(distPath + "css"))
 }
 
-function compileJSProd() {    
+function compileJSProd() {
     return gulp.src("src/js/**/*.js", { base: "src" })
         .pipe(concat("script.js"))
         .pipe(minify({
